@@ -1,0 +1,82 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+body {
+  background: #f2f2f2;
+}
+
+.V_Head {
+  position: relative;
+  width: 94vw;
+  margin: 0 auto;
+  margin-top: 3vw;
+}
+
+.V_Head img {
+  width: 94vw;
+}
+
+.V_Tit {
+  position: relative;
+  width: 94vw;
+  height: 6vw;
+  margin: 0 auto;
+  margin-top: 4vw;
+  margin-bottom: 4vw;
+}
+
+.V_Tit_R {
+  position: relative;
+  float: left;
+  width: 2vw;
+  height: 6vw;
+  background: #ff5b5c;
+}
+
+.V_Tit_Te {
+  position: relative;
+  text-indent: 1.5vw;
+  line-height: 6vw;
+  color: #333;
+  font-size: 4.5vw;
+  letter-spacing: 1px;
+  font-weight: bold;
+}
+
+.V_Img {
+  position: relative;
+  width: 94vw;
+  margin: 0 auto;
+}
+
+.V_Img img {
+  width: 94vw;
+  border-radius: 3vw;
+}
+
+.V_Cz_AnQ {
+  position: relative;
+  width: 94vw;
+  height: 60vw;
+  margin: 0 auto;
+  background: #fff;
+  border-radius: 3vw;
+}
+.Cz_AnQ_O{
+  position: relative;
+  float: left;
+  width: 25%;
+  height: 40%;
+  text-align: center;
+  font-size: 3.5vw;
+  color: #333;
+  top: -2%;
+  margin-top: 5%;
+}
+.Cz_AnQ_O img{
+  width: 70%;
+  margin-bottom: 5px;
+}
