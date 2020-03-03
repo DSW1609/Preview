@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>邀请有礼🎁</title>
+  <link rel="stylesheet" href="css/reward.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+
+</head>
+
+<body>
+  <!-- 左上角logo -->
+  <div class="Z_Logo">
+    <!-- LOGO图标 -->
+    <img src="img/ZSFM.png" alt="">
+    <span>众善富民</span>
+  </div>
+  <!-- 标题 -->
+  <div class="Z_Tit">
+    <img src="img/tit_bg.png" alt="">
+  </div>
+  <!-- 轮播图 -->
+  <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+    <div class="swiper-wrapper">
+      <!-- 第一张轮播图 -->
+      <div class="swiper-slide">
+        <!-- 左侧红包im -->
+        <img class="Z_Hb_Im" src="img/hb_im.png" alt="">
+        <!-- 右侧积分奖励说明 -->
+        <div class="Z_J_Te">
+          <span>
+            每邀请一位好友<br>注册您可以获得<br>888&nbsp;积分
+          </span>
+        </div>
+      </div>
+      <!-- 第二张轮播图 -->
+      <div class="swiper-slide">
+        <!-- 左侧红包im -->
+        <img class="Z_Hb_Im Z_Hb_Im2" src="img/hb_im.png" alt="">
+        <div class="Hb_Im2_Jf"><span id="Hb_N">888</span></div>
+        <!-- 领取按钮 -->
+        <!-- 禁用时class Hb_AF -->
+        <div class="Hb_A Hb_AF">
+          <span>领取</span>
+        </div>
+        <!-- 右侧累计邀请文字 -->
+        <div class="Hb_R">
+          <!-- 单行条件 -->
+          <!-- 满足时 class Hb_Y -->
+          <div class="Hb_R_One" id="Hb_3" data-v="3">
+            <span>累计邀请满3人</span>
+          </div>
+          <!-- 单行条件 -->
+          <div class="Hb_R_One" id="Hb_6" data-v="6">
+            <span>累计邀请满6人</span>
+          </div>
+          <!-- 单行条件 -->
+          <div class="Hb_R_One" id="Hb_m">
+            <span>继续再邀请3人</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <!-- 邀请按钮部分 -->
+  <div class="Z_R_Ctt">
+    <!-- 单个按钮 左 -->
+    <a href="javascript:;">
+      <div class="Z_R_Ca Z_R_Cl">
+        <span>二维码邀请</span>
+      </div>
+    </a>
+    <!-- 单个按钮 右 -->
+    <a href="javascript:;">
+      <div class="Z_R_Ca Z_R_Cr">
+        <span>链接邀请</span>
+      </div>
+    </a>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+  <script>
+    $(function () {
+      var swiper = new Swiper('.swiper-container', {
+        autoplay: true,
+        slidesPerView: 'auto',
+        spaceBetween: 13,
+        centeredSlides: true,
+        pagination: {
+          el: '.swiper-pagination',
+          clickable: true,
+        },
+      });
+      // 设置邀请人数
+      var Z_RS = 9;
+      // 判断邀请人数满足的class
+      if (Z_RS >= $("#Hb_3").attr("data-v")) {
+        // 更改条件为满足颜色
+        $("#Hb_3").addClass("Hb_Y");
+        // 更改按钮为可点击状态
+        $('.Hb_A').removeClass("Hb_AF");
+      }
+      if (Z_RS >= $("#Hb_6").attr("data-v")) {
+        $("#Hb_6").addClass("Hb_Y");
+        $('.Hb_A').removeClass("Hb_AF");
+      }
+      if ((Z_RS - 6) % 3 == 0 && Z_RS - 6 > 0) {
+        $("#Hb_m").addClass("Hb_Y");
+        $('.Hb_A').removeClass("Hb_AF");
+      }
+      // 领取按钮点击事件
+      $('.Hb_A').click(function () {
+        // 更改按钮为禁止点击状态
+        $('.Hb_A').addClass("Hb_AF");
+      })
+    })
+  </script>
+</body>
+
+</html>
