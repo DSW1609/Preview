@@ -213,3 +213,32 @@ body {
   background-image: url(../img/tru.png);
   text-shadow: 2px 0px 0px #20b75a71;
 }
+
+.Z_Gz {
+  position: relative;
+  width: 84vw;
+  height: 80vw;
+  background: #fff;
+  margin: auto;
+  margin-top: 5vw;
+  border-radius: 5vw;
+  text-align: center;
+}
+
+.Z_Gz_Tit {
+  position: relative;
+  width: 28vw;
+  margin-top: 2vw;
+}
+
+.Z_Gz_Ha {
+  position: relative;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 2vw;
+  line-height: 6vw;
+  text-align: left;
+}
+
+/* 把16进制颜色代码修改成rgba格式即可 */
