@@ -193,7 +193,7 @@ body {
   position: relative;
   float: left;
   width: 54vw;
-  top: -3vw;
+  top: -2.5vw;
   height: 7vw;
   left: 3vw;
   margin-top: 2vw;
@@ -205,7 +205,7 @@ body {
   background-image: url(../img/fas.png);
   background-repeat: no-repeat;
   background-size: 10%;
-  background-position: 46.5vw 1.5vw;
+  background-position: 46.5vw 0vw;
 }
 
 .Hb_Y {
