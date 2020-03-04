@@ -130,7 +130,7 @@ body {
   color: #fff;
   font-size: 5vw;
   letter-spacing: 3px;
-  box-shadow: 0px 6px 0px #ff954354;
+  box-shadow: 0px 6px 0px rgba(255, 148, 67, .3);
 }
 
 .Z_R_Cl,
@@ -171,7 +171,7 @@ body {
   text-align: center;
   bottom: 2vw;
   left: 5vw;
-  box-shadow: 0px 2px 0px #20b75a46;
+  box-shadow: 0px 2px 0px rgb(32, 183, 89, .3);
   transition: 0.3s;
   z-index: 999;
 }
@@ -211,18 +211,19 @@ body {
 .Hb_Y {
   color: #20b759;
   background-image: url(../img/tru.png);
-  text-shadow: 2px 0px 0px #20b75a71;
+  text-shadow: 2px 0px 0px rgb(32, 183, 89, .3);
 }
 
 .Z_Gz {
   position: relative;
   width: 84vw;
-  height: 80vw;
   background: #fff;
   margin: auto;
   margin-top: 5vw;
   border-radius: 5vw;
   text-align: center;
+  padding-bottom: 10vw;
+  margin-bottom: 8vw;
 }
 
 .Z_Gz_Tit {
@@ -237,8 +238,40 @@ body {
   height: auto;
   margin: 0 auto;
   margin-top: 2vw;
-  line-height: 6vw;
   text-align: left;
+  font-size: 4.5vw;
+  color: rgb(255, 148, 67);
 }
 
-/* 把16进制颜色代码修改成rgba格式即可 */
+.Z_Gz_Ha i {
+  position: relative;
+  display: inline-block;
+  background: rgb(255, 148, 67);
+  color: #fff;
+  width: 5.5vw;
+  height: 5.5vw;
+  text-align: center;
+  font-style: normal;
+  font-size: 3.5vw;
+  border-radius: 5.5vw;
+  line-height: 5.5vw;
+}
+
+.Z_Gz_Te {
+  position: relative;
+  width: 92%;
+  left: 7vw;
+  margin-top: -6vw;
+  line-height: 6vw;
+  letter-spacing: 1px;
+}
+
+.Z_Gz_Js {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 2.3vw;
+  font-size: 3vw;
+  color: #333;
+  letter-spacing: 1px;
+}
