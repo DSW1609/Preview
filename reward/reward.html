@@ -132,27 +132,29 @@
         },
       });
       // 设置邀请人数
-      var Z_RS = 8;
+      var Z_RS = 6;
       // 判断邀请人数满足的class
       if (Z_RS >= $("#Hb_3").attr("data-v")) {
-        // 更改条件为满足颜色
-        $("#Hb_3").addClass("Hb_Y");
-        // 更改按钮为可点击状态
-        $('.Hb_A').removeClass("Hb_AF");
+        Hb("#Hb_3");
       }
       if (Z_RS >= $("#Hb_6").attr("data-v")) {
-        $("#Hb_6").addClass("Hb_Y");
-        $('.Hb_A').removeClass("Hb_AF");
+        Hb("#Hb_6");
       }
       if ((Z_RS - 6) % 3 == 0 && Z_RS - 6 > 0) {
-        $("#Hb_m").addClass("Hb_Y");
-        $('.Hb_A').removeClass("Hb_AF");
+        Hb("#Hb_m");
       }
       // 领取按钮点击事件
       $('.Hb_A').click(function () {
         // 更改按钮为禁止点击状态
         $('.Hb_A').addClass("Hb_AF");
       })
+
+      function Hb(obj) {
+        // 更改条件为满足颜色
+        $(obj).addClass("Hb_Y");
+        // 更改按钮为可点击状态
+        $('.Hb_A').removeClass("Hb_AF");
+      }
     })
   </script>
 </body>
