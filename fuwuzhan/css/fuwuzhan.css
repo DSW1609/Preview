@@ -250,7 +250,7 @@ em {
 }
 
 .F_Dl {
-  width: 80vw;
+  width: 68vw;
   height: 10vw;
   background: linear-gradient(#e35d5b, #e53935);
   border-radius: 2vw;
@@ -261,7 +261,11 @@ em {
   margin-top: 5vw;
   letter-spacing: 2px;
   margin-bottom: 10vw;
-  transition: 0.3s;
+  transition: 1s;
+}
+
+.F_Dl:hover {
+  background: #1474e4;
 }
 
 .F_W {
