@@ -7,6 +7,8 @@
 
 body {
   background: #fefefe;
+  /* 去除点击蓝色背景框 */
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 .F_Head {
@@ -160,7 +162,7 @@ em {
   border-radius: 4vw;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-top: -8vw;
-  background: linear-gradient(#FFFFFF, #ECE9E6);
+  background: #fff;
 }
 
 .F_Fw_Tit {
@@ -250,7 +252,7 @@ em {
 .F_Dl {
   width: 80vw;
   height: 10vw;
-  background: linear-gradient(to right, #e53935, #e35d5b);
+  background: linear-gradient(#e35d5b, #e53935);
   border-radius: 2vw;
   text-align: center;
   color: #fff;
@@ -260,11 +262,6 @@ em {
   letter-spacing: 2px;
   margin-bottom: 10vw;
   transition: 0.3s;
-}
-
-.F_Dl:hover {
-  width: 60vw;
-  border-radius: 10vw;
 }
 
 .F_W {
