@@ -1,0 +1,113 @@
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.F_Head {
+  position: relative;
+  width: 100vw;
+  height: 60vw;
+  background: #ff5c5c;
+  border-bottom-left-radius: 4vw;
+  border-bottom-right-radius: 4vw;
+}
+
+.F_Mp {
+  position: relative;
+  margin: 0 auto;
+}
+
+.F_Head_O {
+  width: 93vw;
+  height: 16vw;
+  top: 3vw;
+}
+
+.F_H_Tx {
+  position: relative;
+  float: left;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 15vw;
+  border: 2px solid #fff;
+}
+
+.F_H_Tx img {
+  width: 15vw;
+  height: 15vw;
+}
+
+.F_H_NI {
+  position: relative;
+  float: left;
+  width: 28.5vw;
+  height: 16vw;
+  left: 2vw;
+  color: #fff;
+  font-size: 3.6vw;
+}
+
+.F_H_Name {
+  position: relative;
+  width: 28.5vw;
+  height: 8vw;
+  letter-spacing: 1px;
+  margin-top: 0.8vw;
+}
+
+.H_Name {
+  position: absolute;
+  font-size: 5.2vw;
+  top: 1vw;
+  letter-spacing: 3px;
+}
+
+.F_H_Xing {
+  position: relative;
+  float: left;
+  width: 37vw;
+  height: 7vw;
+  top: 4.5vw;
+  background: #fefefe;
+  border-radius: 7vw;
+}
+
+.F_H_X {
+  position: relative;
+  float: left;
+  width: 6vw;
+  left: 0.5vw;
+  margin-left: 1vw;
+  margin-top: 0.5vw;
+}
+
+.F_H_Sz {
+  position: relative;
+  float: left;
+  width: 7vw;
+  height: 7vw;
+  top: 4.5vw;
+  left: 3.5vw;
+}
+
+.F_H_Sz img {
+  width: 7vw;
+}
+
+.F_Head_T {
+  width: 93vw;
+  height: 13vw;
+  top: 8vw;
+  background: black;
+}
+
+.H_Z_One {
+  position: relative;
+  float: left;
+  width: 20vw;
+  height: 13vw;
+  /* left: -16vw; */
+  margin-left: 1vw;
+  background: blanchedalmond;
+}
