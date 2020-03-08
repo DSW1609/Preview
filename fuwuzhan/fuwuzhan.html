@@ -14,12 +14,12 @@
     <!-- 第一部分(头像,星级,设置) -->
     <div class="F_Head_O F_Mp">
       <!-- 头像 -->
-      <div class="F_H_Tx">
+      <div class="F_H_Tx F_Rl">
         <!-- 头像图片 -->
         <img src="img/ZSFM.png" alt="">
       </div>
       <!-- 姓名及ID -->
-      <div class="F_H_NI">
+      <div class="F_H_NI F_Rl">
         <!-- 姓名 -->
         <div class="F_H_Name">
           <span class="H_Name">众善物联</span>
@@ -30,15 +30,15 @@
         </div>
       </div>
       <!-- 星级 -->
-      <div class="F_H_Xing">
+      <div class="F_H_Xing F_Rl">
         <!-- 亮心 -->
-        <Xl v-for="(i,index) in F_X"></Xl>
+        <Xl v-for="i in F_X"></Xl>
         <!-- 灰心 -->
-        <Xh v-for="(i,indez) in 5-F_X"></Xh>
+        <Xh v-for="i in 5-F_X"></Xh>
       </div>
       <!-- 设置 -->
       <a href="javascript:;">
-        <div class="F_H_Sz">
+        <div class="F_H_Sz F_Rl">
           <img src="img/SZ.svg" alt="">
         </div>
       </a>
@@ -47,22 +47,22 @@
     <!-- 第二部分(周期数据) -->
     <div class="F_Head_Tr">
       <!-- 单个周期数据 -->
-      <div class="H_Z_One Z_O_L">
+      <div class="H_Z_One F_Rl">
         <span class="Z_BN">8888</span>
         <br>
         <em>本年</em>
       </div>
-      <div class="H_Z_One">
+      <div class="H_Z_One F_Rl">
         <span class="Z_SZ">8888</span>
         <br>
         <em>上周</em>
       </div>
-      <div class="H_Z_One">
+      <div class="H_Z_One F_Rl">
         <span class="Z_BY">8888</span>
         <br>
         <em>本月</em>
       </div>
-      <div class="H_Z_One">
+      <div class="H_Z_One F_Rl">
         <span class="Z_SN">8888</span>
         <br>
         <em>上年</em>
@@ -72,7 +72,7 @@
     <!-- 第三部分(地址) -->
     <div class="F_Head_Td F_Mp">
       <!-- 左侧位置图标 -->
-      <img src="img/ADDSS.svg" alt="">
+      <img class="F_Rl" src="img/ADDSS.svg" alt="">
       <!-- 地址信息 -->
       <div class="F_H_A">
         <span class="H_A_ADS">山东省菏泽市牡丹区牡丹街道牡丹新城南区23号楼2单元</span>
@@ -85,7 +85,7 @@
   <div class="F_Fw F_Mp">
     <!-- 标题 -->
     <div class="F_Fw_Tit F_Mp">
-      <img src="img/fw_x.svg" alt="">
+      <img class="F_Rl" src="img/fw_x.svg" alt="">
       <span>服务信息</span>
     </div>
     <!-- 下方服务信息 -->
@@ -148,7 +148,7 @@
   <div class="F_Fw F_Mp F_Fwgj">
     <!-- 标题 -->
     <div class="F_Fw_Tit F_Mp">
-      <img src="img/fw_x.svg" alt="">
+      <img class="F_Rl" src="img/fw_x.svg" alt="">
       <span>服务工具</span>
     </div>
     <!-- 下方服务工具 -->
@@ -159,6 +159,10 @@
           <img src="img/g_sye.svg" alt="">
           <br>
           <span>站点首页</span>
+          <!-- 右上角消息提示 有消息添加Fw_Xs-->
+          <div class="Fw_Ting Fw_Xs">
+            99
+          </div>
         </div>
       </a>
       <a href="javascript:;">
@@ -166,6 +170,10 @@
           <img src="img/g_xx.svg" alt="">
           <br>
           <span>站点消息</span>
+          <!-- 右上角消息提示 -->
+          <div class="Fw_Ting">
+            99
+          </div>
         </div>
       </a>
       <a href="javascript:;">
@@ -173,6 +181,10 @@
           <img src="img/g_syi.svg" alt="">
           <br>
           <span>站点收益</span>
+          <!-- 右上角消息提示 -->
+          <div class="Fw_Ting Fw_Xs">
+            99
+          </div>
         </div>
       </a>
       <a href="javascript:;">
@@ -180,6 +192,10 @@
           <img src="img/g_sc.svg" alt="">
           <br>
           <span>站点时长</span>
+          <!-- 右上角消息提示 -->
+          <div class="Fw_Ting">
+            99
+          </div>
         </div>
       </a>
       <a href="javascript:;">
@@ -187,6 +203,10 @@
           <img src="img/g_dz.svg" alt="">
           <br>
           <span>位置信息</span>
+          <!-- 右上角消息提示 -->
+          <div class="Fw_Ting Fw_Xs">
+            99
+          </div>
         </div>
       </a>
       <a href="javascript:;">
@@ -194,6 +214,10 @@
           <img src="img/g_ph.svg" alt="">
           <br>
           <span>服务排行</span>
+          <!-- 右上角消息提示 -->
+          <div class="Fw_Ting">
+            99
+          </div>
         </div>
       </a>
       <a href="javascript:;">
@@ -201,6 +225,10 @@
           <img src="img/g_gz.svg" alt="">
           <br>
           <span>服务工具</span>
+          <!-- 右上角消息提示 -->
+          <div class="Fw_Ting Fw_Xs">
+            99
+          </div>
         </div>
       </a>
       <a href="javascript:;">
@@ -208,6 +236,10 @@
           <img src="img/g_love.svg" alt="">
           <br>
           <span>服务工具</span>
+          <!-- 右上角消息提示 -->
+          <div class="Fw_Ting">
+            99
+          </div>
         </div>
       </a>
       <a href="javascript:;">
@@ -215,32 +247,40 @@
           <img src="img/g_lw.svg" alt="">
           <br>
           <span>服务工具</span>
+          <!-- 右上角消息提示 -->
+          <div class="Fw_Ting Fw_Xs">
+            99
+          </div>
         </div>
       </a>
     </div>
   </div>
   <!-- 服务工具 -->
   <!-- 登录 未登录添加class: F_W -->
-  <div class="F_Dl F_Mp">
-    <span>退出登录</span>
-  </div>
+  <a href="javascript:;">
+    <div class="F_Dl F_Mp">
+      <span class="F_Dl_Te">退出登录</span>
+    </div>
+  </a>
   <!-- 登录 -->
   <script src="js/vue.min.js">
   </script>
   <script>
     // 初始化星级
-    var app = new Vue({
+    new Vue({
       el: ".F_H_Xing",
       data: {
         // 服务站星级
         F_X: 4
       },
       components: {
+        // 亮星
         Xl: {
-          template: '<img class="F_L F_H_X" src="img/X_L.svg" alt="">'
+          template: '<img class="F_L F_H_X F_Rl" src="img/X_L.svg" alt="">'
         },
+        // 灰星
         Xh: {
-          template: '<img class="F_L F_H_X" src="img/X_H.svg" alt="">'
+          template: '<img class="F_L F_H_X F_Rl" src="img/X_H.svg" alt="">'
         }
       }
     })

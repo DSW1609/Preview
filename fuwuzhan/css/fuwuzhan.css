@@ -2,6 +2,7 @@
   padding: 0;
   margin: 0;
   text-decoration: none;
+  user-select: none;
 }
 
 body {
@@ -12,14 +13,21 @@ body {
   position: relative;
   width: 100vw;
   height: 60vw;
-  background: #ff5c5c;
+  background: linear-gradient(#e35d5b, #e53935);
   border-bottom-left-radius: 4vw;
   border-bottom-right-radius: 4vw;
 }
 
+/* 相对定位居中 */
 .F_Mp {
   position: relative;
   margin: 0 auto;
+}
+
+/* 相对定位左浮动 */
+.F_Rl {
+  position: relative;
+  float: left;
 }
 
 .F_Head_O {
@@ -29,8 +37,6 @@ body {
 }
 
 .F_H_Tx {
-  position: relative;
-  float: left;
   width: 15vw;
   height: 15vw;
   border-radius: 15vw;
@@ -43,8 +49,6 @@ body {
 }
 
 .F_H_NI {
-  position: relative;
-  float: left;
   width: 28.5vw;
   height: 16vw;
   left: 2vw;
@@ -72,18 +76,14 @@ body {
 }
 
 .F_H_Xing {
-  position: relative;
-  float: left;
   width: 37vw;
   height: 7vw;
   top: 4.5vw;
-  background: #fefefe;
+  background: linear-gradient(#FFFFFF, #ECE9E6);
   border-radius: 7vw;
 }
 
 .F_H_X {
-  position: relative;
-  float: left;
   width: 6vw;
   left: 0.5vw;
   margin-left: 1vw;
@@ -91,8 +91,6 @@ body {
 }
 
 .F_H_Sz {
-  position: relative;
-  float: left;
   width: 7vw;
   height: 7vw;
   top: 4.5vw;
@@ -111,8 +109,6 @@ body {
 }
 
 .H_Z_One {
-  position: relative;
-  float: left;
   width: 25%;
   height: 13vw;
   text-align: center;
@@ -126,21 +122,20 @@ body {
 em {
   font-style: normal;
   font-size: 4.5vw;
+  letter-spacing: 1px;
 }
 
 .F_Head_Td {
   position: relative;
   width: 93vw;
   height: 10vw;
-  background: #fff;
+  background: linear-gradient(#FFFFFF, #ECE9E6);
   border-radius: 10vw;
   margin-top: 22.5vw;
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
 }
 
 .F_Head_Td img {
-  position: relative;
-  float: left;
   width: 8vw;
   top: 1vw;
   left: 1vw;
@@ -162,10 +157,10 @@ em {
   position: relative;
   width: 93vw;
   height: 50vw;
-  background: #fff;
   border-radius: 4vw;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-top: -8vw;
+  background: linear-gradient(#FFFFFF, #ECE9E6);
 }
 
 .F_Fw_Tit {
@@ -180,8 +175,6 @@ em {
 }
 
 .F_Fw_Tit img {
-  position: relative;
-  float: left;
   width: 8vw;
   top: 0.5vw;
 }
@@ -247,6 +240,7 @@ em {
   line-height: 4.5vw;
   font-size: 4vw;
   color: #333;
+  border-radius: 3vw;
 }
 
 .Fw_One img {
@@ -256,8 +250,8 @@ em {
 .F_Dl {
   width: 80vw;
   height: 10vw;
-  background: #ef4e4e;
-  border-radius: 3vw;
+  background: linear-gradient(to right, #e53935, #e35d5b);
+  border-radius: 2vw;
   text-align: center;
   color: #fff;
   line-height: 10vw;
@@ -265,8 +259,49 @@ em {
   margin-top: 5vw;
   letter-spacing: 2px;
   margin-bottom: 10vw;
+  transition: 0.3s;
+}
+
+.F_Dl:hover {
+  width: 60vw;
+  border-radius: 10vw;
 }
 
 .F_W {
   background: #1474e4;
+}
+
+.Fw_Ting {
+  position: absolute;
+  width: 5.2vw;
+  height: 5.2vw;
+  background: red;
+  border-radius: 5vw;
+  top: -1vw;
+  right: 5.5vw;
+  color: #fff;
+  text-align: center;
+  line-height: 5.2vw;
+  font-size: 3.5vw;
+  display: none;
+  animation: Ting_Key 1.5s linear infinite;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Fw_Xs {
+  display: block;
+}
+
+@keyframes Ting_Key {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
 }
