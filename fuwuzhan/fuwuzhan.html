@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>服务站</title>
+  <title>我的服务站</title>
   <link rel="stylesheet" href="css/fuwuzhan.css">
 </head>
 
@@ -15,13 +15,14 @@
     <div class="F_Head_O F_Mp">
       <!-- 头像 -->
       <div class="F_H_Tx">
+        <!-- 头像图片 -->
         <img src="img/ZSFM.png" alt="">
       </div>
       <!-- 姓名及ID -->
       <div class="F_H_NI">
         <!-- 姓名 -->
         <div class="F_H_Name">
-          <span class="H_Name">王嘉辉</span>
+          <span class="H_Name">众善物联</span>
         </div>
         <!-- ID -->
         <div class="F_H_Name F_H_Id">
@@ -30,13 +31,10 @@
       </div>
       <!-- 星级 -->
       <div class="F_H_Xing">
-        <!-- 红星 -->
-        <img class="F_L F_H_X" src="img/X_L.svg" alt="">
-        <img class="F_L F_H_X" src="img/X_L.svg" alt="">
-        <img class="F_L F_H_X" src="img/X_L.svg" alt="">
-        <!-- 灰星 -->
-        <img class="F_H F_H_X" src="img/X_H.svg" alt="">
-        <img class="F_H F_H_X" src="img/X_H.svg" alt="">
+        <!-- 亮心 -->
+        <Xl v-for="(i,index) in F_X"></Xl>
+        <!-- 灰心 -->
+        <Xh v-for="(i,indez) in 5-F_X"></Xh>
       </div>
       <!-- 设置 -->
       <a href="javascript:;">
@@ -86,7 +84,8 @@
   <!-- 服务信息 -->
   <div class="F_Fw F_Mp">
     <!-- 标题 -->
-    <div class="F_Fw_Tit">
+    <div class="F_Fw_Tit F_Mp">
+      <img src="img/fw_x.svg" alt="">
       <span>服务信息</span>
     </div>
     <!-- 下方服务信息 -->
@@ -145,6 +144,107 @@
     </div>
   </div>
   <!-- 服务信息 -->
+  <!-- 服务工具 -->
+  <div class="F_Fw F_Mp F_Fwgj">
+    <!-- 标题 -->
+    <div class="F_Fw_Tit F_Mp">
+      <img src="img/fw_x.svg" alt="">
+      <span>服务工具</span>
+    </div>
+    <!-- 下方服务工具 -->
+    <div class="F_Fw_Ctt2">
+      <!-- 单个服务工具 -->
+      <a href="javascript:;">
+        <div class="Fw_One">
+          <img src="img/g_sye.svg" alt="">
+          <br>
+          <span>站点首页</span>
+        </div>
+      </a>
+      <a href="javascript:;">
+        <div class="Fw_One">
+          <img src="img/g_xx.svg" alt="">
+          <br>
+          <span>站点消息</span>
+        </div>
+      </a>
+      <a href="javascript:;">
+        <div class="Fw_One">
+          <img src="img/g_syi.svg" alt="">
+          <br>
+          <span>站点收益</span>
+        </div>
+      </a>
+      <a href="javascript:;">
+        <div class="Fw_One">
+          <img src="img/g_sc.svg" alt="">
+          <br>
+          <span>站点时长</span>
+        </div>
+      </a>
+      <a href="javascript:;">
+        <div class="Fw_One">
+          <img src="img/g_dz.svg" alt="">
+          <br>
+          <span>位置信息</span>
+        </div>
+      </a>
+      <a href="javascript:;">
+        <div class="Fw_One">
+          <img src="img/g_ph.svg" alt="">
+          <br>
+          <span>服务排行</span>
+        </div>
+      </a>
+      <a href="javascript:;">
+        <div class="Fw_One">
+          <img src="img/g_gz.svg" alt="">
+          <br>
+          <span>服务工具</span>
+        </div>
+      </a>
+      <a href="javascript:;">
+        <div class="Fw_One">
+          <img src="img/g_love.svg" alt="">
+          <br>
+          <span>服务工具</span>
+        </div>
+      </a>
+      <a href="javascript:;">
+        <div class="Fw_One">
+          <img src="img/g_lw.svg" alt="">
+          <br>
+          <span>服务工具</span>
+        </div>
+      </a>
+    </div>
+  </div>
+  <!-- 服务工具 -->
+  <!-- 登录 未登录添加class: F_W -->
+  <div class="F_Dl F_Mp">
+    <span>退出登录</span>
+  </div>
+  <!-- 登录 -->
+  <script src="js/vue.min.js">
+  </script>
+  <script>
+    // 初始化星级
+    var app = new Vue({
+      el: ".F_H_Xing",
+      data: {
+        // 服务站星级
+        F_X: 4
+      },
+      components: {
+        Xl: {
+          template: '<img class="F_L F_H_X" src="img/X_L.svg" alt="">'
+        },
+        Xh: {
+          template: '<img class="F_L F_H_X" src="img/X_H.svg" alt="">'
+        }
+      }
+    })
+  </script>
 </body>
 
 </html>

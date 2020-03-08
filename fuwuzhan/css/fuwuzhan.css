@@ -62,9 +62,13 @@ body {
 
 .H_Name {
   position: absolute;
+  width: 30vw;
   font-size: 5.2vw;
   top: 1vw;
   letter-spacing: 3px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .F_H_Xing {
@@ -160,53 +164,109 @@ em {
   height: 50vw;
   background: #fff;
   border-radius: 4vw;
-  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   margin-top: -8vw;
 }
 
 .F_Fw_Tit {
-  position: relative;
-  width: 100%;
-  height: 8vw;
-  line-height: 8vw;
+  width: 28vw;
+  height: 9vw;
+  line-height: 9vw;
   color: #333;
   font-size: 4.5vw;
   text-align: center;
   letter-spacing: 1px;
+  top: 1vw;
+}
+
+.F_Fw_Tit img {
+  position: relative;
+  float: left;
+  width: 8vw;
+  top: 0.5vw;
 }
 
 .F_Fw_Ctt {
   width: 90vw;
   height: 40vw;
+  margin-top: 0.5vw;
 }
 
-.F_Fw_One{
+.F_Fw_One {
   position: relative;
   float: left;
   width: 50%;
   height: 50%;
 }
-.F_Fw_One img{
+
+.F_Fw_One img {
   position: absolute;
   width: 40%;
   left: 3%;
 }
-.Fw_One_Xx{
+
+.Fw_One_Xx {
   position: absolute;
   width: 50%;
   top: 20%;
   left: 40%;
-  line-height: 5.5vw;
+  line-height: 6vw;
   text-align: center;
 }
-.Fw_One_Xx span{
+
+.Fw_One_Xx span {
   font-size: 6.5vw;
   color: #ff5c5c;
 }
-.Fw_One_Xx em{
+
+.Fw_One_Xx em {
   font-size: 4.5vw;
   color: #333;
 }
-.Fw_One_r{
+
+.Fw_One_r {
   width: 56%;
+}
+
+.F_Fwgj {
+  margin-top: 5vw;
+  height: 85vw;
+}
+
+.F_Fw_Ctt2 {
+  width: 100%;
+  text-align: center;
+  margin-top: 1.5vw;
+}
+
+.Fw_One {
+  position: relative;
+  float: left;
+  width: 33%;
+  height: 25vw;
+  line-height: 4.5vw;
+  font-size: 4vw;
+  color: #333;
+}
+
+.Fw_One img {
+  width: 50%;
+}
+
+.F_Dl {
+  width: 80vw;
+  height: 10vw;
+  background: #ef4e4e;
+  border-radius: 3vw;
+  text-align: center;
+  color: #fff;
+  line-height: 10vw;
+  font-size: 5vw;
+  margin-top: 5vw;
+  letter-spacing: 2px;
+  margin-bottom: 10vw;
+}
+
+.F_W {
+  background: #1474e4;
 }
