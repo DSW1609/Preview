@@ -282,15 +282,14 @@ body {
 .act_te {
   position: absolute;
   color: #fef951;
-  font-size: 6.6vw;
+  font-size: 7vw;
   left: 0;
   right: 0;
   text-align: center;
   top: 37%;
   font-weight: bold;
   letter-spacing: 0.6vw;
-  font-style: oblique;
-  text-shadow: 1px 1px 0px rgb(254, 249, 81, .3);
+  text-shadow: 3px 1px 0px rgb(254, 249, 81, .3);
 }
 
 .head_st_yc {
