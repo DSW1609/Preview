@@ -1,0 +1,442 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  box-sizing: border-box;
+}
+
+body {
+  background: #f2f2f2;
+  padding-bottom: 20vw;
+}
+
+.head {
+  position: relative;
+  width: 100vw;
+  height: 57vw;
+  background: #eb3528;
+  color: #fff;
+  transition: 0.3s;
+}
+
+.head_tx {
+  position: relative;
+  width: 88vw;
+  height: 20vw;
+  margin: 0 auto;
+  top: 5vw;
+  font-size: 4vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
+#head_tx {
+  position: relative;
+  width: 20vw;
+  border-radius: 20vw;
+  margin-bottom: 1vw;
+  overflow: hidden;
+}
+
+.head_level {
+  position: relative;
+  left: 6vw;
+  background: #fbd404;
+  border-radius: 2vw;
+}
+
+.head_level img {
+  position: absolute;
+  width: 7vw;
+  top: -1vw;
+  left: -1vw;
+  border-radius: 7vw;
+  background: #fb1436;
+  padding: 0.5vw;
+  border: 0.5vw solid #fbd404;
+}
+
+.head_level em {
+  position: relative;
+  padding-left: 7vw;
+  padding-right: 1vw;
+  font-style: normal;
+  font-size: 3.5vw;
+}
+
+.head_st {
+  position: absolute;
+  top: 3vw;
+  right: 3vw;
+  width: 8vw;
+  height: 8vw;
+  color: #333;
+}
+
+.head_st img {
+  width: 8vw;
+  border-radius: 8vw;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+}
+
+.head_btn {
+  position: relative;
+  width: 96vw;
+  height: 7vh;
+  margin: 0 auto;
+  top: 16vw;
+}
+
+.head_btn_one {
+  position: relative;
+  float: left;
+  width: 25%;
+  text-align: center;
+  font-size: 3.5vw;
+}
+
+.one_num {
+  font-size: 4.5vw;
+}
+
+.order {
+  position: relative;
+  width: 92vw;
+  height: 36vw;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5vw;
+  top: -8vw;
+}
+
+.order_tit {
+  position: relative;
+  width: 90vw;
+  height: 11vw;
+  margin: 0 auto;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.order_tit_l {
+  position: absolute;
+  color: #333;
+  font-weight: bold;
+  top: 1.3vh;
+  left: 3vw;
+  font-size: 4vw;
+}
+
+.order_tit_r {
+  position: absolute;
+  right: 3vw;
+  top: 1.6vh;
+  font-size: 3.5vw;
+  color: #666;
+}
+
+.order_content {
+  position: relative;
+  width: 95%;
+  height: 22vw;
+  margin: 0 auto;
+  top: 5.2vw;
+}
+
+.order_btn {
+  position: relative;
+  float: left;
+  width: 18%;
+  height: 100%;
+  text-align: center;
+  color: #555;
+  margin-left: 2%;
+  left: -2%;
+  font-size: 3.5vw;
+  line-height: 6vw;
+}
+
+.order_btn img {
+  width: 55%;
+}
+
+.infmion {
+  position: relative;
+  width: 92vw;
+  height: 38vw;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 5vw;
+  top: -4vw;
+}
+
+.inf_one {
+  position: relative;
+  display: inline-block;
+  width: 25%;
+  left: 3%;
+  margin-left: -2%;
+  margin-top: 6%;
+  text-align: center;
+  font-size: 3.5vw;
+  color: #555;
+}
+
+.inf_one img {
+  width: 50%;
+  opacity: 0.9;
+}
+
+.inf_one span {
+  position: relative;
+  top: 1vw;
+}
+
+.info_one_r {
+  position: absolute;
+  height: 5vw;
+  line-height: 2.5vw;
+  top: -5vw;
+  right: 0;
+  font-size: 2vw;
+  color: #f23921;
+  font-weight: bold;
+}
+
+.info_one_r img {
+  position: relative;
+  float: left;
+  width: 4vw;
+}
+
+.magent {
+  top: 0.5vw;
+}
+
+.magent_ctt {
+  width: 100%;
+  top: -2vw;
+}
+
+.mag_one {
+  width: 20%;
+  margin-top: 6.5%;
+  left: 3%;
+}
+
+.mag_one img {
+  width: 55% !important;
+}
+
+.login {
+  position: relative;
+  width: 80vw;
+  height: 10vw;
+  background: #fb1436;
+  margin: 0 auto;
+  border-radius: 1vw;
+  top: 5vw;
+  text-align: center;
+  font-size: 4vw;
+  line-height: 10vw;
+  color: #fff;
+  letter-spacing: 1px;
+}
+
+.order_b {
+  position: absolute;
+  width: 6vw;
+  height: 6vw;
+  background: #fff;
+  border: 0.5vw solid #fb1436;
+  border-radius: 6vw;
+  color: #fb1436;
+  text-align: center;
+  line-height: 5vw;
+  top: -2vw;
+  right: 0;
+  font-size: 3.6vw;
+  display: none;
+}
+
+.d_zc {
+  margin-top: 5vw;
+}
+
+.act {
+  position: relative;
+  width: 92vw;
+  height: 30vw;
+  background: red;
+  margin: 0 auto;
+  top: -5vw;
+  border-radius: 5vw;
+  overflow: hidden;
+  margin-bottom: 2vw;
+}
+
+.act img {
+  width: 100%;
+}
+
+.act_te {
+  position: absolute;
+  color: #fef951;
+  font-size: 6.6vw;
+  left: 0;
+  right: 0;
+  text-align: center;
+  top: 37%;
+  font-weight: bold;
+  letter-spacing: 0.6vw;
+  font-style: oblique;
+  text-shadow: 1px 1px 0px #fbd60428;
+}
+
+.head_st_yc {
+  position: absolute;
+  width: 30vw;
+  height: 50vw;
+  right: 0;
+  z-index: 999;
+  opacity: 0;
+  transition: 0.3s;
+  background: #fff;
+  border-radius: 5vw;
+  box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.1);
+}
+
+.st_tit {
+  text-align: center;
+  height: 8vw;
+  color: #333;
+  line-height: 8vw;
+  font-size: 3.2vw;
+  letter-spacing: 1px;
+}
+
+.st_theme {
+  position: relative;
+  width: 30vw;
+  height: 40vw;
+  margin: 0 auto;
+}
+
+.st_tm_one {
+  position: relative;
+  display: inline-block;
+  width: 10vw;
+  height: 10vw;
+  top: -2.5vw;
+  margin-left: 3vw;
+  margin-top: 3vw;
+  border-radius: 10vw;
+  border: 1vw solid #f1f1f1;
+}
+
+.act_end {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  display: none;
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.act_end_t {
+  position: absolute;
+  width: 60vw;
+  height: 76vw;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  background-image: url(../img/tt_bg.jpg);
+  background-size: 100% 100%;
+  border-radius: 5vw;
+}
+
+.end_ts {
+  position: relative;
+  width: 28vw;
+  height: 8vw;
+  background: #ffee00;
+  color: #ff2e31;
+  text-align: center;
+  margin: 0 auto;
+  font-weight: bold;
+  line-height: 8vw;
+  border-radius: 8vw;
+  margin-top: 2vw;
+  letter-spacing: 1px;
+}
+
+.end_tit {
+  position: absolute;
+  left: 0;
+  right: 0;
+  text-align: center;
+  color: #fff;
+  font-size: 4.5vw;
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin: auto;
+  margin-top: 2vw;
+  font-family: "MicroSoft Yahei";
+}
+
+#end_tx {
+  position: absolute;
+  right: 1.6vw;
+  top: 3.6vw;
+  width: 7vw;
+  height: 7vw;
+}
+
+.end_get {
+  position: relative;
+  text-align: center;
+  color: #fff;
+  font-weight: bold;
+  font-family: "MicroSoft Yahei";
+  font-size: 4vw;
+  margin-top: 36vw;
+  letter-spacing: 1px;
+}
+
+.end_cy {
+  color: #ffee00;
+  margin: 0 0.5vw;
+}
+
+.end_bt {
+  position: relative;
+  width: 80%;
+  height: 8vw;
+  margin: 0 auto;
+  margin-top: 3vw;
+}
+
+.end_bt_one {
+  position: relative;
+  width: 46%;
+  height: 8vw;
+  background: #ffee00;
+  color: #eb3528;
+  font-size: 3.5vw;
+  text-align: center;
+  line-height: 8vw;
+  border-radius: 8vw;
+  font-weight: bold;
+}
+
+.end_bt_l {
+  float: left;
+}
+
+.end_bt_r {
+  float: right;
+}
