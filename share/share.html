@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <title>我的推广码</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/share.css">
+</head>
+
+<body>
+  <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <img src="img/fx1.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/fx1.jpg" alt="">
+      </div>
+      <div class="swiper-slide">
+        <img src="img/fx1.jpg" alt="">
+      </div>
+    </div>
+    <!-- 分页器 -->
+    <div class="swiper-pagination"></div>
+  </div>
+  <script src="js/swiper.min.js"></script>
+  <script>
+    var swiper = new Swiper('.swiper-container', {
+      autoplay: true,
+      loop: true,
+      slideToClickedSlide: true,
+      slidesPerView: 'auto',
+      spaceBetween: 25,
+      centeredSlides: true,
+      pagination: {
+        el: '.swiper-pagination',
+        clickable: true,
+      },
+    });
+  </script>
+</body>
+
+</html>
