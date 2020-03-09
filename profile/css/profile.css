@@ -286,10 +286,11 @@ body {
   left: 0;
   right: 0;
   text-align: center;
-  top: 37%;
-  font-weight: bold;
+  top: 38%;
+  font-style: oblique;
+  font-weight: bolder;
   letter-spacing: 0.6vw;
-  text-shadow: 3px 1px 0px rgb(254, 249, 81, .3);
+  text-shadow: 1vw 0vw 0px rgb(254, 249, 81, .3);
 }
 
 .head_st_yc {
