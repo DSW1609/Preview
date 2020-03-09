@@ -289,7 +289,7 @@ body {
   top: 38%;
   font-style: oblique;
   letter-spacing: 0.6vw;
-  text-shadow: 0.5vw 0vw 0px rgb(254, 249, 81, .3);
+  text-shadow: 0.5vw 0vw 1vw rgb(254, 249, 81, .3);
 }
 
 .head_st_yc {
