@@ -288,9 +288,8 @@ body {
   text-align: center;
   top: 38%;
   font-style: oblique;
-  font-weight: bolder;
   letter-spacing: 0.6vw;
-  text-shadow: 1vw 0vw 0px rgb(254, 249, 81, .3);
+  text-shadow: 0.5vw 0vw 0px rgb(254, 249, 81, .3);
 }
 
 .head_st_yc {
