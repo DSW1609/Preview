@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>砸金蛋</title>
+  <link rel="stylesheet" href="css/zajindan.css">
+</head>
+
+<body>
+  <div class="Z_Head">
+    <!-- 金蛋蛋图片 -->
+    <img class="JDD" src="img/JDD.png" alt="">
+    <!-- 锤子图片 -->
+    <img class="CZ" src="img/CZ.png" alt="">
+    <!-- 抽奖信息 -->
+    <div class="CJ">
+      <!-- 信息背景图 -->
+      <img class="CJXX" src="img/CJXX.png" alt="">
+      <!-- 信息文字部分 -->
+      <!-- 信息标题 -->
+      <div class="Xx_Tt Xx_Tit"></div>
+      <!-- 信息信息 -->
+      <div class="Xx_Xx Xx_Tit">
+      </div>
+      <!-- 再来按钮 -->
+      <div class="Xx_Btn Xx_Tit">
+        再来一次
+      </div>
+      <!-- 关闭按钮 -->
+      <div class="Xx_Gb">
+        <img src="img/GB.svg" alt="">
+      </div>
+      <!-- 信息文字部分 -->
+    </div>
+    <!-- 公告 -->
+    <div class="Z_Gg">
+      <img src="img/XLB.svg" alt="">
+      <div class="Z_Gg_Ctt">
+        <div class="Z_G_Gx">恭喜</div>
+        <!-- 公告中用户中奖信息 -->
+        <div class="G_Te_Ctt">
+          <div class="Z_G_Te" id="Z_G_Te">
+            <!-- 用户名 -->
+            <span class="G_Name">可爱的嘉辉</span>
+            <!-- 获得奖励 -->
+            <span class="G_Jp">获得800积分~</span>
+          </div>
+          <div class="Z_G_Te">
+            <!-- 用户名 -->
+            <span class="G_Name">王王王</span>
+            <!-- 获得奖励 -->
+            <span class="G_Jp">获得100元优惠券~</span>
+          </div>
+          <div class="Z_G_Te">
+            <!-- 用户名 -->
+            <span class="G_Name">在在在在在在</span>
+            <!-- 获得奖励 -->
+            <span class="G_Jp">获得50元优惠券~</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 奖品详情 -->
+    <div class="Z_Jp">
+      <!-- 左侧奖品标题 -->
+      <div class="Z_Jp_Tit">
+        <!-- 有几率开出 -->
+        <span>有几率开出</span>
+      </div>
+      <!-- 右侧奖品详情 -->
+      <div class="Z_Jp_Ctt">
+        <!-- 单个奖品 -->
+        <div class="Jp_One">
+        </div>
+        <div class="Jp_One">
+        </div>
+        <div class="Jp_One">
+        </div>
+        <div class="Jp_One">
+        </div>
+        <div class="Jp_One">
+        </div>
+        <div class="Jp_One">
+        </div>
+      </div>
+    </div>
+    <!-- 按钮 -->
+    <div class="Z_C">
+      <!-- 左侧按钮 -->
+      <div class="Z_C_Btn C_Btn_L">
+        <span>活动规则</span>
+      </div>
+      <!-- 右侧按钮 -->
+      <div class="Z_C_Btn C_Btn_R">
+        <span>中奖信息</span>
+      </div>
+    </div>
+  </div>
+  <!-- 中奖信息 -->
+  <div class="ZJXX">
+    <div class="XX_Item">恭喜您获得800积分~</div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script>
+    $(function () {
+      // 定义抽奖信息
+      var XX = [{
+          // 标题
+          Tit: '中奖了',
+          // 信息
+          Xx: '恭喜您获得300积分~',
+        },
+        {
+          // 标题
+          Tit: '中奖了',
+          // 信息
+          Xx: '恭喜您获得800积分~',
+        },
+        {
+          // 标题
+          Tit: '中奖了',
+          // 信息
+          Xx: '恭喜您获得50元优惠券',
+        },
+        {
+          // 标题
+          Tit: '中奖了',
+          // 信息
+          Xx: '恭喜您获得100元优惠券',
+        },
+        {
+          // 标题
+          Tit: '未中奖',
+          // 信息
+          Xx: '调整下姿势再来一次吧',
+        }
+      ];
+      // 设置变量防止用户多次点击
+      var JDD_Flag = true;
+      // 金蛋蛋点击事件
+      $(".JDD").click(function () {
+        // 如果为true执行点击事件
+        if (JDD_Flag) {
+          // 执行后变为false,该事件禁止触发
+          JDD_Flag = false;
+          // 获得随机数
+          var SJX = Math.floor(Math.random() * XX.length);
+          // 添加抽奖信息
+          // 信息标题
+          $(".Xx_Tt").text(XX[SJX].Tit);
+          // 信息信息
+          $(".Xx_Xx").text(XX[SJX].Xx);
+          setTimeout(() => {
+            // 更改金蛋蛋图片
+            $(".JDD").attr('src', 'img/JDDS.png');
+            // 显示抽奖信息
+            $(".CJ").css('transform', 'scale(1.2)');
+            // 如果中奖了下方打印信息
+            if (SJX != XX.length - 1) {
+              // 打印
+              $(".ZJXX").prepend('<div class="XX_Item">' + XX[SJX].Xx + '</div>')
+            }
+          }, 500);
+          // 更改锤子为砸开动画
+          $(".CZ").css('animation', 'CZ_Z 0.5s');
+        }
+      })
+      // 按钮点击事件
+      function GB() {
+        // 更改锤子为未砸动画
+        $(".CZ").css('animation', 'CZ_WZ 1.8s linear infinite');
+        // 更改金蛋蛋图片
+        $(".JDD").attr('src', 'img/JDD.png');
+        // 显示抽奖信息
+        $(".CJ").css('transform', 'scale(0)');
+        // 更改变量为true,恢复金蛋蛋点击
+        JDD_Flag = true;
+      }
+      // 关闭按钮点击事件
+      $(".Xx_Gb").click(function () {
+        GB()
+      })
+      // 再来一次按钮点击事件
+      $(".Xx_Btn").click(function () {
+        GB()
+      })
+      // 公告滚动效果
+      // 复制第一个用户信息
+      $('.G_Te_Ctt').append($('#Z_G_Te').clone());
+      // 创建变量记录当前滚动的位置
+      var G_Te = 1
+      // 开启定时器3s一次向上滚动
+      setInterval(() => {
+        // 每次上移-9vw
+        $(".G_Te_Ctt").css("top", '-9' * G_Te + 'vw');
+        // 判断到了末尾更改部分样式
+        if (G_Te == $('.Z_G_Te').length) {
+          $(".G_Te_Ctt").css("transition", '0s');
+          G_Te = 1;
+          $(".G_Te_Ctt").css("top", '0vw');
+        }
+        // 否则继续滚动 
+        else {
+          G_Te += 1
+          $(".G_Te_Ctt").css("transition", '1.5s');
+        }
+      }, 3000);
+    })
+  </script>
+</body>
+
+</html>
