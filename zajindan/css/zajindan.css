@@ -13,8 +13,27 @@ body {
 .Z_Head {
   position: relative;
   width: 100vw;
-  height: 145vw;
+  height: 150vw;
   overflow: hidden;
+}
+
+.Z_Head_Jh {
+  position: absolute;
+  width: 100%;
+  height: 6vw;
+  border-radius: 6vw;
+  top: 66vw;
+  text-align: center;
+  color: #fff;
+  font-size: 4.5vw;
+  letter-spacing: 1px;
+}
+
+.Z_Head_Jh i {
+  font-style: normal;
+  color: #4cc5fd;
+  font-size: 5vw;
+  font-weight: bold;
 }
 
 .JDD {
@@ -24,17 +43,24 @@ body {
   margin-top: 10vw;
 }
 
-.CJ {
+.Cj_Ctt {
   position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  z-index: 999;
+  transform: scale(0);
+  transition: 1s;
+}
+
+.CJ {
+  position: absolute;
   width: 70vw;
   height: 80vw;
   left: 0;
   right: 0;
   margin: auto;
-  top: 20vw;
-  transform: scale(0);
-  transition: 1s;
-  z-index: 999;
+  top: 30vw;
 }
 
 .CJXX {
@@ -116,24 +142,16 @@ body {
   margin: auto;
 }
 
+#Yc_Gb,
+#Zj_Gb {
+  bottom: -10vw;
+}
+
 .Xx_Gb img {
   width: 8vw;
   height: 8vw;
 }
 
-.ZJXX {
-  position: relative;
-  width: 80vw;
-  height: 60vw;
-  background: #fff;
-  margin: 0 auto;
-  border-radius: 3vw;
-  padding: 3vw;
-  font-size: 5vw;
-  letter-spacing: 1px;
-  color: #eba932;
-  margin-top: 20vw;
-}
 
 .Z_C {
   position: absolute;
@@ -156,7 +174,13 @@ body {
   letter-spacing: 2px;
   border-radius: 3vw;
   font-weight: bold;
-  box-shadow: 0px 5px 0px #ff9900;
+  transition: 0.3s;
+  box-shadow: 0px 1vw 0px #ff9900;
+}
+
+.Z_C_Btn:hover {
+  height: 12vw;
+  box-shadow: none;
 }
 
 .C_Btn_R {
@@ -169,7 +193,7 @@ body {
   height: 9vw;
   background: #fff;
   left: 6vw;
-  margin-top: 70vw;
+  margin-top: 75vw;
   border-radius: 3vw;
   overflow: hidden;
   box-shadow: 0px 3px 0px #f1f1f1;
@@ -233,7 +257,7 @@ body {
   height: 40vw;
   margin: auto;
   border-radius: 3vw;
-  margin-top: 83vw;
+  margin-top: 88vw;
   box-shadow: 0px 6px 0px #ff9801;
   background-image: url(../img/Z_Jp.jpg);
   background-size: 100% 100%;
@@ -264,10 +288,236 @@ body {
   float: left;
   width: 18vw;
   height: 16vw;
-  margin-top: 3vw;
-  margin-left: 6vw;
-  left: -1vw;
+  margin-top: 3.5vw;
+  margin-left: 6.6vw;
+  left: -2vw;
   top: -1vw;
-  background-image: url(../img/Jp_Im.png);
   background-size: 100%;
+  animation: Jp_One 1.5s linear infinite;
+}
+
+.Jp_One_100 {
+  background-image: url(../img/Jp_Im_100.png);
+}
+
+.Jp_One_50 {
+  background-image: url(../img/Jp_Im_50.png);
+}
+
+.Jp_One_30 {
+  background-image: url(../img/Jp_Im_30.png);
+}
+
+.Jp_One_800 {
+  background-image: url(../img/Jp_Im_800.png);
+}
+
+.Jp_One_500 {
+  background-image: url(../img/Jp_Im_500.png);
+}
+
+.Jp_One_300 {
+  background-image: url(../img/Jp_Im_300.png);
+}
+
+/* 优惠券礼品放大缩小动画 */
+@keyframes Jp_One {
+  0% {
+    transform: scale(1)
+  }
+
+  50% {
+    transform: scale(1.05)
+  }
+
+  100% {
+    transform: scale(1)
+  }
+}
+
+.C_L_Ctt {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: 0.5s;
+  transform: scale(0);
+}
+
+.Zj_Xx_Ctt {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.3);
+  top: 0;
+  left: 0;
+  z-index: 999;
+  transition: 0.5s;
+  transform: scale(0);
+}
+
+.C_L_Yc,
+.ZJXX {
+  position: absolute;
+  width: 80vw;
+  height: auto;
+  background: #fff;
+  top: 20vw;
+  border-radius: 3vw;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+.ZJXX {
+  height: 100vw;
+}
+
+.XX_Item {
+  position: relative;
+  float: left;
+  width: 96%;
+  height: 6vw;
+  left: 2%;
+  margin-top: 2vw;
+  font-size: 3.5vw;
+  text-align: left;
+  text-indent: 1vw;
+  line-height: 6vw;
+  color: #fab544;
+  border-bottom: 1px solid #f1f1f1;
+}
+
+.XX_Item time {
+  position: absolute;
+  display: inline-block;
+  right: 2vw;
+  font-size: 3vw;
+}
+
+.Yc_Tit {
+  position: relative;
+  width: 100%;
+  height: 10vw;
+  text-align: center;
+  color: #d72e31;
+  line-height: 10vw;
+  font-size: 4vw;
+}
+
+.Yc_Ctt {
+  position: relative;
+  width: 90%;
+  height: 80vw;
+  left: 5%;
+  overflow-y: scroll;
+}
+
+.Yc_One {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-align: left;
+  font-size: 3.5vw;
+  line-height: 5vw;
+  color: #555;
+  margin-top: 2vw;
+  top: -2vw;
+}
+
+.Yc_One_B {
+  text-align: center;
+  color: #666;
+  font-size: 3vw;
+  margin-top: 5vw;
+}
+
+.Z_Rw {
+  position: relative;
+  width: 88vw;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 3vw;
+  margin-bottom: 10vw;
+  margin-top: 2vw;
+  padding-bottom: 5vw;
+  box-shadow: 0px 5px 0px #f1f1f1;
+}
+
+.Z_Rw_Tit {
+  position: relative;
+  width: 100%;
+  height: auto;
+  text-indent: 3vw;
+  font-size: 4.5vw;
+  letter-spacing: 1px;
+  text-align: center;
+  top: 1.5vw;
+  color: #ee3a3d;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.Rw_One {
+  position: relative;
+  width: 96%;
+  height: 10vw;
+  left: 2%;
+  top: 1.5vw;
+  margin-top: 4vw;
+  border-radius: 3vw;
+  line-height: 10vw;
+  font-weight: bold;
+  box-shadow: 0px 2px 0px #f1f1f1;
+}
+
+.Rw_Cs {
+  position: relative;
+  float: left;
+  width: 12vw;
+  height: 10vw;
+  left: 3vw;
+  font-size: 6vw;
+  text-align: center;
+  color: #0e88eb;
+}
+
+.Rw_Te {
+  position: relative;
+  float: left;
+  width: 66%;
+  height: 10vw;
+  left: 8%;
+  font-size: 4.5vw;
+  letter-spacing: 1px;
+  color: #333;
+}
+
+.Rw_An {
+  position: absolute;
+  right: 3vw;
+  top: 0vw;
+  width: 20vw;
+  height: 8vw;
+  text-align: center;
+  color: #fff;
+  border-radius: 10vw;
+  line-height: 8vw;
+  font-size: 3.5vw;
+  letter-spacing: 2px;
+  transition: 0.3s;
+  background: linear-gradient(#FF416C, #FF4B2B);
+}
+
+/* 领取样式 */
+.Rw_An_Lq {
+  background: linear-gradient(#FDC830, #F37335);
+}
+
+/* 已完成样式 */
+.Rw_An_Wc {
+  background: #bdc3c7;
 }

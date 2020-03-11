@@ -14,25 +14,33 @@
     <img class="JDD" src="img/JDD.png" alt="">
     <!-- 锤子图片 -->
     <img class="CZ" src="img/CZ.png" alt="">
+    <!-- 抽奖机会 -->
+    <div class="Z_Head_Jh">
+      <span>今天还有</span>
+      <i id="Jh_I"></i>
+      <span>次砸金蛋机会</span>
+    </div>
     <!-- 抽奖信息 -->
-    <div class="CJ">
-      <!-- 信息背景图 -->
-      <img class="CJXX" src="img/CJXX.png" alt="">
-      <!-- 信息文字部分 -->
-      <!-- 信息标题 -->
-      <div class="Xx_Tt Xx_Tit"></div>
-      <!-- 信息信息 -->
-      <div class="Xx_Xx Xx_Tit">
+    <div class="Cj_Ctt">
+      <div class="CJ">
+        <!-- 信息背景图 -->
+        <img class="CJXX" src="img/CJXX.png" alt="">
+        <!-- 信息文字部分 -->
+        <!-- 信息标题 -->
+        <div class="Xx_Tt Xx_Tit"></div>
+        <!-- 信息信息 -->
+        <div class="Xx_Xx Xx_Tit">
+        </div>
+        <!-- 再来按钮 -->
+        <div class="Xx_Btn Xx_Tit">
+          再来一次
+        </div>
+        <!-- 关闭按钮 -->
+        <div class="Xx_Gb">
+          <img src="img/GB.svg" alt="">
+        </div>
+        <!-- 信息文字部分 -->
       </div>
-      <!-- 再来按钮 -->
-      <div class="Xx_Btn Xx_Tit">
-        再来一次
-      </div>
-      <!-- 关闭按钮 -->
-      <div class="Xx_Gb">
-        <img src="img/GB.svg" alt="">
-      </div>
-      <!-- 信息文字部分 -->
     </div>
     <!-- 公告 -->
     <div class="Z_Gg">
@@ -72,17 +80,17 @@
       <!-- 右侧奖品详情 -->
       <div class="Z_Jp_Ctt">
         <!-- 单个奖品 -->
-        <div class="Jp_One">
+        <div class="Jp_One Jp_One_100">
         </div>
-        <div class="Jp_One">
+        <div class="Jp_One Jp_One_50">
         </div>
-        <div class="Jp_One">
+        <div class="Jp_One Jp_One_30">
         </div>
-        <div class="Jp_One">
+        <div class="Jp_One Jp_One_800">
         </div>
-        <div class="Jp_One">
+        <div class="Jp_One Jp_One_500">
         </div>
-        <div class="Jp_One">
+        <div class="Jp_One Jp_One_300">
         </div>
       </div>
     </div>
@@ -91,20 +99,150 @@
       <!-- 左侧按钮 -->
       <div class="Z_C_Btn C_Btn_L">
         <span>活动规则</span>
+        <!-- 活动规则隐藏弹窗 -->
+        <div class="C_L_Ctt">
+          <div class="C_L_Yc">
+            <!-- 标题 -->
+            <div class="Yc_Tit">
+              活动规则
+            </div>
+            <!-- 规则内容 -->
+            <div class="Yc_Ctt">
+              <!-- 单行活动规则 -->
+              <div class="Yc_One">
+                1、这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,
+              </div>
+              <!-- 单行活动规则 -->
+              <div class="Yc_One">
+                2、这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,
+              </div>
+              <!-- 单行活动规则 -->
+              <div class="Yc_One">
+                3、这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,
+              </div>
+              <!-- 单行活动规则 -->
+              <div class="Yc_One">
+                4、这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,这是活动规则,
+              </div>
+            </div>
+            <!-- 解释权 -->
+            <div class="Yc_One Yc_One_B">
+              *最终解释权归众善富民所有
+            </div>
+            <!-- 关闭按钮 -->
+            <div class="Xx_Gb" id="Yc_Gb">
+              <img src="img/GB.svg" alt="">
+            </div>
+          </div>
+        </div>
       </div>
       <!-- 右侧按钮 -->
       <div class="Z_C_Btn C_Btn_R">
         <span>中奖信息</span>
+        <!-- 中奖信息 -->
+        <!-- 隐藏弹窗 -->
+        <div class="Zj_Xx_Ctt">
+          <div class="ZJXX">
+            <div class="XX_Item" style="border: none;">
+              <!-- 左侧中奖详情 -->
+              <!-- 右侧中奖时间 -->
+              <time></time>
+            </div>
+            <!-- 关闭按钮 -->
+            <div class="Xx_Gb" id="Zj_Gb">
+              <img src="img/GB.svg" alt="">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
-  <!-- 中奖信息 -->
-  <div class="ZJXX">
-    <div class="XX_Item">恭喜您获得800积分~</div>
+  <!-- 做任务 -->
+  <div class="Z_Rw">
+    <!-- 标题 -->
+    <div class="Z_Rw_Tit">
+      <span>做任务 得次数</span>
+    </div>
+    <!-- 单个任务 -->
+    <div class="Rw_One">
+      <!-- 左侧次数 -->
+      <div class="Rw_Cs">
+        +1
+      </div>
+      <!-- 中奖任务说明 -->
+      <div class="Rw_Te">
+        完成每日签到
+      </div>
+      <!-- 任务按钮  默认去完成得样式-->
+      <!-- 领取样式: Rw_An_Lq;已完成样式: Rw_An_Wc  -->
+      <div class="Rw_An Rw_An_Wc" data-R="1">
+        已领取
+      </div>
+    </div>
+    <div class="Rw_One">
+      <!-- 左侧次数 -->
+      <div class="Rw_Cs">
+        +1
+      </div>
+      <!-- 中奖任务说明 -->
+      <div class="Rw_Te">
+        购买一件商品
+      </div>
+      <!-- 任务按钮 -->
+      <div class="Rw_An" data-R="1">
+        去完成
+      </div>
+    </div>
+    <div class="Rw_One">
+      <!-- 左侧次数 -->
+      <div class="Rw_Cs">
+        +3
+      </div>
+      <!-- 中奖任务说明 -->
+      <div class="Rw_Te">
+        邀请一位新用户
+      </div>
+      <!-- 任务按钮 -->
+      <div class="Rw_An Rw_An_Lq" data-R="3">
+        领取
+      </div>
+    </div>
+    <div class="Rw_One">
+      <!-- 左侧次数 -->
+      <div class="Rw_Cs">
+        +1
+      </div>
+      <!-- 中奖任务说明 -->
+      <div class="Rw_Te">
+        完成这个任务
+      </div>
+      <!-- 任务按钮 -->
+      <div class="Rw_An Rw_An_Lq" data-R="1">
+        领取
+      </div>
+    </div>
+    <div class="Rw_One">
+      <!-- 左侧次数 -->
+      <div class="Rw_Cs">
+        +1
+      </div>
+      <!-- 中奖任务说明 -->
+      <div class="Rw_Te">
+        完成这个任务
+      </div>
+      <!-- 任务按钮 -->
+      <div class="Rw_An Rw_An_Lq" data-R="1">
+        领取
+      </div>
+    </div>
   </div>
   <script src="js/jquery.min.js"></script>
   <script>
     $(function () {
+      // 定义抽奖次数
+      var Jh_I = 3;
+      // 把次数输出到页面
+      $("#Jh_I").text(Jh_I);
       // 定义抽奖信息
       var XX = [{
           // 标题
@@ -135,6 +273,42 @@
           Tit: '未中奖',
           // 信息
           Xx: '调整下姿势再来一次吧',
+        },
+        {
+          // 标题
+          Tit: '未中奖',
+          // 信息
+          Xx: '调整下姿势再来一次吧',
+        },
+        {
+          // 标题
+          Tit: '未中奖',
+          // 信息
+          Xx: '调整下姿势再来一次吧',
+        },
+        {
+          // 标题
+          Tit: '未中奖',
+          // 信息
+          Xx: '调整下姿势再来一次吧',
+        },
+        {
+          // 标题
+          Tit: '未中奖',
+          // 信息
+          Xx: '调整下姿势再来一次吧',
+        },
+        {
+          // 标题
+          Tit: '未中奖',
+          // 信息
+          Xx: '调整下姿势再来一次吧',
+        },
+        {
+          // 标题
+          Tit: '未中奖',
+          // 信息
+          Xx: '调整下姿势再来一次吧',
         }
       ];
       // 设置变量防止用户多次点击
@@ -142,9 +316,11 @@
       // 金蛋蛋点击事件
       $(".JDD").click(function () {
         // 如果为true执行点击事件
-        if (JDD_Flag) {
+        if (JDD_Flag && Jh_I >= 1) {
           // 执行后变为false,该事件禁止触发
           JDD_Flag = false;
+          // 页面禁止滚动
+          $("body").css("overflow", "hidden");
           // 获得随机数
           var SJX = Math.floor(Math.random() * XX.length);
           // 添加抽奖信息
@@ -155,28 +331,39 @@
           setTimeout(() => {
             // 更改金蛋蛋图片
             $(".JDD").attr('src', 'img/JDDS.png');
+            // 点击次数-1
+            $("#Jh_I").text(Jh_I -= 1);
             // 显示抽奖信息
-            $(".CJ").css('transform', 'scale(1.2)');
+            $(".Cj_Ctt").css('transform', 'scale(1.2)');
             // 如果中奖了下方打印信息
             if (SJX != XX.length - 1) {
               // 打印
-              $(".ZJXX").prepend('<div class="XX_Item">' + XX[SJX].Xx + '</div>')
+              $(".ZJXX").prepend('<div class="XX_Item">' + XX[SJX].Xx + '<time>2020-03-11</time>' +
+                '</div>')
             }
           }, 500);
           // 更改锤子为砸开动画
           $(".CZ").css('animation', 'CZ_Z 0.5s');
+        } else {
+          // 信息标题
+          $(".Xx_Tt").text("失败...");
+          // 信息信息
+          $(".Xx_Xx").text("次数用完了完成任务再来吧");
+          $(".Cj_Ctt").css('transform', 'scale(1.2)');
         }
       })
-      // 按钮点击事件
+      // 金蛋蛋按钮点击事件
       function GB() {
         // 更改锤子为未砸动画
         $(".CZ").css('animation', 'CZ_WZ 1.8s linear infinite');
         // 更改金蛋蛋图片
         $(".JDD").attr('src', 'img/JDD.png');
-        // 显示抽奖信息
-        $(".CJ").css('transform', 'scale(0)');
+        // 隐藏抽奖信息
+        $(".Cj_Ctt").css('transform', 'scale(0)');
         // 更改变量为true,恢复金蛋蛋点击
         JDD_Flag = true;
+        // 页面恢复滚动
+        $("body").css("overflow", "auto");
       }
       // 关闭按钮点击事件
       $(".Xx_Gb").click(function () {
@@ -207,6 +394,49 @@
           $(".G_Te_Ctt").css("transition", '1.5s');
         }
       }, 3000);
+      // 活动规则/中奖信息按钮点击事件
+      function C_Btn(TC) {
+        // 显示弹窗
+        $(TC).css("transform", "scale(1)")
+        // 禁止页面滚动
+        $("body").css("overflow", "hidden");
+      }
+      // 活动规则/中奖信息部分关闭按钮点击事件
+      function C_Gb(Y_TC) {
+        // 隐藏弹窗
+        $(Y_TC).css("transform", "scale(0)")
+        // 阻止事件冒泡
+        event.stopPropagation();
+        // 恢复页面滚动
+        $("body").css("overflow", "auto");
+      }
+      // 活动规则点击事件
+      $(".C_Btn_L").click(function () {
+        C_Btn(".C_L_Ctt");
+      })
+      // 活动规则关闭按钮点击事件
+      $("#Yc_Gb").click(function () {
+        C_Gb(".C_L_Ctt");
+      })
+      // 中奖信息点击事件
+      $(".C_Btn_R").click(function () {
+        C_Btn(".Zj_Xx_Ctt");
+      })
+      // 中奖信息关闭按钮点击事件
+      $("#Zj_Gb").click(function () {
+        C_Gb(".Zj_Xx_Ctt");
+      })
+      // 领取按钮点击事件(一次)
+      $(".Rw_An_Lq").one("click", function () {
+        $(this).attr("disabled", "disabled");
+        // 添加已完成样式
+        $(this).addClass("Rw_An_Wc");
+        // 更改文字为已领取
+        $(this).text("已领取");
+        // 增加砸金蛋次数
+        Jh_I += parseInt($(this).attr('data-R'));
+        $("#Jh_I").text(Jh_I);
+      })
     })
   </script>
 </body>
