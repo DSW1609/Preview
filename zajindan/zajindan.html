@@ -352,7 +352,9 @@
           $(".Xx_Tt").text("没有砸开");
           // 信息信息
           $(".Xx_Xx").text("次数用完了完成任务再来吧");
-          $(".Cj_Ctt").css('transform', 'scale(1.2)');
+          setTimeout(function () {
+            $(".Cj_Ctt").css('transform', 'scale(1.2)');
+          }, 500)
         }
       })
       // 金蛋蛋按钮点击事件
@@ -443,7 +445,6 @@
           }
         }, 1000);
       })
-
       // 领取按钮点击事件(一次)
       $(".Rw_An_Lq").one("click", function () {
         // 添加已完成样式
