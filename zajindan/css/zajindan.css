@@ -388,13 +388,14 @@ body {
   text-indent: 1vw;
   line-height: 6vw;
   color: #fab544;
+  letter-spacing: 0;
   border-bottom: 1px solid #f1f1f1;
 }
 
 .XX_Item time {
   position: absolute;
   display: inline-block;
-  right: 2vw;
+  right: 1vw;
   font-size: 3vw;
 }
 

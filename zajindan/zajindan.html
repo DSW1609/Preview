@@ -189,7 +189,7 @@
         购买一件商品
       </div>
       <!-- 任务按钮 -->
-      <div class="Rw_An" data-R="1">
+      <div class="Rw_An Rw_An_Qw" data-R="1">
         去完成
       </div>
     </div>
@@ -328,7 +328,7 @@
           $(".Xx_Tt").text(XX[SJX].Tit);
           // 信息信息
           $(".Xx_Xx").text(XX[SJX].Xx);
-          setTimeout(() => {
+          setTimeout(function () {
             // 更改金蛋蛋图片
             $(".JDD").attr('src', 'img/JDDS.png');
             // 点击次数-1
@@ -336,17 +336,20 @@
             // 显示抽奖信息
             $(".Cj_Ctt").css('transform', 'scale(1.2)');
             // 如果中奖了下方打印信息
-            if (SJX != XX.length - 1) {
+            if (XX[SJX].Tit == "中奖了") {
               // 打印
-              $(".ZJXX").prepend('<div class="XX_Item">' + XX[SJX].Xx + '<time>2020-03-11</time>' +
+              $(".ZJXX").prepend('<div class="XX_Item">' +
+                XX[SJX].Xx + '<time>2020.03.11 12:22:22</time>' +
                 '</div>')
             }
           }, 500);
           // 更改锤子为砸开动画
           $(".CZ").css('animation', 'CZ_Z 0.5s');
-        } else {
+        } else if (Jh_I == 0) {
+          // 更改锤子为砸开动画
+          $(".CZ").css('animation', 'CZ_Z 0.5s');
           // 信息标题
-          $(".Xx_Tt").text("失败...");
+          $(".Xx_Tt").text("没有砸开");
           // 信息信息
           $(".Xx_Xx").text("次数用完了完成任务再来吧");
           $(".Cj_Ctt").css('transform', 'scale(1.2)');
@@ -379,7 +382,7 @@
       // 创建变量记录当前滚动的位置
       var G_Te = 1
       // 开启定时器3s一次向上滚动
-      setInterval(() => {
+      setInterval(function () {
         // 每次上移-9vw
         $(".G_Te_Ctt").css("top", '-9' * G_Te + 'vw');
         // 判断到了末尾更改部分样式
@@ -426,9 +429,23 @@
       $("#Zj_Gb").click(function () {
         C_Gb(".Zj_Xx_Ctt");
       })
+      // 去完成按钮点击事件
+      $(".Rw_An_Qw").click(function () {
+        // 判断是否完成任务
+        var Rw = false;
+        setInterval(function () {
+          Rw = true;
+          if (Rw) {
+            // 更改按钮为领取样式
+            $(this).addClass("Rw_An_Lq");
+            // 更改文字为领取
+            $(this).text("领取");
+          }
+        }, 1000);
+      })
+
       // 领取按钮点击事件(一次)
       $(".Rw_An_Lq").one("click", function () {
-        $(this).attr("disabled", "disabled");
         // 添加已完成样式
         $(this).addClass("Rw_An_Wc");
         // 更改文字为已领取
