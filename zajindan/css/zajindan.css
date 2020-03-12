@@ -17,6 +17,25 @@ body {
   overflow: hidden;
 }
 
+.Z_Logo {
+  position: absolute;
+  width: 50vw;
+  height: 10vw;
+  line-height: 10vw;
+  color: #fff;
+  font-size: 4.5vw;
+  left: 1vw;
+  text-indent: 1vw;
+  letter-spacing: 1px;
+}
+
+.Z_Logo img {
+  position: relative;
+  float: left;
+  width: 8vw;
+  top: 1vw;
+}
+
 .Z_Head_Jh {
   position: absolute;
   width: 100%;
@@ -127,8 +146,12 @@ body {
 }
 
 .Xx_Btn {
-  top: 55.6vw;
+  top: 56vw;
   font-size: 4.5vw;
+  color: #f1f1f1;
+}
+
+.Xx_Btn a {
   color: #f1f1f1;
 }
 
@@ -142,9 +165,13 @@ body {
   margin: auto;
 }
 
-#Yc_Gb,
+#Yc_Gb {
+  bottom: -12vw;
+}
+
 #Zj_Gb {
-  bottom: -10vw;
+  position: relative;
+  margin-top: 126vw;
 }
 
 .Xx_Gb img {
@@ -370,10 +397,12 @@ body {
   left: 0;
   right: 0;
   margin: auto;
+  border: 2vw solid #ec4346;
 }
 
 .ZJXX {
   height: 100vw;
+  overflow-y: scroll;
 }
 
 .XX_Item {
@@ -383,12 +412,13 @@ body {
   height: 6vw;
   left: 2%;
   margin-top: 2vw;
-  font-size: 3.5vw;
+  font-size: 3vw;
   text-align: left;
   text-indent: 1vw;
   line-height: 6vw;
   color: #fab544;
   letter-spacing: 0;
+  font-size: 3.5vw;
   border-bottom: 1px solid #f1f1f1;
 }
 
