@@ -55,6 +55,7 @@
   </div>
   <!-- 申请进度 -->
   <!-- 立即申请按钮 -->
+  <!-- 申请点击后添加类名: Sq_An_Y -->
   <a href="javascript:;">
     <div class="F_Sq_An">
       立即申请
@@ -200,10 +201,12 @@
         // 判断是否购买了下方商品
         var isBuy = true;
         if (isBuy) {
+          // 添加成功申请样式
+          $(this).addClass("Sq_An_Y");
+          // 更改提示文字
+          $(this).text("您已申请");
           // 添加上方进度提交申请达到类名：Sq_Dl
           $("#F_Buy").addClass("Sq_Dl");
-          // 添加动效
-          $("#F_Buy").css("animation", "F_Buy 0.3s linear");
           // 更改分割线颜色
           $("#F_Fg1").css("background", "#feba27")
         } else {
