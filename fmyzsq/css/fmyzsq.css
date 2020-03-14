@@ -260,19 +260,38 @@ body {
   margin-left: 3vw;
 }
 
+.F_Itg {
+  position: absolute;
+  width: 21vw;
+  height: 7vw;
+  margin-top: 1vw;
+  border-radius: 7vw;
+  background-image: url(../img/JF.svg);
+  background-size: 7.5vw;
+  background-position: left center;
+  background-repeat: no-repeat;
+  background-color: #d7282b;
+  color: #fff;
+  font-size: 4vw;
+  text-align: center;
+  text-indent: 4.5vw;
+  line-height: 7vw;
+  letter-spacing: 1px;
+}
+
 .F_Go {
   position: absolute;
-  width: 30vw;
-  height: 7.5vw;
+  right: 1vw;
+  width: 22vw;
+  height: 7vw;
   background: #d7282b;
   border-radius: 2vw;
   color: #fff;
   text-align: center;
-  line-height: 7.5vw;
+  line-height: 7vw;
   letter-spacing: 2px;
-  font-size: 4vw;
-  margin-left: 10vw;
-  margin-top: 0.5vw;
+  font-size: 3.5vw;
+  margin-top: 1vw;
 }
 
 .Sq_An_No {

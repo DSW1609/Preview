@@ -98,6 +98,10 @@
           <span>累计销量: 745件</span>
         </div>
       </div>
+      <!-- 赠送积分 -->
+      <div class="F_Itg">
+        10000
+      </div>
       <!-- 购买按钮 -->
       <a href="javascript:;">
         <div class="F_Go">
@@ -130,6 +134,10 @@
         <div class="F_Sales">
           <span>累计销量: 1518件</span>
         </div>
+      </div>
+      <!-- 赠送积分 -->
+      <div class="F_Itg">
+        10000
       </div>
       <!-- 购买按钮 -->
       <a href="javascript:;">
@@ -164,7 +172,11 @@
           <span>累计销量: 406件</span>
         </div>
       </div>
-      <!-- 购买按钮 -->
+      <!-- 赠送积分 -->
+      <div class="F_Itg">
+        41000
+      </div>
+      <!-- 购买按钮 跳转到购买页 -->
       <a href="javascript:;">
         <div class="F_Go">
           <span>购买开通</span>
@@ -196,6 +208,10 @@
         <div class="F_Sales">
           <span>累计销量: 196件</span>
         </div>
+      </div>
+      <!-- 赠送积分 -->
+      <div class="F_Itg">
+        10000
       </div>
       <!-- 购买按钮 -->
       <a href="javascript:;">
@@ -237,7 +253,7 @@
       // 申请按钮点击事件
       $(".F_Sq_An").click(function () {
         // 判断是否购买了下方商品
-        var isBuy = false;
+        var isBuy = true;
         if (isBuy) {
           // 添加成功申请样式
           $(this).addClass("Sq_An_Y");
@@ -246,7 +262,7 @@
           // 添加上方进度提交申请达到类名：Sq_Dl
           $("#F_Buy").addClass("Sq_Dl");
           // 更改分割线颜色
-          $("#F_Fg1").css("background", "#feba27")
+          $("#F_Fg1").css("background", "#feba27");
         } else {
           // 显示弹窗提醒
           $(".Sq_An_No").css("display", "block");
