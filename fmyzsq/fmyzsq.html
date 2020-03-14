@@ -12,9 +12,11 @@
   <!-- HEAD -->
   <div class="F_Head">
     <!-- 左侧返回箭头 -->
-    <div class="F_Head_L">
-      <img src="img/FH.svg" alt="">
-    </div>
+    <a href="javascript:;">
+      <div class="F_Head_L">
+        <img src="img/FH.svg" alt="">
+      </div>
+    </a>
     <!-- 中间标题 -->
     <div class="F_Head_Tit">
       富民驿站开通申请
@@ -196,7 +198,7 @@
       // 申请按钮点击事件
       $(".F_Sq_An").click(function () {
         // 判断是否购买了下方商品
-        var isBuy = false;
+        var isBuy = true;
         if (isBuy) {
           // 添加上方进度提交申请达到类名：Sq_Dl
           $("#F_Buy").addClass("Sq_Dl");
@@ -206,7 +208,7 @@
           $("#F_Fg1").css("background", "#feba27")
         } else {
           // 提醒用户未购买以下商品不能提交申请
-          alert("您没有购买下方商品,请购买后再提交申请")
+          alert("您没有购买下方商品,请购买后再提交申请!")
         }
       })
     })
