@@ -58,8 +58,16 @@ body {
 .JDD {
   position: absolute;
   width: 70vw;
+  height: 58vw;
   margin-left: 10vw;
   margin-top: 10vw;
+  background-image: url(../img/JDD.png);
+  background-size: 100%;
+  transition: 0.3s;
+}
+
+.JDDS {
+  background-image: url(../img/JDDS.png);
 }
 
 .Cj_Ctt {

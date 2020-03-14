@@ -196,6 +196,7 @@
   <script src="js/jquery.min.js"></script>
   <script>
     $(function () {
+      // 禁止微信端字体缩放
       if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
         handleFontSize();
       } else {

@@ -1,6 +1,6 @@
 $(function () {
   // 定义抽奖次数
-  var Jh_I = 3;
+  var Jh_I = 1;
   // 把次数输出到页面
   $("#Jh_I").text(Jh_I);
   // 定义抽奖信息
@@ -90,7 +90,7 @@ $(function () {
       $(".Xx_Xx").text(XX[SJX].Xx);
       setTimeout(function () {
         // 更改金蛋蛋图片
-        $(".JDD").attr('src', 'img/JDDS.png');
+        $(".JDD").addClass("JDDS");
         // 点击次数-1
         $("#Jh_I").text(Jh_I -= 1);
         // 显示抽奖信息
@@ -127,7 +127,7 @@ $(function () {
       // 信息信息
       $(".Xx_Xx").text("次数用完了完成任务再来吧");
       // 底部按钮
-      $(".Xx_Btn").text("去做任务");
+      $(".Xx_Btn").text('去做任务');
       setTimeout(function () {
         $(".Cj_Ctt").css('transform', 'scale(1.2)');
       }, 400)
@@ -138,7 +138,7 @@ $(function () {
     // 更改锤子为未砸动画
     $(".CZ").css('animation', 'CZ_WZ 1.8s linear infinite');
     // 更改金蛋蛋图片
-    $(".JDD").attr('src', 'img/JDD.png');
+    $(".JDD").removeClass("JDDS");
     // 隐藏抽奖信息
     $(".Cj_Ctt").css('transform', 'scale(0)');
     // 更改变量为true,恢复金蛋蛋点击
