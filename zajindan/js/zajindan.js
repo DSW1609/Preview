@@ -1,5 +1,30 @@
 $(function () {
-  // 定义抽奖次数
+  // 禁止微信端字体缩放
+  if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+    handleFontSize();
+  } else {
+    if (document.addEventListener) {
+      document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+    } else if (document.attachEvent) {
+      document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+      document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+    }
+  }
+
+  function handleFontSize() {
+    // 设置网页字体为默认大小
+    WeixinJSBridge.invoke('setFontSizeCallback', {
+      'fontSize': 0
+    });
+    // 重写设置网页字体大小的事件
+    WeixinJSBridge.on('menu:setfont', function () {
+      WeixinJSBridge.invoke('setFontSizeCallback', {
+        'fontSize': 0
+      });
+    });
+  }
+
+  // 初始化抽奖次数
   var Jh_I = 1;
   // 把次数输出到页面
   $("#Jh_I").text(Jh_I);

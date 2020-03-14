@@ -23,11 +23,11 @@ body {
 }
 
 .F_Head_L {
-  position: relative;
-  float: left;
+  position: absolute;
   width: 10vw;
   height: 10vw;
   left: 2vw;
+  z-index: 999;
 }
 
 .F_Head_L img {
