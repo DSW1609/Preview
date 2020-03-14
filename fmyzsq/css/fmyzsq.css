@@ -10,6 +10,9 @@ body {
   background-image: url(../img/F_Bg.jpg);
   background-size: 100%;
   margin-bottom: 8vw;
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
 }
 
 .F_Head {
