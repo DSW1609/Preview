@@ -274,3 +274,48 @@ body {
   margin-left: 10vw;
   margin-top: 0.5vw;
 }
+
+.Sq_An_No {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.4);
+  top: 0;
+  z-index: 999;
+  display: none;
+}
+
+.An_No_Te {
+  position: absolute;
+  width: 80vw;
+  height: 40vw;
+  background: #ffffff;
+  left: 10vw;
+  top: 50%;
+  transform: translateY(-50%);
+  border-radius: 3vw;
+  text-align: center;
+  font-size: 4.5vw;
+  overflow: hidden;
+}
+
+.No_Te_Tit {
+  position: relative;
+  width: 80%;
+  height: 30%;
+  padding: 10%;
+  color: #333;
+  border-bottom: 1px solid #f4f4f4;
+}
+
+.No_Te_Yes {
+  position: relative;
+  height: 12vw;
+  line-height: 12vw;
+  color: #5a6aaa;
+  letter-spacing: 1px;
+}
+
+.No_Te_Yes:hover {
+  background: #f0f0f0;
+}

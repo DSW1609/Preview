@@ -56,11 +56,24 @@
   <!-- 申请进度 -->
   <!-- 立即申请按钮 -->
   <!-- 申请点击后添加类名: Sq_An_Y -->
-  <a href="javascript:;">
-    <div class="F_Sq_An">
-      立即申请
+  <div class="F_Sq_An">
+    立即申请
+  </div>
+  <!-- 立即申请按钮 -->
+  <!-- 禁止申请弹窗 -->
+  <div class="Sq_An_No">
+    <div class="An_No_Te">
+      <!-- 上方提示内容 -->
+      <div class="No_Te_Tit">
+        您没有购买下方商品，请购买后再提交申请！
+      </div>
+      <!-- 底部确定按钮 -->
+      <div class="No_Te_Yes">
+        确定
+      </div>
     </div>
-  </a>
+  </div>
+  <!-- 禁止申请弹窗 -->
   <!-- 单个商品 -->
   <div class="F_Sp">
     <!-- 左侧商品图片 -->
@@ -235,8 +248,16 @@
           // 更改分割线颜色
           $("#F_Fg1").css("background", "#feba27")
         } else {
-          // 提醒用户未购买以下商品不能提交申请
-          alert("您没有购买下方商品,请购买后再提交申请!")
+          // 显示弹窗提醒
+          $(".Sq_An_No").css("display", "block");
+          // 禁止页面滚动
+          $("body").css("overflow", "hidden");
+          // 确定按钮点击事件-隐藏
+          $(".No_Te_Yes").click(function () {
+            $(".Sq_An_No").css("display", "none");
+            // 恢复页面滚动
+            $("body").css("overflow", "auto");
+          })
         }
       })
     })
