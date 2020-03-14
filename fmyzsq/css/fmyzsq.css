@@ -1,0 +1,265 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+body {
+  background-image: url(../img/F_Bg.jpg);
+  background-size: 100%;
+  margin-bottom: 8vw;
+}
+
+.F_Head {
+  position: relative;
+  width: 100vw;
+  height: 10vw;
+  top: 2vw;
+}
+
+.F_Head_L {
+  position: relative;
+  float: left;
+  width: 10vw;
+  height: 10vw;
+  left: 2vw;
+}
+
+.F_Head_L img {
+  width: 9vw;
+  margin-top: 0.5vw;
+  margin-left: 0.5vw;
+}
+
+.F_Head_Tit {
+  position: absolute;
+  width: 100vw;
+  height: 10vw;
+  line-height: 10vw;
+  text-align: center;
+  color: #fff;
+  font-size: 5vw;
+  letter-spacing: 3px;
+}
+
+.F_Big_Te {
+  position: relative;
+  width: 78vw;
+  height: auto;
+  margin: 0 auto;
+  margin-top: 8vw;
+}
+
+.F_Big_Te img {
+  width: 100%;
+}
+
+.F_Sq {
+  position: relative;
+  width: 85vw;
+  height: 18vw;
+  margin: 0 auto;
+  margin-top: 3vw;
+}
+
+.F_Sq_One {
+  position: relative;
+  width: 20vw;
+  height: 18vw;
+  text-align: center;
+  font-size: 3.6vw;
+  background-image: url(../img/WD.svg);
+  background-size: 12vw 12vw;
+  background-repeat: no-repeat;
+  background-position: center top;
+  color: #e6e6e6;
+  transition: 0.3s;
+}
+
+/* 提交申请后动画 */
+@keyframes F_Buy {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  0% {
+    transform: scale(1);
+  }
+}
+
+.Sq_L {
+  float: left;
+}
+
+.Sq_C {
+  margin: 0 auto;
+}
+
+.Sq_R {
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.Sq_X {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  text-align: center;
+}
+
+.Sq_Dl {
+  background-image: url(../img/DL.svg);
+  color: #ffbd27;
+}
+
+.F_Fg {
+  position: absolute;
+  width: 17vw;
+  height: 1vw;
+  background: #e6e6e6;
+  margin-left: 18vw;
+  border-radius: 1vw;
+  margin-top: 5.5vw;
+  transition: 0.3s;
+}
+
+.F_Fg2 {
+  top: 0;
+  margin-left: 50.5vw;
+}
+
+.F_Sq_An {
+  position: relative;
+  width: 36vw;
+  height: 11vw;
+  background: #feba27;
+  margin: 0 auto;
+  margin-top: 4vw;
+  border-radius: 6vw;
+  color: #fff;
+  line-height: 11vw;
+  text-align: center;
+  font-size: 4.5vw;
+  letter-spacing: 2px;
+  background-image: url(../img/DJI.svg);
+  background-size: 7.5vw;
+  background-repeat: no-repeat;
+  background-position: 3.5vw center;
+  text-indent: 7.5vw;
+  animation: Sq_An 1s infinite linear;
+}
+
+@keyframes Sq_An {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.F_Sp {
+  position: relative;
+  width: 88vw;
+  height: 32vw;
+  background: #fff;
+  margin: 0 auto;
+  margin-top: 4vw;
+  border-radius: 4vw;
+  top: 1vw;
+}
+
+.F_Sp_Im {
+  position: absolute;
+  width: 28vw;
+  height: 28vw;
+  top: 2vw;
+  left: 2vw;
+}
+
+.F_Sp_Im img {
+  width: 28vw;
+  height: 28vw;
+  border-radius: 4vw;
+}
+
+.F_Sp_Xq {
+  position: absolute;
+  right: 0;
+  width: 53vw;
+  height: 28vw;
+  top: 2vw;
+  right: 2vw;
+}
+
+.F_Xq_Tit {
+  position: relative;
+  width: 100%;
+  height: 10vw;
+  color: #333;
+  font-size: 4.3vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  line-height: 5.5vw;
+  margin-top: 0.5vw;
+}
+
+.F_PX {
+  width: 100%;
+  height: 9.5vw;
+  line-height: 9.5vw;
+}
+
+.F_Price {
+  position: relative;
+  float: left;
+  width: auto;
+  font-size: 4.5vw;
+  color: #d7282b;
+}
+
+.F_Price em {
+  position: relative;
+  float: left;
+  font-style: normal;
+  font-size: 4vw;
+  margin-top: 0.3vw;
+}
+
+.F_Sales {
+  position: relative;
+  float: left;
+  width: auto;
+  font-size: 3.5vw;
+  color: #666;
+  margin-left: 3vw;
+}
+
+.F_Go {
+  position: absolute;
+  width: 30vw;
+  height: 7.5vw;
+  background: #d7282b;
+  border-radius: 2vw;
+  color: #fff;
+  text-align: center;
+  line-height: 7.5vw;
+  letter-spacing: 2px;
+  font-size: 4vw;
+  margin-left: 10vw;
+}
