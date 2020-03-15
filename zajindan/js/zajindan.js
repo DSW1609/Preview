@@ -24,7 +24,11 @@ $(function () {
 
     })
   }
+  WeixinJSBridge.on('menu:share:appmessage', function (argv) {
 
+    shareFriend();
+
+  });
 
   // 定义抽奖次数
   var Jh_I = 1;
@@ -126,11 +130,6 @@ $(function () {
         if (XX[SJX].Tit == "中奖了") {
           // 更改下方按钮文字
           $(".Xx_Btn").html('<a id="Z_Sre">去分享</a>');
-          // 去分享按钮点击事件
-          $("#Z_Sre").click(function () {
-            // 提示用户
-            shareFriend()
-          })
           //判断是否在前面加0
           function getNow(s) {
             return s < 10 ? '0' + s : s;
