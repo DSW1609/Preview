@@ -230,14 +230,16 @@ $(function () {
     $("#Jh_I").text(Jh_I);
   })
   // 判断是否为新用户,显示弹窗
-  var isNew = true;
-  if (isNew) {
+  // 清除
+  if (localStorage.getItem('isNew') == null) {
     $(".Z_New").css("transform", "scale(1)");
-    $("body").css("overflow", "hidden")
+    $("body").css("overflow", "hidden");
   }
   // 关注公众号弹窗按钮点击事件
-  $(".New_Btn_One").click(function () {
+  $(".Z_New_Btn").click(function () {
+    // 隐藏关注弹窗
     $(".Z_New").css("transform", "scale(0)");
-    $("body").css("overflow", "auto")
+    $("body").css("overflow", "auto");
+    localStorage.setItem('isNew', true);
   })
 })

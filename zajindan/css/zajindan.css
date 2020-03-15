@@ -589,16 +589,10 @@ body {
 
 .Z_New_Btn {
   position: absolute;
-  width: 70vw;
-  height: 12vw;
-  bottom: 3vw;
-  left: 5vw;
-}
-
-.New_Btn_One {
-  position: absolute;
-  width: 28vw;
+  width: 30vw;
   height: 10vw;
+  bottom: 5vw;
+  left: 25vw;
   background: linear-gradient(#FDC830, #F37335);
   border-radius: 6vw;
   color: #fff;
@@ -607,8 +601,4 @@ body {
   font-size: 4.5vw;
   font-weight: bold;
   letter-spacing: 1px;
-}
-
-.NB_R {
-  right: 0;
 }
