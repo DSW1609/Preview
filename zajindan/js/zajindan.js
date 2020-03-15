@@ -1,30 +1,5 @@
 $(function () {
-  // 禁止微信端字体缩放
-  if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
-    handleFontSize();
-  } else {
-    if (document.addEventListener) {
-      document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
-    } else if (document.attachEvent) {
-      document.attachEvent("WeixinJSBridgeReady", handleFontSize);
-      document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
-    }
-  }
-
-  function handleFontSize() {
-    // 设置网页字体为默认大小
-    WeixinJSBridge.invoke('setFontSizeCallback', {
-      'fontSize': 0
-    });
-    // 重写设置网页字体大小的事件
-    WeixinJSBridge.on('menu:setfont', function () {
-      WeixinJSBridge.invoke('setFontSizeCallback', {
-        'fontSize': 0
-      });
-    });
-  }
-
-  // 初始化抽奖次数
+  // 定义抽奖次数
   var Jh_I = 1;
   // 把次数输出到页面
   $("#Jh_I").text(Jh_I);
@@ -122,7 +97,10 @@ $(function () {
         $(".Cj_Ctt").css('transform', 'scale(1.2)');
         // 如果中奖了下方打印信息
         if (XX[SJX].Tit == "中奖了") {
-          $(".Xx_Btn").html('<a href="#">去分享</a>');
+          $(".Xx_Btn").html('<a href="#" id="Z_QFX">去分享</a>');
+          $("#Z_QFX").click(function () {
+            weixinSendAppMessage()
+          })
           //判断是否在前面加0
           function getNow(s) {
             return s < 10 ? '0' + s : s;
@@ -253,4 +231,16 @@ $(function () {
     Jh_I += parseInt($(this).attr('data-R'));
     $("#Jh_I").text(Jh_I);
   })
+  // 微信分享好友功能
+  function weixinSendAppMessage(title, desc, link, imgUrl) {
+    WeixinJSBridge.invoke('sendAppMessage', {
+      //"appid":appId,
+      "img_url": "http://img.benshanw.com/Areas/Mobile/Templates/Default/Images/member/gogogo.png",
+      "img_width": "640",
+      "img_height": "640",
+      "link": "https://dsw1609.github.io/Preview/zajindan/zajindan.html",
+      "desc": 快来砸金蛋,
+      "title": 砸金蛋
+    });
+  }
 })
