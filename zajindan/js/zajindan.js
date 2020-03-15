@@ -1,4 +1,31 @@
 $(function () {
+  var imgUrl = 'http://img.benshanw.com/Areas/Mobile/Templates/Default/Images/member/gogogo.png'; // 分享后展示的一张图片 
+  var lineLink = 'http://www.benshanw.com/m-wap/member/center?SpreadId=660104'; // 点击分享后跳转的页面地址
+  var descContent = "砸金蛋"; // 分享后的描述信息
+  var shareTitle = '快来砸金蛋砸金蛋砸金蛋'; // 分享后的标题
+  var appid = 'wx196114a22fe5a62b'; // 应用id,如果有可以填，没有就留空
+  function shareFriend() {
+
+    WeixinJSBridge.invoke('sendAppMessage', {
+
+      "appid": appid,
+
+      "img_url": imgUrl,
+
+      "img_width": "200",
+
+      "img_height": "200",
+
+      "link": lineLink,
+
+      "desc": descContent,
+
+      "title": shareTitle
+
+    })
+  }
+
+
   // 定义抽奖次数
   var Jh_I = 1;
   // 把次数输出到页面
@@ -97,9 +124,12 @@ $(function () {
         $(".Cj_Ctt").css('transform', 'scale(1.2)');
         // 如果中奖了下方打印信息
         if (XX[SJX].Tit == "中奖了") {
-          $(".Xx_Btn").html('<a href="#" id="Z_QFX">去分享</a>');
-          $("#Z_QFX").click(function () {
-            weixinSendAppMessage()
+          // 更改下方按钮文字
+          $(".Xx_Btn").html('<a id="Z_Sre">去分享</a>');
+          // 去分享按钮点击事件
+          $("#Z_Sre").click(function () {
+            // 提示用户
+            shareFriend()
           })
           //判断是否在前面加0
           function getNow(s) {
@@ -231,16 +261,4 @@ $(function () {
     Jh_I += parseInt($(this).attr('data-R'));
     $("#Jh_I").text(Jh_I);
   })
-  // 微信分享好友功能
-  function weixinSendAppMessage(title, desc, link, imgUrl) {
-    WeixinJSBridge.invoke('sendAppMessage', {
-      //"appid":appId,
-      "img_url": "http://img.benshanw.com/Areas/Mobile/Templates/Default/Images/member/gogogo.png",
-      "img_width": "640",
-      "img_height": "640",
-      "link": "https://dsw1609.github.io/Preview/zajindan/zajindan.html",
-      "desc": 快来砸金蛋,
-      "title": 砸金蛋
-    });
-  }
 })
