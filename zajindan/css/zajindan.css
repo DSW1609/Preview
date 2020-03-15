@@ -560,3 +560,55 @@ body {
 .Rw_An_Wc {
   background: #bdc3c7;
 }
+
+.Z_New {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  z-index: 999;
+  transition: 0.5s;
+  transform: scale(0);
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.Z_New_Ctt {
+  position: absolute;
+  width: 80vw;
+  height: 105vw;
+  top: 50%;
+  transform: translateY(-55%);
+  left: 10vw;
+}
+
+.Z_New img {
+  position: absolute;
+  top: 0;
+  width: 80vw;
+  border-radius: 5vw;
+}
+
+.Z_New_Btn {
+  position: absolute;
+  width: 70vw;
+  height: 12vw;
+  bottom: 3vw;
+  left: 5vw;
+}
+
+.New_Btn_One {
+  position: absolute;
+  width: 28vw;
+  height: 10vw;
+  background: linear-gradient(#FDC830, #F37335);
+  border-radius: 6vw;
+  color: #fff;
+  text-align: center;
+  line-height: 10vw;
+  font-size: 4.5vw;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.NB_R {
+  right: 0;
+}

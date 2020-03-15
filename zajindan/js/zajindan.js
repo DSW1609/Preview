@@ -1,35 +1,4 @@
 $(function () {
-  var imgUrl = 'http://img.benshanw.com/Areas/Mobile/Templates/Default/Images/member/gogogo.png'; // 分享后展示的一张图片 
-  var lineLink = 'http://www.benshanw.com/m-wap/member/center?SpreadId=660104'; // 点击分享后跳转的页面地址
-  var descContent = "砸金蛋"; // 分享后的描述信息
-  var shareTitle = '快来砸金蛋砸金蛋砸金蛋'; // 分享后的标题
-  var appid = 'wx196114a22fe5a62b'; // 应用id,如果有可以填，没有就留空
-  function shareFriend() {
-
-    WeixinJSBridge.invoke('sendAppMessage', {
-
-      "appid": appid,
-
-      "img_url": imgUrl,
-
-      "img_width": "200",
-
-      "img_height": "200",
-
-      "link": lineLink,
-
-      "desc": descContent,
-
-      "title": shareTitle
-
-    })
-  }
-  WeixinJSBridge.on('menu:share:appmessage', function (argv) {
-
-    shareFriend();
-
-  });
-
   // 定义抽奖次数
   var Jh_I = 1;
   // 把次数输出到页面
@@ -259,5 +228,16 @@ $(function () {
     // 增加砸金蛋次数
     Jh_I += parseInt($(this).attr('data-R'));
     $("#Jh_I").text(Jh_I);
+  })
+  // 判断是否为新用户,显示弹窗
+  var isNew = true;
+  if (isNew) {
+    $(".Z_New").css("transform", "scale(1)");
+    $("body").css("overflow", "hidden")
+  }
+  // 关注公众号弹窗按钮点击事件
+  $(".New_Btn_One").click(function () {
+    $(".Z_New").css("transform", "scale(0)");
+    $("body").css("overflow", "auto")
   })
 })
