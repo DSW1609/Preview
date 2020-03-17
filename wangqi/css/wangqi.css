@@ -81,6 +81,22 @@ body {
 
 .Item_Z2 {
   background-image: url(../img/W_ZZ2.png);
+  animation: Item_Get 1s infinite linear;
+}
+
+/* 未领取按钮动效 */
+@keyframes Item_Get {
+  0% {
+    transform: rotate(-10deg);
+  }
+
+  50% {
+    transform: rotate(10deg);
+  }
+
+  100% {
+    transform: rotate(-10deg);
+  }
 }
 
 .Item_Z3 {
@@ -136,6 +152,7 @@ body {
 .Item_Get2 {
   background: #ff8746;
 }
+
 
 .Item_Get3 {
   background: #664edd;
