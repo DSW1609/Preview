@@ -66,16 +66,16 @@
     <div class="G_Sy">
       <!-- 单个收益 -->
       <div class="G_Sy_One F_Rl">
-        累计收益:&nbsp;8514元
+        累计收益:&nbsp;85元
       </div>
       <div class="G_Sy_One F_Rl">
-        邀请商家收益:&nbsp;85213元
+        邀请商家收益:&nbsp;852元
       </div>
       <div class="G_Sy_One F_Rl">
-        订单收益:&nbsp;8514元
+        订单收益:&nbsp;85元
       </div>
       <div class="G_Sy_One F_Rl">
-        商家广告收益:&nbsp;2213元
+        商家广告收益:&nbsp;222元
       </div>
     </div>
   </div>
@@ -287,7 +287,32 @@
     // 公告滚动事件
     $(function () {
 
-      // 获得星级
+      // 禁止微信端字体缩放
+      if (typeof WeixinJSBridge == "object" && typeof WeixinJSBridge.invoke == "function") {
+        handleFontSize();
+      } else {
+        if (document.addEventListener) {
+          document.addEventListener("WeixinJSBridgeReady", handleFontSize, false);
+        } else if (document.attachEvent) {
+          document.attachEvent("WeixinJSBridgeReady", handleFontSize);
+          document.attachEvent("onWeixinJSBridgeReady", handleFontSize);
+        }
+      }
+
+      function handleFontSize() {
+        // 设置网页字体为默认大小
+        WeixinJSBridge.invoke('setFontSizeCallback', {
+          'fontSize': 0
+        });
+        // 重写设置网页字体大小的事件
+        WeixinJSBridge.on('menu:setfont', function () {
+          WeixinJSBridge.invoke('setFontSizeCallback', {
+            'fontSize': 0
+          });
+        });
+      }
+
+      // 初始化星级
       var DXJ = 4;
       // 循环输出亮心
       for (var X = 0; X < DXJ; X++) {

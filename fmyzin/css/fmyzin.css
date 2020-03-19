@@ -10,6 +10,10 @@ body {
   background: #fafafa;
   /* 去除点击蓝色背景框 */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  /* 禁止字体缩放 */
+  -webkit-text-size-adjust: 100% !important;
+  text-size-adjust: 100% !important;
+  -moz-text-size-adjust: 100% !important;
 }
 
 .G_Head {
@@ -115,7 +119,7 @@ body {
 .G_Sz img {
   width: 7vw;
   height: 7vw;
-  margin-top: 1.5vw;
+  margin-top: .5vw;
 }
 
 .G_Zl_Sy {
@@ -127,7 +131,7 @@ body {
   background-repeat: no-repeat;
   overflow: hidden;
   border-radius: 3vw;
-  box-shadow: 0px 0px 10px #fdc563;
+  box-shadow: 0px 0px 5px #fdc563;
 }
 
 .G_Zs {
@@ -202,14 +206,15 @@ body {
   bottom: 2vw;
   width: 100vw;
   height: 12vw;
-  font-size: 3.6vw;
+  font-size: 4.5vw;
   color: #fff;
 }
 
 .G_Sy_One {
   width: auto;
   height: 6vw;
-  margin-left: 5.5vw;
+  left: 2vw;
+  margin-left: 3vw;
 }
 
 .G_Gg {
@@ -325,7 +330,7 @@ body {
 }
 
 .G_Gj_Ct {
-  height: 50vw;
+  height: 55vw;
   overflow: hidden;
 }
 
