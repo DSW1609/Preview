@@ -138,7 +138,7 @@ body {
   position: absolute;
   width: 32vw;
   height: 15vw;
-  left: 5vw;
+  left: 4vw;
   top: 3vw;
   color: #fff;
 }
@@ -164,7 +164,7 @@ body {
   font-size: 8vw;
   letter-spacing: 0;
   margin-top: 0.5vw;
-  margin-left: -0.5vw;
+  margin-left: -1vw;
 }
 
 .G_Yq {
@@ -213,7 +213,7 @@ body {
 .G_Sy_One {
   width: auto;
   height: 6vw;
-  left: 2vw;
+  left: 1vw;
   margin-left: 3vw;
 }
 
