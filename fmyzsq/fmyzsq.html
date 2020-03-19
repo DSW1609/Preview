@@ -12,7 +12,7 @@
   <!-- HEAD -->
   <div class="F_Head">
     <!-- 左侧返回箭头 -->
-    <a href="http://www.benshanw.com/m-wap/member/center">
+    <a href="http://www.benshanw.com/m-wap/member/center/">
       <div class="F_Head_L">
         <img src="img/FH.svg" alt="">
       </div>
@@ -48,7 +48,7 @@
     <div class="F_Fg F_Fg2">
     </div>
     <!-- 单个申请进度 -->
-    <div class="F_Sq_One Sq_R">
+    <div class="F_Sq_One Sq_R" id="F_Scc">
       <!-- 下方文字 -->
       <div class="Sq_X">成功开通</div>
     </div>
@@ -74,6 +74,11 @@
     </div>
   </div>
   <!-- 禁止申请弹窗 -->
+  <!-- 购买提示 -->
+  <div class="F_Sq_Ts">
+    *通过本页购买的商品只支持换货, 不支持退货
+  </div>
+  <!-- 购买提示 -->
   <!-- 单个商品 -->
   <div class="F_Sp">
     <!-- 左侧商品图片 -->
@@ -254,6 +259,7 @@
       $(".F_Sq_An").click(function () {
         // 判断是否购买了下方商品
         var isBuy = true;
+        // 如果购买了
         if (isBuy) {
           // 添加成功申请样式
           $(this).addClass("Sq_An_Y");
@@ -263,7 +269,17 @@
           $("#F_Buy").addClass("Sq_Dl");
           // 更改分割线颜色
           $("#F_Fg1").css("background", "#feba27");
-        } else {
+          setTimeout(function () {
+            // 添加上方进度提交申请达到类名：Sq_Dl
+            $("#F_Scc").addClass("Sq_Dl");
+            // 更改分割线颜色
+            $(".F_Fg2").css("background", "#feba27");
+            // 跳转到富民驿站主页
+            window.location.replace("http://benshanw.com");
+          }, 1000);
+        }
+        // 没有购买提示
+        else {
           // 显示弹窗提醒
           $(".Sq_An_No").css("display", "block");
           // 禁止页面滚动

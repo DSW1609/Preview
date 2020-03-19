@@ -282,7 +282,7 @@ body {
 .F_Go {
   position: absolute;
   right: 1vw;
-  width: 22vw;
+  width: 23vw;
   height: 7vw;
   background: #d7282b;
   border-radius: 2vw;
@@ -290,7 +290,7 @@ body {
   text-align: center;
   line-height: 7vw;
   letter-spacing: 2px;
-  font-size: 3.5vw;
+  font-size: 4vw;
   margin-top: 1vw;
 }
 
@@ -337,4 +337,14 @@ body {
 
 .No_Te_Yes:hover {
   background: #f0f0f0;
+}
+
+.F_Sq_Ts {
+  position: relative;
+  width: 100vw;
+  height: 8vw;
+  text-align: center;
+  color: #fff;
+  top: 3vw;
+  font-size: 4vw;
 }
