@@ -311,7 +311,7 @@ body {
   left: 1vw;
   padding: 1vw;
   transform: translateY(-50%);
-  line-height: 7.5vw;
+  line-height: 8vw;
   text-shadow: 0px 2px 0px rgba(0, 0, 0, 0.3);
 }
 
@@ -333,30 +333,49 @@ body {
   top: -1vw;
   background-size: 100%;
   animation: Jp_One 1.5s linear infinite;
+  background-image: url(../img/Z_Mbg.png);
 }
 
-.Jp_One_100 {
-  background-image: url(../img/Jp_Im_100.png);
+.Jp_One::after {
+  content: '';
+  text-align: center;
+  position: absolute;
+  width: 14vw;
+  height: 10vw;
+  left: 2vw;
+  top: 2vw;
+  font-size: 4.5vw;
+  color: #ff684c;
+  letter-spacing: 1px;
+  background-size: 100% 100%;
 }
 
-.Jp_One_50 {
-  background-image: url(../img/Jp_Im_50.png);
+.Jp_One_Yh::after {
+  content: '优惠券';
+  font-size: 4vw;
 }
 
-.Jp_One_30 {
-  background-image: url(../img/Jp_Im_30.png);
+.Jp_One_Hb::after {
+  content: '红包';
 }
 
-.Jp_One_800 {
-  background-image: url(../img/Jp_Im_800.png);
+.Jp_One_Jf::after {
+  content: '积分';
 }
 
-.Jp_One_500 {
-  background-image: url(../img/Jp_Im_500.png);
+.Jp_One_Sw1::after {
+  content: '';
+  background-image: url(../img/1.png);
 }
 
-.Jp_One_300 {
-  background-image: url(../img/Jp_Im_300.png);
+.Jp_One_Sw2::after {
+  content: '';
+  background-image: url(../img/1.png);
+}
+
+.Jp_One_Sw3::after {
+  content: '';
+  background-image: url(../img/1.png);
 }
 
 /* 优惠券礼品放大缩小动画 */
@@ -484,7 +503,7 @@ body {
   margin: 0 auto;
   border-radius: 3vw;
   margin-bottom: 10vw;
-  margin-top: 2vw;
+  margin-top: 5vw;
   padding-bottom: 5vw;
   box-shadow: 0px 5px 0px #f1f1f1;
 }
@@ -501,6 +520,10 @@ body {
   color: #ee3a3d;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+.Z_Rw_Tit span {
+  border-bottom: 1vw solid #f7e7c9;
 }
 
 .Rw_One {
@@ -533,7 +556,7 @@ body {
   width: 66%;
   height: 10vw;
   left: 8%;
-  font-size: 4.5vw;
+  font-size: 4vw;
   letter-spacing: 1px;
   color: #333;
 }
@@ -604,4 +627,38 @@ body {
   font-size: 4.5vw;
   font-weight: bold;
   letter-spacing: 1px;
+}
+
+.Z_Dt {
+  position: relative;
+  width: 88vw;
+  height: 62vw;
+  background: #fff;
+  margin: 0 auto;
+  border-radius: 3vw;
+  box-shadow: 0px 5px 0px #f1f1f1;
+}
+
+.Z_Dt_Ctt {
+  position: relative;
+  width: 90%;
+  height: 40vw;
+  margin: 0 auto;
+  margin-top: 5vw;
+}
+
+.Z_Dt_Item {
+  position: relative;
+  width: 100%;
+  height: 12vw;
+  font-size: 4vw;
+  color: #ff9801;
+}
+
+.Z_Dt_Item i {
+  font-style: normal;
+  color: #ea513a;
+  font-size: 4.5vw;
+  margin: 0 0.5vw;
+  font-weight: bold;
 }

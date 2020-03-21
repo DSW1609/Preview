@@ -14,7 +14,7 @@
     <!-- 左侧返回按钮 -->
     <a href="http://www.benshanw.com/m-wap/member/center">
       <div class="Head_L">
-        <img src="img/jiantou.svg" alt="">
+        <img src="img/jiantou.svg" alt="返回">
       </div>
     </a>
     <!-- 中间页面标题 -->
@@ -27,7 +27,7 @@
   <div class="G_XX F_Mp">
     <!-- 左侧头像 -->
     <div class="G_Xx_Tx">
-      <img src="img/yaoqing.svg" alt="">
+      <img src="img/yaoqing.svg" alt="头像">
     </div>
     <!-- 姓名 -->
     <div class="G_Xx_Name">
@@ -38,7 +38,7 @@
     </div>
     <!-- 设置 -->
     <div class="G_Sz">
-      <img src="img/shezhi.svg" alt="">
+      <img src="img/shezhi.svg" alt="设置">
     </div>
   </div>
   <!-- 个人信息 -->
@@ -47,20 +47,28 @@
     <!-- 左上指数部分 -->
     <div class="G_Zs">
       <!-- 上方指数标题 -->
-      <div class="G_Zs_Tit">
-        助力指数
+      <div class="G_Zs_Tit" data-Z="0">
+        站长助力指数
         <!-- 提示图标 -->
-        <img src="img/tishi.svg" alt="">
+        <img src="img/tishi.svg" alt="?">
       </div>
       <!-- 下方指数 -->
       <div class="G_Zs_N">
         1356.00
       </div>
     </div>
-    <!-- 右侧邀请商家入驻 -->
-    <div class="G_Yq">
-      <img src="img/yaoqing.svg" alt="">
-      <span>邀请商家入驻</span>
+    <!-- 左上指数部分 -->
+    <div class="G_Zs G_Zs2">
+      <!-- 上方指数标题 -->
+      <div class="G_Zs_Tit" data-Z="1">
+        品牌助力指数
+        <!-- 提示图标 -->
+        <img src="img/tishi.svg" alt="?">
+      </div>
+      <!-- 下方指数 -->
+      <div class="G_Zs_N">
+        3356.00
+      </div>
     </div>
     <!-- 底部收益部分 -->
     <div class="G_Sy">
@@ -83,7 +91,7 @@
   <!-- 公告部分 -->
   <div class="G_Gg F_Mp">
     <!-- 左侧图标 -->
-    <img src="img/gonggao.svg" alt="">
+    <img src="img/gonggao.svg" alt="公告">
     <!-- 滚动文字部分 -->
     <div class="G_Gg_Te">
       <!-- 滚动lll -->
@@ -98,6 +106,10 @@
     </div>
   </div>
   <!-- 公告部分 -->
+  <!-- 邀请商家入驻 -->
+  <a href="javascript:;">
+    <div class="G_Yq F_Mp"></div>
+  </a>
   <!-- 孵化中心 -->
   <div class="G_Fh F_Mp">
     <!-- 标题 -->
@@ -121,6 +133,7 @@
             </div>
             <!-- 下方说明 -->
             <div class="G_An_B">
+              <!-- 显示目前平台的总商品数量 -->
               国货精品
             </div>
           </div>
@@ -141,6 +154,9 @@
             </div>
             <!-- 下方说明 -->
             <div class="G_An_B">
+              <!-- 可以发表文章之后,所有文章的阅读量,
+                如果是微信文章或者说其他平台的文章,
+                可以后台设置数量 -->
               品牌故事
             </div>
           </div>
@@ -161,6 +177,7 @@
             </div>
             <!-- 下方说明 -->
             <div class="G_An_B">
+              <!-- 累计点击的会员量 -->
               品牌传播量
             </div>
           </div>
@@ -181,6 +198,7 @@
             </div>
             <!-- 下方说明 -->
             <div class="G_An_B">
+              <!-- 所有商家和个人做广告的红包量 -->
               商家红包
             </div>
           </div>
@@ -228,32 +246,32 @@
           </div>
         </a>
         <a href="javascript:;">
-          <div class="G_Gj_one Gj_one_Y G_Gj_T">
+          <div class="G_Gj_one Gj_one_Z G_Gj_T">
             <!-- 上方工具图标 -->
             <img src="img/gongju1.svg" alt="">
             <!-- 下方工具文字 -->
             <div class="G_Gj_Te">
-              站点工具
+              站长攻略
             </div>
           </div>
         </a>
         <a href="javascript:;">
-          <div class="G_Gj_one Gj_one_B G_Gj_T">
+          <div class="G_Gj_one Gj_one_P G_Gj_T">
             <!-- 上方工具图标 -->
             <img src="img/gongju2.svg" alt="">
             <!-- 下方工具文字 -->
             <div class="G_Gj_Te">
-              站点工具
+              站长排行榜
             </div>
           </div>
         </a>
         <a href="javascript:;">
-          <div class="G_Gj_one Gj_one_G G_Gj_T">
+          <div class="G_Gj_one Gj_one_H G_Gj_T">
             <!-- 上方工具图标 -->
             <img src="img/gongju3.svg" alt="">
             <!-- 下方工具文字 -->
             <div class="G_Gj_Te">
-              站点工具
+              华为手机
             </div>
           </div>
         </a>
@@ -266,7 +284,6 @@
     <div class="An_No_Te">
       <!-- 上方提示内容 -->
       <div class="No_Te_Tit">
-        助力指数是:XXXXXXXXX
       </div>
       <!-- 底部确定按钮 -->
       <div class="No_Te_Yes">
@@ -317,8 +334,19 @@
         $('.F_H_Xing').append('<img class="F_L F_H_X F_Rl" src="img/X_H.svg" alt="">')
       }
 
+      // 站长助力指数解释
+      var JS_01 = "站长服务指数=本区域消费金额x0.5"
+      // 品牌助力指数解释
+      var JS_02 = "品牌助力指数=邀请商家的产品交易额x0.1+邀请的商家广告红包x1"
       // 助力指数点击事件
       $(".G_Zs_Tit").click(function () {
+        if ($(this).attr("data-Z") == 0) {
+          // 显示站长助力指数
+          $(".No_Te_Tit").text(JS_01)
+        } else {
+          // 显示品牌助力指数
+          $(".No_Te_Tit").text(JS_02)
+        }
         $(".Sq_An_No").css("display", "block");
         // 禁止页面滚动
         $("body").css("overflow", "hidden");

@@ -7,7 +7,6 @@
 }
 
 body {
-  background: #fafafa;
   /* 去除点击蓝色背景框 */
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
   /* 禁止字体缩放 */
@@ -33,9 +32,9 @@ body {
 }
 
 .Head_L img {
-  width: 9vw;
-  height: 9vw;
-  margin-top: 0.5vw;
+  width: 8vw;
+  height: 8vw;
+  margin-top: 1vw;
 }
 
 .Head_C {
@@ -126,12 +125,10 @@ body {
   position: relative;
   height: 35vw;
   margin-top: 3vw;
-  background-image: url(../img/Zl_Bg.png);
-  background-size: 100%;
-  background-repeat: no-repeat;
   overflow: hidden;
   border-radius: 3vw;
   box-shadow: 0px 0px 5px #fdc563;
+  background: linear-gradient(rgb(255, 188, 17), #FF8008);
 }
 
 .G_Zs {
@@ -141,6 +138,11 @@ body {
   left: 4vw;
   top: 3vw;
   color: #fff;
+}
+
+.G_Zs2 {
+  position: absolute;
+  left: 46vw;
 }
 
 .G_Zs_Tit {
@@ -164,41 +166,16 @@ body {
   font-size: 8vw;
   letter-spacing: 0;
   margin-top: 0.5vw;
-  margin-left: -1vw;
 }
 
 .G_Yq {
-  position: absolute;
-  right: 0vw;
-  top: 8vw;
-  width: 33.5vw;
-  height: 8vw;
-  background-color: rgba(255, 255, 255, 0.3);
-  border-top-left-radius: 2vw;
-  border-bottom-left-radius: 2vw;
-  font-size: 3.8vw;
-  color: #fff;
-  line-height: 8vw;
-  text-indent: 8vw;
-}
-
-.G_Yq img {
-  position: absolute;
-  width: 6vw;
-  height: 6vw;
-  left: 1.2vw;
-  top: 1vw;
-  animation: G_Yq_Im 3s infinite linear;
-}
-
-@keyframes G_Yq_Im {
-  from {
-    transform: rotate(0);
-  }
-
-  to {
-    transform: rotate(360deg);
-  }
+  position: relative;
+  height: 30vw;
+  margin-top: 5vw;
+  border-radius: 3vw;
+  background-image: url(../img/Z_Rk.png);
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
 }
 
 .G_Sy {
@@ -211,7 +188,7 @@ body {
 }
 
 .G_Sy_One {
-  width: auto;
+  width: 39vw;
   height: 6vw;
   left: 1vw;
   margin-left: 3vw;
@@ -363,6 +340,18 @@ body {
   background: linear-gradient(#6affb1, #11FFBD);
 }
 
+.Gj_one_Z {
+  background: linear-gradient(#eaafc8, #654ea3);
+}
+
+.Gj_one_P {
+  background: linear-gradient(#f5af19, #f12711);
+}
+
+.Gj_one_H {
+  background: linear-gradient(#bdc3c7, #2c3e50);
+}
+
 .G_Gj_one::before {
   content: '';
   position: absolute;
@@ -423,7 +412,7 @@ body {
 .An_No_Te {
   position: absolute;
   width: 80vw;
-  height: 40vw;
+  height: 50vw;
   background: #ffffff;
   left: 10vw;
   top: 50%;
@@ -437,7 +426,7 @@ body {
 .No_Te_Tit {
   position: relative;
   width: 80%;
-  height: 30%;
+  height: 43%;
   padding: 10%;
   color: #333;
   border-bottom: 1px solid #f4f4f4;

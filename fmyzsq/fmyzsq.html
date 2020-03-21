@@ -107,7 +107,7 @@
       <div class="F_Itg">
         10000
       </div>
-      <!-- 购买按钮 -->
+      <!-- 购买按钮 点击跳转到商品页 -->
       <a href="javascript:;">
         <div class="F_Go">
           <span>购买开通</span>
@@ -269,13 +269,18 @@
           $("#F_Buy").addClass("Sq_Dl");
           // 更改分割线颜色
           $("#F_Fg1").css("background", "#feba27");
+          // 更改导航栏文字
+          $(".F_Head_Tit").text("正在为您开通,请不要离开...")
           setTimeout(function () {
             // 添加上方进度提交申请达到类名：Sq_Dl
             $("#F_Scc").addClass("Sq_Dl");
             // 更改分割线颜色
             $(".F_Fg2").css("background", "#feba27");
+            // 更改导航栏文字
+            $(".F_Head_Tit").text("开通成功,正在为您跳转...");
             // 跳转到富民驿站主页
-            // window.location.replace("http://");
+            // console.log('跳转成功!');
+            window.location.replace("https://dsw1609.github.io/Preview/fmyzin/fmyzin.html");
           }, 1000);
         }
         // 没有购买提示
