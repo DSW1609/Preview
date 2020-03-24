@@ -1,0 +1,131 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+body {
+  background: #f75b43;
+}
+
+.P_Head {
+  position: relative;
+  width: 100vw;
+  height: 35vw;
+  background-image: url(../img/PTN_BNN.jpg);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.P_List {
+  position: relative;
+  width: 90vw;
+  margin: 0 auto;
+  top: -6vw;
+  padding-bottom: 5vw;
+}
+
+.P_Item {
+  position: relative;
+  width: 100%;
+  height: 31vw;
+  background: #fff;
+  margin-top: 4.3vw;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.P_L_Img {
+  position: relative;
+  width: 26.5vw;
+  height: 26.5vw;
+  top: 2.25vw;
+  left: 2.25vw;
+}
+
+.P_L_Img img {
+  width: 100%;
+  height: 100%;
+  border-radius: 3vw;
+}
+
+.P_R_Ctt {
+  position: absolute;
+  width: 59vw;
+  height: 31vw;
+  left: 31vw;
+  top: 0;
+}
+
+.P_R_M {
+  position: relative;
+  width: 40vw;
+  height: 7vw;
+  top: 2vw;
+  margin-top: 1.5vw;
+  line-height: 7vw;
+  font-size: 4.2vw;
+  color: #555;
+}
+
+.P_R_M em {
+  color: #d7282b;
+  font-style: normal;
+  margin-left: 1vw;
+}
+
+.P_R_Tit {
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  color: #333;
+  font-weight: bold;
+}
+
+.P_R_Pst {
+  color: #555;
+}
+
+.P_R_Grade {
+  position: absolute;
+  top: 1.5vw;
+  right: 1.5vw;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 6vw;
+  border: 1px solid #d7282b;
+  text-align: center;
+  line-height: 6vw;
+  font-size: 4vw;
+  color: #d7282b;
+}
+
+.P_R_Buy {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 25.2vw;
+  height: 8vw;
+  background: linear-gradient(to right, #fc696d, #fe914a);
+  text-align: center;
+  line-height: 8vw;
+  color: #fff;
+  font-size: 4vw;
+}
+
+.P_R_Price {
+  position: absolute;
+  bottom: 8.5vw;
+  right: 1.5vw;
+  height: 8vw;
+  line-height: 8vw;
+  color: #d7282b;
+  font-size: 6vw;
+  text-align: right;
+}
+
+.P_R_Price em {
+  font-size: 3.8vw;
+  font-style: normal;
+  margin-right: 0.3vw;
+}
