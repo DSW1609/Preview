@@ -59,7 +59,7 @@ body {
 
 .P_R_M {
   position: relative;
-  width: 40vw;
+  width: 52vw;
   height: 7vw;
   top: 2vw;
   margin-top: 1.5vw;
@@ -80,24 +80,6 @@ body {
   text-overflow: ellipsis;
   color: #333;
   font-weight: bold;
-}
-
-.P_R_Pst {
-  color: #555;
-}
-
-.P_R_Grade {
-  position: absolute;
-  top: 1.5vw;
-  right: 1.5vw;
-  width: 6vw;
-  height: 6vw;
-  border-radius: 6vw;
-  border: 1px solid #d7282b;
-  text-align: center;
-  line-height: 6vw;
-  font-size: 4vw;
-  color: #d7282b;
 }
 
 .P_R_Buy {
