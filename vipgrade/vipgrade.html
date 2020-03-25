@@ -179,18 +179,24 @@
           clickable: true,
         },
       });
+      // 顶部等级文字显示效果
+      // 循环输出
+      var V_SZ = ['初', '中', '高', '白', '钻', '首']
+      $(".V_DJ_IM").each(function (i) {
+        $(this).text(V_SZ[i]);
+      })
+      // 初始化当前积分
+      var V_NOW = 11000
+      // 输出到页面
+      $(".V_DJ_NOW").text(V_NOW);
+      // 初始化下一等级需要满足的积分
+      var V_UP = 21000
+      // 计算升到下一等级需要的积分
+      var V_UP_X = V_UP - V_NOW
+      // 输出到页面
+      $(".V_XX_ITEM3 em").text(V_UP_X);
       // 指示条显示效果
       setTimeout(function () {
-        // 初始化当前积分
-        var V_NOW = 11000
-        // 输出到页面
-        $(".V_DJ_NOW").text(V_NOW);
-        // 初始化下一等级需要满足的积分
-        var V_UP = 21000
-        // 计算升到下一等级需要的积分
-        var V_UP_X = V_UP - V_NOW
-        // 输出到页面
-        $(".V_XX_ITEM3 em").text(V_UP_X);
         // 获得上方积分指示的宽度(PX)
         var V_NOW_W = $(".V_DJ_NOW").outerWidth(true);
         // 获得当前底层指示条的长度(PX)
@@ -202,12 +208,6 @@
         // 更改上方积分指示的left值,与上层指示条位置一致
         $(".V_DJ_NOW").css("left", V_ZS_TW - V_NOW_W / 2 + 'px');
       }, 300)
-      // 顶部等级文字显示效果
-      // 循环输出
-      var V_SZ = ['初', '中', '高', '白', '钻', '首']
-      $(".V_DJ_IM").each(function (i) {
-        $(this).text(V_SZ[i]);
-      })
     })
   </script>
 </body>
