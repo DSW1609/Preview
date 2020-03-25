@@ -4,6 +4,7 @@
   text-decoration: none;
   user-select: none;
   letter-spacing: 1px;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 body {
@@ -32,7 +33,7 @@ body {
 
 .swiper-slide {
   position: relative;
-  width: 68vw;
+  width: 72vw;
   height: 110vw;
   margin: 0 auto;
   top: 12vw;
@@ -50,7 +51,7 @@ body {
 .V_TS {
   position: relative;
   width: 40vw;
-  height: 9vw;
+  height: 10vw;
   background: #f7f7f7;
   margin: 0 auto;
   border-radius: 6vw;
@@ -58,7 +59,7 @@ body {
   color: #2377d7;
   font-size: 4.5vw;
   text-align: center;
-  line-height: 9vw;
+  line-height: 10vw;
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
 }
 
