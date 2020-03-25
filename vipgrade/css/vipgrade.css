@@ -1,0 +1,179 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+  letter-spacing: 1px;
+}
+
+body {
+  background: #2377d7;
+}
+
+.V_Head {
+  position: relative;
+  width: 100vw;
+  height: 9vw;
+  line-height: 9vw;
+  font-size: 4.5vw;
+  color: #fff;
+  text-align: center;
+  background-image: url(../img/DJ_FH.svg);
+  background-size: 4.5vw;
+  background-repeat: no-repeat;
+  background-position: 3vw center;
+}
+
+.swiper-container {
+  position: relative;
+  width: 100vw;
+  height: 130vw;
+}
+
+.swiper-slide {
+  position: relative;
+  width: 68vw !important;
+  height: 110vw !important;
+  margin: 0 auto;
+  top: 12vw;
+  border-radius: 3vw;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(#38ef7d, #9be04d);
+}
+
+.swiper-pagination-bullet {
+  background: #fff !important;
+  opacity: 1 !important;
+  transition: 0.3s;
+}
+
+.V_TS {
+  position: relative;
+  width: 40vw;
+  height: 9vw;
+  background: #f7f7f7;
+  margin: 0 auto;
+  border-radius: 6vw;
+  margin-bottom: 10vw;
+  color: #2377d7;
+  font-size: 4vw;
+  text-align: center;
+  line-height: 9vw;
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+}
+
+.V_DJ_IM {
+  position: relative;
+  width: 25vw;
+  height: 40vw;
+  background-image: url(../img/DJ_BG.png);
+  background-size: 100%;
+  background-repeat: no-repeat;
+  margin: 0 auto;
+  margin-top: 4vw;
+  text-align: center;
+  color: #fff;
+  line-height: 28vw;
+  font-size: 9.5vw;
+}
+
+.V_DJ_ZST {
+  position: relative;
+  width: 62vw;
+  height: 20vw;
+  margin: 0 auto;
+  margin-top: 5vw;
+}
+
+.V_DJ_NOW {
+  position: absolute;
+  width: auto;
+  height: 6vw;
+  line-height: 4.6vw;
+  background-image: url(../img/DJ_JF.png);
+  background-position: center;
+  background-size: 95% 100%;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 4vw;
+  color: #fff;
+  text-indent: 0.5vw;
+  padding: 0 2vw;
+  transition: 1s linear;
+  left: -6.5vw;
+}
+
+.V_DJ_DZS {
+  position: absolute;
+  width: 62vw;
+  height: 1vw;
+  top: 7vw;
+  background: #fff;
+  border-radius: 1vw;
+  opacity: 0.6;
+}
+
+.V_DJ_TZS {
+  position: absolute;
+  width: 0;
+  height: 1vw;
+  top: 7vw;
+  background: linear-gradient(to right, #2377d7, #372963);
+  border-radius: 1vw;
+  transition: 1s linear;
+}
+
+.V_DJ_TZS::after {
+  position: absolute;
+  content: '';
+  width: 1vw;
+  height: 2vw;
+  right: 0;
+  top: -0.5vw;
+  background: #fff;
+  border-radius: 2vw;
+}
+
+.V_DJ_SJF {
+  position: absolute;
+  width: 30vw;
+  height: 6vw;
+  top: 8.8vw;
+  right: 0.5vw;
+  text-align: right;
+  color: #fff;
+  font-size: 4vw;
+}
+
+.V_DJ_XX {
+  position: relative;
+  width: 62vw;
+  height: 40vw;
+  margin: 0 auto;
+  margin-top: 5vw;
+}
+
+.V_XX_ITEM {
+  position: relative;
+  width: 100%;
+  height: 8.8vw;
+  color: #333;
+  font-size: 4.2vw;
+}
+
+.V_XX_ITEM2 {
+  height: 13.5vw;
+}
+
+.V_XX_ITEM2 i {
+  font-style: normal;
+  font-size: 3.5vw;
+  color: #555;
+}
+
+.V_XX_ITEM em {
+  color: #ff4538;
+  font-style: normal;
+  margin: 0vw 0.8vw;
+  font-weight: bold;
+}
