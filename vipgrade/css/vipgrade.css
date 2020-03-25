@@ -107,7 +107,7 @@ body {
 .V_DJ_DZS {
   position: absolute;
   width: 62vw;
-  height: 1vw;
+  height: 2vw;
   top: 8vw;
   background: #fff;
   border-radius: 1vw;
@@ -117,7 +117,7 @@ body {
 .V_DJ_TZS {
   position: absolute;
   width: 0;
-  height: 1vw;
+  height: 2vw;
   top: 8vw;
   background: linear-gradient(to right, #2377d7, #372963);
   border-radius: 1vw;
@@ -128,7 +128,7 @@ body {
   position: absolute;
   content: '';
   width: 1vw;
-  height: 2vw;
+  height: 3vw;
   right: 0;
   top: -0.5vw;
   background: #fff;
@@ -139,7 +139,7 @@ body {
   position: absolute;
   width: 30vw;
   height: 6vw;
-  top: 9.8vw;
+  top: 10.5vw;
   right: 0.5vw;
   text-align: right;
   color: #fff;
@@ -163,7 +163,7 @@ body {
 }
 
 .V_XX_ITEM2 {
-  height: 13.5vw;
+  height: 14vw;
 }
 
 .V_XX_ITEM2 i {

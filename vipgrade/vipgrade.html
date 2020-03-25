@@ -11,7 +11,7 @@
 
 <body>
   <!-- HEAD -->
-  <a href="javascript:;">
+  <a href="http://www.benshanw.com/m-wap/member/center">
     <div class="V_Head">
       提升会员等级
     </div>
@@ -158,8 +158,8 @@
       </div>
     </div>
   </div>
-  <!-- 去提升 -->
-  <a href="javascript:;">
+  <!-- 去提升 跳转到合伙人商品专区 -->
+  <a href="http://benshanw.com">
     <div class="V_TS">
       去提升
     </div>
@@ -180,8 +180,8 @@
         },
       });
       // 顶部等级文字显示效果
-      // 循环输出
       var V_SZ = ['初', '中', '高', '白', '钻', '首']
+      // 循环输出
       $(".V_DJ_IM").each(function (i) {
         $(this).text(V_SZ[i]);
       })
@@ -195,14 +195,14 @@
       var V_UP_X = V_UP - V_NOW
       // 输出到页面
       $(".V_XX_ITEM3 em").text(V_UP_X);
-      // 指示条显示效果
+      // 获得上方积分指示的宽度(PX)
+      var V_NOW_W = $(".V_DJ_NOW").outerWidth(true);
+      // 获得当前底层指示条的长度(PX)
+      var V_ZS_W = $(".V_DJ_DZS").width();
+      // 计算上层指示条的宽度
+      var V_ZS_TW = Math.round(V_ZS_W * V_NOW / V_UP);
+      // 指示条延时显示效果
       setTimeout(function () {
-        // 获得上方积分指示的宽度(PX)
-        var V_NOW_W = $(".V_DJ_NOW").outerWidth(true);
-        // 获得当前底层指示条的长度(PX)
-        var V_ZS_W = $(".V_DJ_DZS").width();
-        // 计算上层指示条的宽度
-        var V_ZS_TW = Math.round(V_ZS_W * V_NOW / V_UP);
         // 更改上层指示条的宽度
         $(".V_DJ_TZS").css("width", V_ZS_TW + 'px');
         // 更改上方积分指示的left值,与上层指示条位置一致
