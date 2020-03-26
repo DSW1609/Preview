@@ -11,6 +11,21 @@ body {
   background: url(../img/DJ_BDGG.png);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
+  animation: V_BD 5s linear infinite;
+}
+
+@keyframes V_BD {
+  0% {
+    background-size: 100vw 100vh;
+  }
+
+  50% {
+    background-size: 105vw 100vh;
+  }
+
+  100% {
+    background-size: 100vw 100vh;
+  }
 }
 
 .V_Head {
@@ -209,13 +224,13 @@ body {
 .V_Tips_Te::before {
   position: absolute;
   content: '';
-  width: 62vw;
+  width: 60vw;
   height: 10vw;
   top: 0;
   background: url(../img/DJ_BDGG.png);
   background-size: 100%;
   z-index: -1;
-  filter: blur(5px);
+  filter: blur(1VW);
   border-radius: 1vw;
 }
 
