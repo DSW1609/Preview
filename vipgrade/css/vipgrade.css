@@ -36,7 +36,7 @@ body {
   width: 72vw;
   height: 110vw;
   margin: 0 auto;
-  top: 12vw;
+  top: 5vw;
   border-radius: 3vw;
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
   background: linear-gradient(#38ef7d, #9be04d);
@@ -177,4 +177,28 @@ body {
   font-style: normal;
   margin: 0vw 0.8vw;
   font-weight: bold;
+}
+
+.V_Tips {
+  position: relative;
+  width: 72vw;
+  height: 10vw;
+  margin: 0 auto;
+  margin-top: 8vw;
+}
+
+.V_Tips img {
+  position: absolute;
+  width: 10vw;
+  height: 10vw;
+}
+
+.V_Tips_Te {
+  position: absolute;
+  width: 64vw;
+  height: 10vw;
+  left: 10vw;
+  color: #ffc807;
+  font-size: 4.5vw;
+  line-height: 5vw;
 }
