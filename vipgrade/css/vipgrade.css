@@ -13,7 +13,7 @@ body::after {
   width: 100vw;
   height: 100vh;
   top: 0;
-  z-index: -1;
+  z-index: -2;
   background: url(../img/DJ_BDGG.png);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
@@ -74,17 +74,10 @@ body::after {
   opacity: 0.3;
 }
 
-.swiper-pagination-bullet {
-  background: #fff !important;
-  opacity: 1 !important;
-  transition: 0.3s;
-}
-
 .V_TS {
   position: relative;
   width: 40vw;
   height: 10vw;
-  background: linear-gradient(#ffc807, #ffb300);
   margin: 0 auto;
   border-radius: 6vw;
   margin-bottom: 10vw;
@@ -94,7 +87,10 @@ body::after {
   text-align: center;
   line-height: 10vw;
   letter-spacing: 2px;
-  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.3);
+  box-shadow: 0px 4px 0px 0px #03c8ff;
+  background: url(../img/DJ_BDGG.png);
+  background-position: top center;
+  animation: V_BD 6s infinite;
 }
 
 .V_DJ_IM {
@@ -124,7 +120,6 @@ body::after {
   position: absolute;
   width: auto;
   height: 7vw;
-  line-height: 4.6vw;
   background-image: url(../img/DJ_JF.png);
   background-position: center;
   background-size: 95% 100%;
@@ -135,7 +130,7 @@ body::after {
   text-indent: 0.5vw;
   padding: 0 2vw;
   transition: 1s linear;
-  left: -6.5vw;
+  left: -8vw;
   line-height: 5.6vw;
 }
 
@@ -203,8 +198,8 @@ body::after {
 
 .V_XX_ITEM2 i {
   font-style: normal;
-  font-size: 3.5vw;
-  color: #555;
+  font-size: 3.8vw;
+  color: #595bb3;
 }
 
 .V_XX_ITEM em {
@@ -290,10 +285,10 @@ body::after {
 }
 
 .V_D_Te a {
-  color: #333;
-  background: #fef951;
+  color: #fff;
+  background: #595bb3;
   font-size: 3.5vw;
   border-radius: 3vw;
-  padding: 0 1vw;
+  padding: 0 2vw;
   margin-left: 1vw;
 }
