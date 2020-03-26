@@ -7,24 +7,31 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body {
+body::after {
+  content: '';
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  z-index: -1;
   background: url(../img/DJ_BDGG.png);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
-  animation: V_BD 20s linear infinite;
+  background-position: top center;
+  animation: V_BD 30s linear infinite;
 }
 
 @keyframes V_BD {
   0% {
-    background-size: 100vw 100vh;
+    transform: scale(1);
   }
 
   50% {
-    background-size: 150vw 100vh;
+    transform: scale(1.2);
   }
 
   100% {
-    background-size: 100vw 100vh;
+    transform: scale(1);
   }
 }
 

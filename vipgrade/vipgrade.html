@@ -29,7 +29,7 @@
   <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
     <div class="swiper-wrapper">
       <!-- 当前会员等级 -->
-      <div class="swiper-slide">
+      <div class="swiper-slide" data-hash="slide1">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -66,7 +66,7 @@
         </div>
       </div>
       <!-- 下一会员等级 -->
-      <div class="swiper-slide">
+      <div class="swiper-slide" data-hash="slide2">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -112,7 +112,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide" data-hash="slide3">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -156,7 +156,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide" data-hash="slide4">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -200,7 +200,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide" data-hash="slide5">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -244,7 +244,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide">
+      <div class="swiper-slide" data-hash="slide6">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -306,13 +306,14 @@
         slidesPerView: 'auto',
         spaceBetween: 28,
         centeredSlides: true,
+        hashNavigation: true,
         pagination: {
           el: '.swiper-pagination',
           clickable: true,
         },
       });
       // 顶部等级文字显示效果
-      var V_SZ = ['初', '中', '高', '白', '钻', '首']
+      var V_SZ = ['初', '中', '高', '金', '钻', '董']
       // 循环输出
       $(".V_DJ_IM").each(function (i) {
         $(this).text(V_SZ[i]);
