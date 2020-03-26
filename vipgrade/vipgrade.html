@@ -318,13 +318,14 @@
       $(".V_DJ_IM").each(function (i) {
         $(this).text(V_SZ[i]);
       })
-      // 背景颜色
+      // 定义背景颜色
       var V_BC = ['#5fff9b', '#ffe0d8', '#bdd1eb', '#f0ede6', '#98ddde', '#6fc8ff']
       $(".swiper-slide").each(function (i) {
-        $(this).css('background', V_BC[i])
+        $(this).css('background-color', V_BC[i]);
+        $(this).css('box-shadow', '0px 10px 0px' + V_BC[i]);
       })
       // 初始化当前积分
-      var V_NOW = 15000
+      var V_NOW = 13000
       // 输出到页面
       $(".V_DJ_NOW").text(V_NOW);
       // 初始化下一等级需要满足的积分

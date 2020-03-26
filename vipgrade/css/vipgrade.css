@@ -18,20 +18,20 @@ body::after {
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
   background-position: top center;
-  animation: V_BD 30s linear infinite;
+  animation: V_BD 50s infinite;
 }
 
 @keyframes V_BD {
   0% {
-    transform: scale(1);
+    background-size: 100vw 100vh;
   }
 
   50% {
-    transform: scale(1.2);
+    background-size: 150vw 150vh;
   }
 
   100% {
-    transform: scale(1);
+    background-size: 100vw 100vh;
   }
 }
 
@@ -62,7 +62,16 @@ body::after {
   margin: 0 auto;
   top: 5vw;
   border-radius: 3vw;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+}
+
+.swiper-slide::before {
+  content: '';
+  position: absolute;
+  width: 72vw;
+  height: 110vw;
+  background-image: url(../img//DJ_VIP.svg);
+  background-size: 8vw 8vw;
+  opacity: 0.3;
 }
 
 .swiper-pagination-bullet {
@@ -127,6 +136,7 @@ body::after {
   padding: 0 2vw;
   transition: 1s linear;
   left: -6.5vw;
+  line-height: 5.6vw;
 }
 
 .V_DJ_DZS {
@@ -156,7 +166,7 @@ body::after {
   height: 3vw;
   right: 0;
   top: -0.5vw;
-  background: #fff;
+  background: #372963;
   border-radius: 2vw;
 }
 
