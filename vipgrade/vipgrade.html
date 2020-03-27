@@ -44,34 +44,45 @@
         <div class="V_DJ_IM">
           <!-- 等级 -->
         </div>
-        <!-- 积分指示条 只在当前等级轮播图中显示 -->
-        <div class="V_DJ_ZST">
-          <!-- 上方当前积分指示 -->
-          <div class="V_DJ_NOW">
-          </div>
-          <!-- 底层指示条 -->
-          <div class="V_DJ_DZS">
-          </div>
-          <!-- 上层指示条 -->
-          <div class="V_DJ_TZS">
-          </div>
-          <!-- 升级需要积分 -->
-          <div class="V_DJ_SJF">
-            21000
-          </div>
-        </div>
         <!-- 下方等级信息 -->
         <div class="V_DJ_XX">
           <!-- 单行信息 -->
           <div class="V_XX_ITEM V_XX_ITEM1">
-            当前等级:<em>初级合伙人</em>
+            会员等级:<em>无</em>
           </div>
           <div class="V_XX_ITEM V_XX_ITEM2">
-            可享折扣率:<em>9.99</em><br>
+            可享折扣率:<em>无</em><br>
             <i>*仅限众善物联官方自营店商品</i>
           </div>
-          <div class="V_XX_ITEM V_XX_ITEM3">
-            升级还需要<em></em>扶贫积分
+          <div class="V_XX_ITEM">
+            <!-- 需要达到/距离升级 -->
+            需要达到<em>0</em>扶贫积分
+          </div>
+        </div>
+        <!-- 底部按钮 -->
+        <div class="V_DJ_B">
+          <!-- 单行按钮 -->
+          <div class="V_DJ_D">
+            <!-- 左侧图标 -->
+            <div class="V_D_Im">
+              <img src="img/DJ_GW.svg" alt="">
+            </div>
+            <!-- 右侧文字 -->
+            <div class="V_D_Te">
+              <!-- 去购买跳转到合伙人商品专区 -->
+              购买合伙人商品可以获得大额扶贫积分<a href="http://benshanw.com">去购买</a>
+            </div>
+          </div>
+          <div class="V_DJ_D">
+            <!-- 左侧图标 -->
+            <div class="V_D_Im">
+              <img src="img/DJ_YQ.svg" alt="">
+            </div>
+            <!-- 右侧文字 -->
+            <div class="V_D_Te">
+              <!-- 去邀请跳转到创客中心 -->
+              邀请新用户注册可以获得大额扶贫积分<a href="http://www.benshanw.com/m-wap/Distribution/MyShop">去邀请</a>
+            </div>
           </div>
         </div>
       </div>
@@ -85,14 +96,14 @@
         <div class="V_DJ_XX">
           <!-- 单行信息 -->
           <div class="V_XX_ITEM V_XX_ITEM1">
-            会员等级:<em>中级合伙人</em>
+            会员等级:<em>初级合伙人</em>
           </div>
           <div class="V_XX_ITEM V_XX_ITEM2">
-            可享折扣率:<em>9.98</em><br>
+            可享折扣率:<em>9.99</em><br>
             <i>*仅限众善物联官方自营店商品</i>
           </div>
           <div class="V_XX_ITEM">
-            需要达到<em>21000</em>扶贫积分
+            需要达到<em>10000</em>扶贫积分
           </div>
         </div>
         <!-- 底部按钮 -->
@@ -123,6 +134,41 @@
         </div>
       </div>
       <div class="swiper-slide" data-hash="slide3">
+        <!-- 等级徽章 -->
+        <div class="V_DJ_IM">
+          <!-- 等级 -->
+        </div>
+        <!-- 积分指示条 只在当前等级轮播图中显示 -->
+        <div class="V_DJ_ZST">
+          <!-- 上方当前积分指示 -->
+          <div class="V_DJ_NOW">
+          </div>
+          <!-- 底层指示条 -->
+          <div class="V_DJ_DZS">
+          </div>
+          <!-- 上层指示条 -->
+          <div class="V_DJ_TZS">
+          </div>
+          <!-- 升级需要积分 -->
+          <div class="V_DJ_SJF">
+          </div>
+        </div>
+        <!-- 下方等级信息 -->
+        <div class="V_DJ_XX">
+          <!-- 单行信息 -->
+          <div class="V_XX_ITEM V_XX_ITEM1">
+            当前等级:<em>中级合伙人</em>
+          </div>
+          <div class="V_XX_ITEM V_XX_ITEM2">
+            可享折扣率:<em>9.98</em><br>
+            <i>*仅限众善物联官方自营店商品</i>
+          </div>
+          <div class="V_XX_ITEM V_XX_ITEM3">
+            升级需要<em></em>扶贫积分
+          </div>
+        </div>
+      </div>
+      <div class="swiper-slide" data-hash="slide4">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -166,7 +212,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide" data-hash="slide4">
+      <div class="swiper-slide" data-hash="slide5">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -210,7 +256,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide" data-hash="slide5">
+      <div class="swiper-slide" data-hash="slide6">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -254,7 +300,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide" data-hash="slide6">
+      <div class="swiper-slide" data-hash="slide7">
         <!-- 等级徽章 -->
         <div class="V_DJ_IM">
           <!-- 等级 -->
@@ -324,35 +370,49 @@
         hashNavigation: true,
       });
       // 顶部等级文字显示效果
-      var V_SZ = ['初', '中', '高', '金', '钻', '董']
+      var V_SZ = ['无', '初', '中', '高', '金', '钻', '董']
       // 循环输出
       $(".V_DJ_IM").each(function (i) {
         $(this).text(V_SZ[i]);
       })
       // 定义背景颜色
-      var V_BC = ['#5fff9b', '#ffe0d8', '#bdd1eb', '#f0ede6', '#98ddde', '#6fc8ff']
+      var V_BC = ['#03c8ff', '#5fff9b', '#ffe0d8', '#bdd1eb', '#f0ede6', '#98ddde', '#6fc8ff']
       $(".swiper-slide").each(function (i) {
+        // 更改背景
         $(this).css('background-color', V_BC[i]);
+        // 增加投影
         $(this).css('box-shadow', '0px 10px 0px' + V_BC[i]);
       })
+
+      // 当前页面进度条效果
       // 初始化当前积分
-      var V_NOW = 13000
+      var V_NOW = 26000
       // 输出到页面
       $(".V_DJ_NOW").text(V_NOW);
+
       // 初始化下一等级需要满足的积分
-      var V_UP = 21000
+      var V_UP = 41000
+      // 输出到页面
+      $(".V_DJ_SJF").text(V_UP);
+
       // 计算升到下一等级需要的积分
       var V_UP_X = V_UP - V_NOW
       // 输出到页面
       $(".V_XX_ITEM3 em").text(V_UP_X);
+
+
       // 获得上方积分指示的宽度(PX)
       var V_NOW_W = $(".V_DJ_NOW").outerWidth(true);
+      // 积分指示向左偏移宽度的1/2
+      $(".V_DJ_NOW").css("left", -V_NOW_W / 2 + 'px')
       // 获得当前底层指示条的长度(PX)
       var V_ZS_W = $(".V_DJ_DZS").width();
       // 计算上层指示条的宽度
       var V_ZS_TW = Math.round(V_ZS_W * V_NOW / V_UP);
       // 指示条延时显示效果
       setTimeout(function () {
+        // 设置过渡时间
+        $(".V_DJ_NOW").css("transition", "1s linear");
         // 更改上层指示条的宽度
         $(".V_DJ_TZS").css("width", V_ZS_TW + 'px');
         // 更改上方积分指示的left值,与上层指示条位置一致
