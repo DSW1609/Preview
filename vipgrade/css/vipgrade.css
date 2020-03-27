@@ -336,16 +336,17 @@ body::after {
   width: 50vw;
   height: 11vw;
   left: 12vw;
-  font-size: 4vw;
-  top: 1vw;
+  font-size: 4.5vw;
+  top: 1.5vw;
   line-height: 5vw;
   color: #333;
+  letter-spacing: 0;
 }
 
 .V_D_Te a {
   color: #fff;
   background: #595bb3;
-  font-size: 3.5vw;
+  font-size: 4vw;
   border-radius: 3vw;
   padding: 0 2vw;
   margin-left: 1vw;
