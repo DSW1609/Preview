@@ -74,6 +74,20 @@ body::after {
   opacity: 0.3;
 }
 
+.swiper-pagination-bullet {
+  background: #03c8ff !important;
+  opacity: 1 !important;
+  transition: 0.3s;
+  border: 1px solid #04c6ff;
+}
+
+.swiper-pagination-bullet-active {
+  width: 6vw !important;
+  transition: 0.3s;
+  border-radius: 8px !important;
+  background: linear-gradient(to right, #03c8ff, #416aff) !important;
+}
+
 .V_TS {
   position: relative;
   width: 40vw;
@@ -81,6 +95,7 @@ body::after {
   margin: 0 auto;
   border-radius: 6vw;
   margin-bottom: 10vw;
+  margin-top: 5vw;
   color: #fff;
   font-weight: bold;
   font-size: 4.5vw;
