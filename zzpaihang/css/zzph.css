@@ -1,0 +1,168 @@
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  user-select: none;
+}
+
+body {
+  background: #f7fcff;
+}
+
+.Head {
+  position: relative;
+  width: 100vw;
+  height: 72vw;
+}
+
+.Head_Jim {
+  position: absolute;
+  width: 96vw;
+  left: 2vw;
+  z-index: 999;
+  top: -2vw;
+}
+
+.Head_Tit {
+  position: absolute;
+  width: 66vw;
+  z-index: 999;
+  left: 17vw;
+  top: 4vw;
+}
+
+.Head_Lo {
+  position: absolute;
+  width: 12vw;
+  z-index: 999;
+  left: 44vw;
+  top: 28vw;
+}
+
+.Ctt {
+  position: relative;
+  width: 100vw;
+  height: 200vw;
+  border-top-left-radius: 3vw;
+  border-top-right-radius: 3vw;
+  background: #fbf0c9;
+  overflow: hidden;
+}
+
+.Head_Slc {
+  position: relative;
+  width: 44vw;
+  height: 8vw;
+  margin: 0 auto;
+  z-index: 999;
+  top: 70vw;
+  left: 0.6vw;
+}
+
+.Head_Slc_Item {
+  position: absolute;
+  width: 21vw;
+  height: 7.5vw;
+  line-height: 7.5vw;
+  color: #fff;
+  font-size: 4.8vw;
+  letter-spacing: 1px;
+}
+
+.Head_Slc_Item2 {
+  right: 0;
+  text-align: right;
+}
+
+.Head_Slc_Btm {
+  position: absolute;
+  width: 0;
+  height: 0;
+  bottom: -2px;
+  left: 6.8vw;
+  /* left: 30.4vw; */
+  transition: 0.3s linear;
+  border-width: 0 3vw 1.8vw;
+  border-style: solid;
+  border-color: transparent transparent #fbf0c9;
+}
+
+.Ctt_Body {
+  position: relative;
+  width: 200vw;
+}
+
+.Ctt_Q {
+  position: relative;
+  float: left;
+  width: 90vw;
+  z-index: 999;
+  left: 0vw;
+  /* left: -95vw; */
+  margin-left: 5vw;
+  top: 10vw;
+  transition: 0.3s linear;
+}
+
+.Ctt_Q2 {
+  background: blue;
+}
+
+.swiper-container {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.swiper-slide {
+  background-size: cover;
+  background-position: center;
+}
+
+.gallery-top {
+  height: 80%;
+  width: 100%;
+}
+
+.gallery-thumbs {
+  box-sizing: border-box;
+  background: #fff;
+  height: 8.8vw;
+  line-height: 8.8vw;
+  font-size: 4.1vw;
+  border-radius: 3vw;
+}
+
+.gallery-thumbs .swiper-slide {
+  height: 100%;
+  color: #555;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
+  opacity: 1;
+  color: #ffc729;
+}
+
+.C_More {
+  position: relative;
+  width: 28vw;
+  height: 7vw;
+  color: #fff;
+  font-size: 4vw;
+  text-align: center;
+  line-height: 7vw;
+  background: #2481e2;
+  margin: 0 auto;
+  border-radius: 2vw;
+  margin-top: 3vw;
+  letter-spacing: 1px;
+}
+
+.C_F_Item {
+  position: relative;
+  width: 100%;
+  height: 30vw;
+  background: #fff;
+  margin-top: 3vw;
+  border-radius: 3vw;
+}

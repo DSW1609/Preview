@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>站长排行榜</title>
+  <link rel="stylesheet" href="css/zzph.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+</head>
+
+<body>
+  <!-- HEAD -->
+  <div class="Head">
+    <!-- 奖杯背景 -->
+    <img class="Head_Jim" src="img/Zz_Head.png" alt="">
+    <!-- 标题 -->
+    <img class="Head_Tit" src="img/Zz_Head_Te.png" alt="">
+    <!-- LOGO -->
+    <img class="Head_Lo" src="img/ZSFM.png" alt="">
+    <!-- 排行选项卡 -->
+    <div class="Head_Slc">
+      <!-- 单个选项卡 -->
+      <div class="Head_Slc_Item">
+        <span>普通排行</span>
+      </div>
+      <!-- 单个选项卡 -->
+      <div class="Head_Slc_Item Head_Slc_Item2">
+        <span>往期排行</span>
+      </div>
+      <!-- 底部指示箭头 -->
+      <div class="Head_Slc_Btm">
+      </div>
+    </div>
+  </div>
+  <!-- HEAD -->
+  <!-- CTT -->
+  <div class="Ctt">
+    <div class="Ctt_Body">
+      <!-- 内层可切换div -->
+      <div class="Ctt_Q">
+        <!-- 省份列表 -->
+        <div class="swiper-container gallery-thumbs">
+          <div class="swiper-wrapper" id="C_Pro">
+          </div>
+        </div>
+        <!-- Swiper -->
+        <div class="swiper-container gallery-top">
+          <div class="swiper-wrapper" id="C_Pro_X">
+            <!-- 单个省份排行榜 -->
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+              </div>
+              <!-- 查看更多 -->
+              <div class="C_More">查看更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+              </div>
+              <!-- 查看更多 -->
+              <div class="C_More">查看更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+              </div>
+              <!-- 查看更多 -->
+              <div class="C_More">查看更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+              </div>
+              <!-- 查看更多 -->
+              <div class="C_More">查看更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+              </div>
+              <!-- 查看更多 -->
+              <div class="C_More">查看更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+              </div>
+              <!-- 查看更多 -->
+              <div class="C_More">查看更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+              </div>
+              <!-- 查看更多 -->
+              <div class="C_More">查看更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+              </div>
+              <!-- 查看更多 -->
+              <div class="C_More">查看更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个富民驿站 -->
+                <div class="C_F_Item">
+
+                </div>
+              </div>
+              <!-- 查看更多 -->
+              <div class="C_More">查看更多</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 内层可切换div 往期排行-->
+      <div class="Ctt_Q Ctt_Q2">
+
+      </div>
+    </div>
+    <!-- CTT -->
+    <script src="js/jquery.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script>
+      $(function () {
+
+        // 选项卡切换事件
+        $(".Head_Slc_Item").click(function () {
+          if ($(this).index() == 0) {
+            // 切换底部指示箭头
+            $(".Head_Slc_Btm").css("left", "6.8vw")
+            // 切换下方选项卡
+            $(".Ctt_Q").css("left", "0vw")
+          } else {
+            $(".Head_Slc_Btm").css("left", "30.4vw")
+            $(".Ctt_Q").css("left", "-95vw")
+          }
+        })
+
+        // sf
+        var C_Pro = ['山东省', '北京市', '四川省', '河南省', '广东省', '湖南省', '湖北省', '江西省', '江苏省']
+        // 输出到页面
+        $.each(C_Pro, function (i) {
+          $("#C_Pro").append('<div class="swiper-slide">' + C_Pro[i] + '</div>');
+        })
+        // 省份选择轮播图
+        var galleryThumbs = new Swiper('.gallery-thumbs', {
+          spaceBetween: -15,
+          slidesPerView: 6,
+          freeMode: true,
+          loopedSlides: 5, //looped slides should be the same
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+        });
+        var galleryTop = new Swiper('.gallery-top', {
+          spaceBetween: 10,
+          loop: true,
+          loopedSlides: 5, //looped slides should be the same
+          thumbs: {
+            swiper: galleryThumbs,
+          },
+        });
+
+      })
+    </script>
+</body>
+
+</html>
