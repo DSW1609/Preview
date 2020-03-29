@@ -6,13 +6,14 @@
 }
 
 body {
-  background: #f7fcff;
+  background: #fbf0c9;
 }
 
 .Head {
   position: relative;
   width: 100vw;
-  height: 72vw;
+  height: 75vw;
+  background: #f7fcff;
 }
 
 .Head_Jim {
@@ -42,11 +43,11 @@ body {
 .Ctt {
   position: relative;
   width: 100vw;
-  height: 200vw;
   border-top-left-radius: 3vw;
   border-top-right-radius: 3vw;
   background: #fbf0c9;
   overflow: hidden;
+  padding-bottom: 15vw;
 }
 
 .Head_Slc {
@@ -100,18 +101,12 @@ body {
   left: 0vw;
   /* left: -95vw; */
   margin-left: 5vw;
-  top: 10vw;
+  top: 7vw;
   transition: 0.3s linear;
 }
 
 .Ctt_Q2 {
   background: blue;
-}
-
-.swiper-container {
-  width: 100%;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 .swiper-slide {
@@ -165,4 +160,96 @@ body {
   background: #fff;
   margin-top: 3vw;
   border-radius: 3vw;
+}
+
+.C_Item_L {
+  position: absolute;
+  width: 15vw;
+  height: auto;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.C_Item_R {
+  position: absolute;
+  width: 73vw;
+  height: 27vw;
+  left: 15vw;
+  top: 1.5vw;
+}
+
+.C_L_T {
+  position: relative;
+  width: 12vw;
+  height: 12vw;
+  background-image: url(../img/Zz_O.svg);
+  background-size: 12vw;
+  margin: 0 auto;
+}
+
+.C_L_T1 {
+  background-image: url(../img/Zz_F.svg);
+}
+
+.C_L_T2 {
+  background-image: url(../img/Zz_S.svg);
+}
+
+.C_L_T3 {
+  background-image: url(../img/Zz_T.svg);
+}
+
+.C_L_B {
+  position: relative;
+  width: 100%;
+  height: 5vw;
+  text-align: center;
+  font-size: 4.5vw;
+  color: #fe2a2a;
+}
+
+.C_R_Item {
+  position: relative;
+  width: 50vw;
+  height: 9vw;
+  line-height: 9vw;
+  color: #555;
+  font-size: 4.5vw;
+}
+
+.C_R_Item span {
+  display: inline;
+  color: #fe2a2a;
+}
+
+.F_H_Xing {
+  position: absolute;
+  width: 37vw;
+  height: 7vw;
+  left: 8vw;
+  top: 1vw;
+  transform: scale(0.85);
+  overflow: hidden;
+}
+
+.F_H_X {
+  width: 6vw;
+  left: 0.5vw;
+  margin-left: 0.5vw;
+  margin-top: 0.5vw;
+}
+
+.C_R_Im {
+  position: absolute;
+  right: 1vw;
+  top: 2vw;
+  width: 23vw;
+  height: 23vw;
+  border-radius: 2vw;
+  overflow: hidden;
+}
+
+.C_R_Im img {
+  width: 23vw;
+  height: 23vw;
 }
