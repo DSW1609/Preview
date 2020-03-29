@@ -44,9 +44,7 @@
   transition-property: transform;
   box-sizing: content-box;
 }
-#C_Pro{
-  padding-left: 12px;
-}
+
 .swiper-container-android .swiper-slide,
 .swiper-wrapper {
   transform: translate3d(0px, 0, 0)

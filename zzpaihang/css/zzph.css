@@ -122,15 +122,16 @@ body {
 .gallery-thumbs {
   box-sizing: border-box;
   background: #fff;
-  height: 8.8vw;
-  line-height: 8.8vw;
-  font-size: 4.1vw;
+  height: 9vw;
+  line-height: 9vw;
+  font-size: 4.2vw;
   border-radius: 3vw;
 }
 
 .gallery-thumbs .swiper-slide {
   height: 100%;
   color: #555;
+  text-align: center;
 }
 
 .gallery-thumbs .swiper-slide-thumb-active {
