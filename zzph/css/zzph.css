@@ -138,11 +138,11 @@ body {
 .swiper-slide-thumb-active::before {
   content: '';
   position: absolute;
-  bottom: -2px;
+  bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
   transition: 0.3s linear;
-  border-width: 0 3vw 1.8vw;
+  border-width: 0 3vw 2vw;
   border-style: solid;
   border-color: transparent transparent #fbf0c9;
 }
