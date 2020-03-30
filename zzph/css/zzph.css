@@ -120,7 +120,7 @@ body {
   box-sizing: border-box;
   background: #fff;
   height: 9vw;
-  line-height: 8vw;
+  line-height: 8.5vw;
   font-size: 4.2vw;
   border-radius: 3vw;
   text-align: center;
@@ -138,7 +138,7 @@ body {
 .swiper-slide-thumb-active::before {
   content: '';
   position: absolute;
-  bottom: 0px;
+  bottom: -2px;
   left: 50%;
   transform: translateX(-50%);
   transition: 0.3s linear;
