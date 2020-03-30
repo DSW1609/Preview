@@ -6,7 +6,7 @@
 }
 
 body {
-  background: #fbf0c9;
+  background: #f7fcff;
 }
 
 .Head {
@@ -80,8 +80,8 @@ body {
   width: 0;
   height: 0;
   bottom: -2px;
-  left: 6.8vw;
-  /* left: 30.4vw; */
+  /* left: 6.8vw; */
+  left: 30.4vw;
   transition: 0.3s linear;
   border-width: 0 3vw 1.8vw;
   border-style: solid;
@@ -98,15 +98,11 @@ body {
   float: left;
   width: 90vw;
   z-index: 999;
-  left: 0vw;
-  /* left: -95vw; */
+  /* left: 0vw; */
+  left: -95vw;
   margin-left: 5vw;
   top: 7vw;
   transition: 0.3s linear;
-}
-
-.Ctt_Q2 {
-  background: blue;
 }
 
 .swiper-slide {
@@ -119,24 +115,36 @@ body {
   width: 100%;
 }
 
-.gallery-thumbs {
+.gallery-thumbs,
+.gallery-list {
   box-sizing: border-box;
   background: #fff;
   height: 9vw;
-  line-height: 9vw;
+  line-height: 8vw;
   font-size: 4.2vw;
   border-radius: 3vw;
+  text-align: center;
 }
 
 .gallery-thumbs .swiper-slide {
   height: 100%;
   color: #555;
-  text-align: center;
 }
 
-.gallery-thumbs .swiper-slide-thumb-active {
-  opacity: 1;
-  color: #ffc729;
+.swiper-slide-thumb-active {
+  color: #ffc729 !important;
+}
+
+.swiper-slide-thumb-active::before {
+  content: '';
+  position: absolute;
+  bottom: 0px;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: 0.3s linear;
+  border-width: 0 3vw 1.8vw;
+  border-style: solid;
+  border-color: transparent transparent #fbf0c9;
 }
 
 .C_More {
@@ -154,7 +162,8 @@ body {
   letter-spacing: 1px;
 }
 
-.C_F_Item {
+.C_F_Item,
+.C_P_Item {
   position: relative;
   width: 100%;
   height: 30vw;

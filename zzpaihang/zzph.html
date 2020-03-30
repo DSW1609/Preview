@@ -538,7 +538,56 @@
       </div>
       <!-- 内层可切换div 往期排行-->
       <div class="Ctt_Q Ctt_Q2">
-
+        <!-- 日期列表 -->
+        <div class="swiper-container gallery-list">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">周排行</div>
+            <div class="swiper-slide">月排行</div>
+            <div class="swiper-slide">季排行</div>
+            <div class="swiper-slide">年排行</div>
+          </div>
+        </div>
+        <div class="swiper-container gallery-right">
+          <div class="swiper-wrapper">
+            <!-- 单个日期排行榜 -->
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个排行列表 -->
+                <div class="C_P_Item">
+                </div>
+              </div>
+              <!-- 加载更多 -->
+              <div class="C_More">加载更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个排行列表 -->
+                <div class="C_F_Item">
+                </div>
+              </div>
+              <!-- 加载更多 -->
+              <div class="C_More">加载更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个排行列表 -->
+                <div class="C_F_Item">
+                </div>
+              </div>
+              <!-- 加载更多 -->
+              <div class="C_More">加载更多</div>
+            </div>
+            <div class="swiper-slide">
+              <div>
+                <!-- 单个排行列表 -->
+                <div class="C_F_Item">
+                </div>
+              </div>
+              <!-- 加载更多 -->
+              <div class="C_More">加载更多</div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
 
@@ -576,6 +625,21 @@
           spaceBetween: 10,
           thumbs: {
             swiper: galleryThumbs,
+          },
+        });
+        // 上方日期选择轮播图
+        var galleryList = new Swiper('.gallery-list', {
+          spaceBetween: 0,
+          slidesPerView: 4,
+          freeMode: true,
+          watchSlidesVisibility: true,
+          watchSlidesProgress: true,
+        });
+        // 下方日期具体展示轮播图
+        var galleryRight = new Swiper('.gallery-right', {
+          spaceBetween: 10,
+          thumbs: {
+            swiper: galleryList,
           },
         });
         // 加载更多按钮点击事件
