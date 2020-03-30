@@ -4,6 +4,7 @@
   text-decoration: none;
   user-select: none;
   letter-spacing: 1px;
+  outline: none;
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
