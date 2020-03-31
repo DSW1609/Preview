@@ -1185,6 +1185,21 @@
       </div>
     </div>
   </div>
+  <!-- 滑动指引 -->
+  <div class="Z_HD">
+    <!-- 居中 -->
+    <div class="Z_HD_Ct">
+      <!-- 滑动图标 -->
+      <div class="Z_HD_Ct_Im">
+        <img src="img/Zz_Hd.svg" alt="">
+      </div>
+      <!-- 文字解释 -->
+      <div class="Z_HD_Ct_Te">
+        左右滑动可以<br>
+        快速切换省份
+      </div>
+    </div>
+  </div>
   <script>
     $(function () {
       // 选项卡切换事件
@@ -1206,6 +1221,7 @@
       $.each(C_Pro, function (i) {
         $("#C_Pro").append('<div class="swiper-slide">' + C_Pro[i] + '</div>');
       })
+
       // 上方省份选择轮播图
       var galleryThumbs = new Swiper('.gallery-thumbs', {
         spaceBetween: 0,
@@ -1219,6 +1235,14 @@
         spaceBetween: 10,
         thumbs: {
           swiper: galleryThumbs,
+        },
+        on: {
+          // 切换事件 隐藏提示
+          slideChange: function (event) {
+            $(".Z_HD").css("display", "none")
+            // 保存状态
+            localStorage.setItem('isFirstInZz', false)
+          },
         },
       });
       // 上方日期选择轮播图
@@ -1237,7 +1261,19 @@
         },
       });
       // 加载更多按钮点击事件
-      $('.C_More').click(function () {})
+      $('.C_More').click(function () {
+        console.log(1);
+      })
+
+      // 底部提示效果
+      if (localStorage.getItem('isFirstInZz') == null) {
+        // 显示提示
+        $(".Z_HD").css("display", "block")
+        // 如果没有左右滑动,10S自动隐藏
+        setTimeout(function () {
+          $(".Z_HD").css("display", "none")
+        }, 10000)
+      }
     })
   </script>
 </body>

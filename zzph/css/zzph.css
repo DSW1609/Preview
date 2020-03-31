@@ -350,3 +350,61 @@ body {
   width: 6vw;
   height: 6vw;
 }
+
+.Z_HD {
+  position: fixed;
+  width: 100vw;
+  height: 30vw;
+  background: linear-gradient(rgba(255, 255, 255, 0.1), #fff);
+  bottom: 0;
+  z-index: 999;
+  display: none;
+}
+
+.Z_HD_Ct {
+  position: relative;
+  width: 61vw;
+  height: 20vw;
+  margin: 0 auto;
+  margin-top: 5vw;
+}
+
+.Z_HD_Ct_Im {
+  position: absolute;
+  width: 20vw;
+  left: -3vw;
+  transition: 0.3s;
+  animation: Z_Hd 2s linear infinite;
+}
+
+.Z_HD_Ct_Im img {
+  width: 20vw;
+  height: 20vw;
+}
+
+/* 滑动动画 */
+@keyframes Z_Hd {
+  0% {
+    left: -3vw;
+  }
+
+  50% {
+    left: 0vw;
+  }
+
+  100% {
+    left: -3vw;
+  }
+}
+
+.Z_HD_Ct_Te {
+  position: absolute;
+  width: 38vw;
+  right: 0;
+  color: #6077eb;
+  font-size: 5.5vw;
+  top: 50%;
+  font-weight: bold;
+  transform: translateY(-50%);
+  letter-spacing: 1px;
+}
