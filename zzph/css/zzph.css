@@ -16,6 +16,15 @@ body {
   background: #f7fcff;
 }
 
+.Head_Fh {
+  position: absolute;
+  width: 6vw;
+  height: 6vw;
+  top: 7.5vw;
+  left: 2vw;
+  z-index: 1000;
+}
+
 .Head_Jim {
   position: absolute;
   width: 96vw;
@@ -138,12 +147,13 @@ body {
 .swiper-slide-thumb-active::before {
   content: '';
   position: absolute;
+  width: 5vw;
+  height: 1vw;
+  background: #ffc729;
+  border-radius: 1vw;
   bottom: 0px;
   left: 50%;
   transform: translateX(-50%);
-  border-width: 0 3vw 2vw;
-  border-style: solid;
-  border-color: transparent transparent #fbf0c9;
 }
 
 .C_More {
@@ -154,7 +164,7 @@ body {
   font-size: 4vw;
   text-align: center;
   line-height: 7vw;
-  background: #2481e2;
+  background: #feb221;
   margin: 0 auto;
   border-radius: 2vw;
   margin-top: 3vw;
