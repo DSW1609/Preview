@@ -189,7 +189,7 @@ body {
   width: 46vw;
   height: auto;
   left: 16vw;
-  top: 50%;
+  top: 52%;
   transform: translateY(-50%);
 }
 
@@ -272,7 +272,7 @@ body {
 .C_R_Im {
   position: absolute;
   right: 3.5vw;
-  top: 3.5vw;
+  top: 3.8vw;
   width: 23vw;
   height: 23vw;
   border-radius: 2vw;
@@ -293,6 +293,10 @@ body {
   color: #555;
   top: 3.8vw;
   line-height: 6.5vw;
+}
+
+.C_Y {
+  line-height: 13vw;
 }
 
 .C_P_Y {
