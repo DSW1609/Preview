@@ -10,35 +10,95 @@
 </head>
 
 <body>
+  <!-- HEAD -->
+  <div class="S_Head">
+    <em>邀请新用户</em>
+    <br>
+    <an>得大额扶贫积分</an>
+  </div>
+  <!-- HEAD -->
+  <!-- 轮播图部分 -->
   <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
     <div class="swiper-wrapper">
+      <!-- 单张轮播图 -->
       <div class="swiper-slide">
-        <img src="img/fx1.jpg" alt="">
+        <!-- 盛放二维码和背景图得盒子 -->
+        <div class="S_Ct S_Ct1">
+          <!-- 二维码 -->
+          <div class="S_EWM S_EWM1">
+            <img src="img/GZH.jpg" alt="">
+          </div>
+          <!-- 轮播图背景 -->
+          <img class="S_Sw_Bg" src="img/fx1.jpg" alt="">
+        </div>
+        <!-- 生成按钮 -->
+        <div class="share_mk" data-N="1">生成图片</div>
       </div>
+      <!-- 单张轮播图 -->
       <div class="swiper-slide">
-        <img src="img/fx1.jpg" alt="">
-      </div>
-      <div class="swiper-slide">
-        <img src="img/fx1.jpg" alt="">
+        <!-- 盛放二维码和背景图得盒子 -->
+        <div class="S_Ct S_Ct2">
+          <!-- 二维码 -->
+          <div class="S_EWM S_EWM2">
+            <img src="img/GZH.jpg" alt="">
+          </div>
+          <!-- 轮播图背景 -->
+          <img class="S_Sw_Bg" src="img/fx2.jpg" alt="">
+        </div>
+        <!-- 生成按钮 -->
+        <div class="share_mk" data-N="2">生成图片</div>
       </div>
     </div>
-    <!-- 分页器 -->
-    <div class="swiper-pagination"></div>
   </div>
+  <!-- 控制按钮 -->
+  <div class="S_Mk_K">
+    <!-- 长按图片保存 -->
+    <div class="share_mk share_mk_c">长按上方图片保存</div>
+    <!-- 关闭按钮 -->
+    <div class="S_Mk_Gb">X</div>
+  </div>
+  <script src="js/jquery.min.js"></script>
+  <script src="js/html2canvas.min.js"></script>
   <script src="js/swiper.min.js"></script>
   <script>
-    var swiper = new Swiper('.swiper-container', {
-      autoplay: true,
-      loop: true,
-      slideToClickedSlide: true,
-      slidesPerView: 'auto',
-      spaceBetween: 25,
-      centeredSlides: true,
-      pagination: {
-        el: '.swiper-pagination',
-        clickable: true,
-      },
-    });
+    $(function () {
+      // 轮播图控制
+      var swiper = new Swiper('.swiper-container', {
+        loop: true,
+        slideToClickedSlide: true,
+        slidesPerView: 'auto',
+        spaceBetween: 25,
+        centeredSlides: true,
+      });
+      // 生成图片点击事件
+      $(".share_mk").click(function () {
+        var num = $(this).attr("data-N");
+        var canvas2 = document.createElement("canvas");
+        let _canvas = document.querySelector(".S_Ct" + num);
+        var w = parseInt(window.getComputedStyle(_canvas).width);
+        var h = parseInt(window.getComputedStyle(_canvas).height);
+        //将canvas画布放大若干倍，然后盛放在较小的容器内，就显得不模糊了
+        canvas2.width = w * 2;
+        canvas2.height = h * 2;
+        canvas2.style.width = w + "px";
+        canvas2.style.height = h + "px";
+        canvas2.classList.add("S_CVS")
+        var context = canvas2.getContext("2d");
+        context.scale(0.66, 0.66);
+        html2canvas(_canvas, {
+          canvas: canvas2
+        }).then(function (canvas) {
+          document.body.appendChild(canvas);
+          // 显示按钮
+          $(".S_Mk_K").show();
+          // 关闭按钮点击事件
+          $(".S_Mk_Gb").click(function () {
+            $(".S_CVS").hide();
+            $(".S_Mk_K").hide();
+          })
+        })
+      })
+    })
   </script>
 </body>
 

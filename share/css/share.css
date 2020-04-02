@@ -1,29 +1,61 @@
 * {
   margin: 0;
   padding: 0;
+  letter-spacing: 1px;
+  user-select: none;
 }
 
 body {
-  background: #ffffff;
+  background: linear-gradient(#ff3f4c, #ff8441);
+  height: 100vh;
+}
+
+body::before {
+  content: '';
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/body_y.png);
+}
+
+.S_Head {
+  position: relative;
+  width: 100vw;
+  height: 30vw;
+  text-align: center;
+  font-weight: bold;
+  top: 4vw;
+  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+}
+
+.S_Head em {
+  font-style: normal;
+  font-size: 7vw;
+  color: #fff;
+}
+
+.S_Head an {
+  font-style: normal;
+  font-size: 9vw;
+  color: #f4e282;
 }
 
 .swiper-container {
   position: relative;
   width: 100vw;
-  height: 119.5vw;
-  margin-top: 10vw;
+  height: 140vw;
 }
 
 
 .swiper-slide {
-  width: 75vw !important;
-  border-radius: 5vw;
+  width: 75vw;
+  height: 130vw;
 }
 
-.swiper-slide img {
+.S_Sw_Bg {
   width: 75vw;
-  border-radius: 3vw;
-  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  height: 112vw;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
 .swiper-pagination-bullet {
@@ -39,4 +71,84 @@ body {
 
 .swiper-pagination-bullet-active {
   border-radius: 8px !important;
+}
+
+.share_mk {
+  position: relative;
+  width: 30vw;
+  height: 8vw;
+  line-height: 8vw;
+  margin: 0 auto;
+  margin-top: 5vw;
+  font-size: 4.5vw;
+  text-align: center;
+  color: #fff;
+  background: #fcbd5c;
+  box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+}
+
+.S_EWM {
+  position: absolute;
+  width: 20vw;
+  height: 20vw;
+  left: 27.5vw;
+  top: 0;
+}
+
+.S_EWM img {
+  width: 20vw;
+  height: 20vw;
+}
+
+.S_EWM1 {
+  top: 70vw;
+}
+
+.S_EWM2 {
+  top: 60vw;
+}
+
+.S_CVS {
+  position: fixed;
+  top: 30vw;
+  z-index: 999;
+  left: 50%;
+  transform: translateX(-50%);
+  box-shadow: 0px 0px 100vw 100vw rgba(0, 0, 0, 0.5);
+}
+
+.S_CVS::before {
+  content: '长按图片保存';
+  position: absolute;
+  width: 20vw;
+  height: 10vw;
+  font-size: 6vw;
+  color: #fff;
+}
+
+.S_Mk_K {
+  position: absolute;
+  width: 45vw;
+  top: 143vw;
+  left: 30vw;
+  z-index: 1000;
+  display: none;
+}
+
+.share_mk_c {
+  width: 45vw;
+}
+
+.S_Mk_Gb {
+  position: relative;
+  margin: 0 auto;
+  margin-top: 3vw;
+  width: 6vw;
+  height: 6vw;
+  border-radius: 6vw;
+  text-align: center;
+  line-height: 6vw;
+  font-size: 4vw;
+  background: rgba(255, 255, 255, 0.5);
+  color: #fff;
 }
