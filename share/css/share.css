@@ -75,12 +75,12 @@ body::before {
 
 .share_mk {
   position: relative;
-  width: 30vw;
-  height: 8vw;
-  line-height: 8vw;
+  width: 50vw;
+  height: 10vw;
+  line-height: 10vw;
   margin: 0 auto;
   margin-top: 5vw;
-  font-size: 4.5vw;
+  font-size: 5vw;
   text-align: center;
   color: #fff;
   background: #fcbd5c;
@@ -121,33 +121,33 @@ body::before {
 .S_V_Img {
   position: relative;
   width: 75vw;
-  height: 112vw;
+  height: 113vw;
   top: 30vw;
   left: 12.5vw;
 }
 
 .S_Mk_K {
   position: absolute;
-  width: 45vw;
+  width: 50vw;
   top: 143vw;
-  left: 30vw;
+  left: 25vw;
   z-index: 1000;
 }
 
 .share_mk_c {
-  width: 45vw;
+  width: 50vw;
 }
 
 .S_Mk_Gb {
   position: relative;
   margin: 0 auto;
   margin-top: 3vw;
-  width: 6vw;
-  height: 6vw;
-  border-radius: 6vw;
+  width: 10vw;
+  height: 10vw;
+  border-radius: 10vw;
   text-align: center;
-  line-height: 6vw;
-  font-size: 4vw;
+  line-height: 10vw;
+  font-size: 4.5vw;
   background: rgba(255, 255, 255, 0.5);
   color: #fff;
 }
