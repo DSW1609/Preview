@@ -93,9 +93,7 @@
         html2canvas(_canvas, {
           canvas: canvas2
         }).then(function (canvas) {
-          // document.body.appendChild(canvas);
-          // var strDataURI = canvas.toDataURL("image/jpeg");
-          var strDataURI = "ssssss";
+          var strDataURI = canvas.toDataURL("image/jpg");
           $(".S_V_Img").attr("src", strDataURI);
           // 显示按钮
           $(".S_CVS").show();
