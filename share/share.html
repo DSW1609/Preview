@@ -89,6 +89,8 @@
           canvas: canvas2
         }).then(function (canvas) {
           document.body.appendChild(canvas);
+          var strDataURI = canvas.toDataURL();
+          console.log(strDataURI);
           // 显示按钮
           $(".S_Mk_K").show();
           // 关闭按钮点击事件
