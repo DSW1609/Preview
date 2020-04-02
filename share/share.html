@@ -50,13 +50,18 @@
       </div>
     </div>
   </div>
-  <!-- 控制按钮 -->
-  <div class="S_Mk_K">
-    <!-- 长按图片保存 -->
-    <div class="share_mk share_mk_c">长按上方图片保存</div>
-    <!-- 关闭按钮 -->
-    <div class="S_Mk_Gb">X</div>
+  <!-- 图片 -->
+  <div class="S_CVS">
+    <img class="S_V_Img" src="" alt="">
+    <!-- 控制按钮 -->
+    <div class="S_Mk_K">
+      <!-- 长按图片保存 -->
+      <div class="share_mk share_mk_c">长按上方图片保存</div>
+      <!-- 关闭按钮 -->
+      <div class="S_Mk_Gb">X</div>
+    </div>
   </div>
+
   <script src="js/jquery.min.js"></script>
   <script src="js/html2canvas.min.js"></script>
   <script src="js/swiper.min.js"></script>
@@ -88,15 +93,15 @@
         html2canvas(_canvas, {
           canvas: canvas2
         }).then(function (canvas) {
-          document.body.appendChild(canvas);
-          var strDataURI = canvas.toDataURL();
-          console.log(strDataURI);
+          // document.body.appendChild(canvas);
+          // var strDataURI = canvas.toDataURL("image/jpeg");
+          var strDataURI = "ssssss";
+          $(".S_V_Img").attr("src", strDataURI);
           // 显示按钮
-          $(".S_Mk_K").show();
+          $(".S_CVS").show();
           // 关闭按钮点击事件
           $(".S_Mk_Gb").click(function () {
             $(".S_CVS").hide();
-            $(".S_Mk_K").hide();
           })
         })
       })

@@ -110,11 +110,20 @@ body::before {
 
 .S_CVS {
   position: fixed;
-  top: 30vw;
+  width: 100vw;
+  height: 100vh;
+  top: 0vw;
   z-index: 999;
-  left: 50%;
-  transform: translateX(-50%);
-  box-shadow: 0px 0px 100vw 100vw rgba(0, 0, 0, 0.5);
+  display: none;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.S_V_Img {
+  position: relative;
+  width: 75vw;
+  height: 112vw;
+  top: 30vw;
+  left: 12.5vw;
 }
 
 .S_Mk_K {
@@ -123,7 +132,6 @@ body::before {
   top: 143vw;
   left: 30vw;
   z-index: 1000;
-  display: none;
 }
 
 .share_mk_c {
