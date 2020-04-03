@@ -66,7 +66,6 @@
   </div>
   <script>
     $(function () {
-      localStorage.setItem("cs", 3)
       // 轮播图控制
       var swiper = new Swiper('.swiper-container', {
         loop: true,
@@ -76,6 +75,7 @@
         centeredSlides: true,
       });
       var cs = parseInt(localStorage.getItem("cs"))
+      var sc = parseInt(localStorage.getItem("sc"))
       // 生成图片点击事件
       $(".share_mk").click(function () {
         var num = $(this).attr("data-N");
@@ -89,7 +89,7 @@
         canvas2.style.height = h + "px";
         canvas2.classList.add("S_CVS")
         var context = canvas2.getContext("2d");
-        context.scale(0.66, 0.66);
+        context.scale(sc, sc);
         html2canvas(_canvas, {
           canvas: canvas2
         }).then(function (canvas) {
