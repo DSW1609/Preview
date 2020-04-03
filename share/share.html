@@ -74,8 +74,6 @@
         spaceBetween: 25,
         centeredSlides: true,
       });
-      var cs = parseInt(localStorage.getItem("cs"))
-      var sc = parseInt(localStorage.getItem("sc"))
       // 生成图片点击事件
       $(".share_mk").click(function () {
         var num = $(this).attr("data-N");
@@ -83,13 +81,13 @@
         let _canvas = document.querySelector(".S_Ct" + num);
         var w = parseInt(window.getComputedStyle(_canvas).width);
         var h = parseInt(window.getComputedStyle(_canvas).height);
-        canvas2.width = w * cs;
-        canvas2.height = h * cs;
+        canvas2.width = w * 3;
+        canvas2.height = h * 3;
         canvas2.style.width = w + "px";
         canvas2.style.height = h + "px";
         canvas2.classList.add("S_CVS")
         var context = canvas2.getContext("2d");
-        context.scale(sc, sc);
+        context.scale(1, 1);
         html2canvas(_canvas, {
           canvas: canvas2
         }).then(function (canvas) {
