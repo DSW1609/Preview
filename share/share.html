@@ -90,6 +90,7 @@
       });
       // 生成图片点击事件
       $(".share_mk").click(function () {
+        var cs = parseInt(localStorage.getItem("cs", 3))
         var num = $(this).attr("data-N");
         var canvas2 = document.createElement("canvas");
         let _canvas = document.querySelector(".S_Ct" + num);
@@ -109,10 +110,10 @@
           // var strDataURI = "ss";
           $(".S_V_Img").attr("src", strDataURI);
           // 显示
-          $(".S_CVS").show();
+          $(".S_CVS").fadeIn();
           // 关闭按钮点击事件
           $(".S_Mk_Gb").click(function () {
-            $(".S_CVS").hide();
+            $(".S_CVS").fadeOut();
           })
         })
       })
