@@ -122,19 +122,23 @@ body::before {
 
 .S_V_Img {
   position: relative;
-  width: 75.5vw;
-  height: 113vw;
-  top: 30vw;
-  left: 12.5vw;
+  width: 85vw;
+  height: 127vw;
+  top: 15vw;
+  left: 7.5vw;
 }
 
 .S_Mk_K {
   position: absolute;
   width: 75vw;
-  top: 143vw;
+  top: 148vw;
   left: 12.5vw;
   z-index: 1000;
   background: #b2502f;
+}
+
+.share_mk_k {
+  margin-top: 0;
 }
 
 .share_mk_c {
