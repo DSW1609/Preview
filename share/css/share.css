@@ -3,6 +3,7 @@
   padding: 0;
   letter-spacing: 1px;
   user-select: none;
+  text-decoration: none;
 }
 
 body {
@@ -134,6 +135,10 @@ body::before {
   left: 12.5vw;
   z-index: 1000;
   background: #b2502f;
+}
+
+.S_Mk_K a {
+  color: #fff;
 }
 
 .share_mk_c {
