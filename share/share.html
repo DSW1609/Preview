@@ -66,6 +66,7 @@
   </div>
   <script>
     $(function () {
+      localStorage.setItem("cs", 3)
       // 轮播图控制
       var swiper = new Swiper('.swiper-container', {
         loop: true,
@@ -74,15 +75,7 @@
         spaceBetween: 25,
         centeredSlides: true,
       });
-      //判断是否是微信浏览器的函数
-      function isWeiXin() {
-        var ua = window.navigator.userAgent.toLowerCase();
-        if (ua.match(/MicroMessenger/i) == 'micromessenger') {
-          return true;
-        } else {
-          return false;
-        }
-      }
+      var cs = parseInt(localStorage.getItem("cs"))
       // 生成图片点击事件
       $(".share_mk").click(function () {
         var num = $(this).attr("data-N");
@@ -90,9 +83,8 @@
         let _canvas = document.querySelector(".S_Ct" + num);
         var w = parseInt(window.getComputedStyle(_canvas).width);
         var h = parseInt(window.getComputedStyle(_canvas).height);
-        //将canvas画布放大若干倍，然后盛放在较小的容器内，就显得不模糊了
-        canvas2.width = w * 2;
-        canvas2.height = h * 2;
+        canvas2.width = w * cs;
+        canvas2.height = h * cs;
         canvas2.style.width = w + "px";
         canvas2.style.height = h + "px";
         canvas2.classList.add("S_CVS")
@@ -101,7 +93,8 @@
         html2canvas(_canvas, {
           canvas: canvas2
         }).then(function (canvas) {
-          var strDataURI = canvas.toDataURL("image/png");
+          // var strDataURI = canvas.toDataURL("image/png");
+          var strDataURI = "ss";
           $(".S_V_Img").attr("src", strDataURI);
           // 显示
           $(".S_CVS").show();
