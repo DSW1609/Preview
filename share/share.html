@@ -59,9 +59,7 @@
     <!-- 控制按钮 -->
     <div class="S_Mk_K">
       <!-- 长按图片保存 -->
-      <div class="share_mk_k share_mk_c">
-        <a class="share_a" download="我的邀请码" href="">长按上方图片保存</a>
-      </div>
+      <div class="share_mk_k share_mk_c">长按上方图片保存</div>
       <!-- 关闭按钮 -->
       <div class="share_mk_k S_Mk_Gb">关闭</div>
     </div>
@@ -103,14 +101,8 @@
         html2canvas(_canvas, {
           canvas: canvas2
         }).then(function (canvas) {
-          var strDataURI = canvas.toDataURL("image/jpg");
-          // var strDataURI = "CS";
+          var strDataURI = canvas.toDataURL("image/png");
           $(".S_V_Img").attr("src", strDataURI);
-          $(".share_a").attr("href", strDataURI);
-          // 判断是否微信浏览器
-          if (!isWeiXin()) {
-            $(".share_a").text("点我保存图片")
-          }
           // 显示
           $(".S_CVS").show();
           // 关闭按钮点击事件
