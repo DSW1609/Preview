@@ -53,6 +53,10 @@ body::before {
   height: 130vw;
 }
 
+.S_Ct {
+  height: 112vw;
+}
+
 .S_Sw_Bg {
   width: 75vw;
   height: 112vw;
@@ -81,7 +85,7 @@ body::before {
   height: 10vw;
   line-height: 10vw;
   margin: 0 auto;
-  margin-top: 5vw;
+  margin-top: 6vw;
   font-size: 5vw;
   text-align: center;
   color: #fff;
