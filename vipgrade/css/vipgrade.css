@@ -8,13 +8,9 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body::after {
-  content: '';
-  position: absolute;
+body {
   width: 100vw;
   height: 100vh;
-  top: 0;
-  z-index: -2;
   background: url(../img/DJ_BDGG.png);
   background-size: 100vw 100vh;
   background-repeat: no-repeat;
@@ -245,7 +241,7 @@ body::after {
 
 @keyframes Tips_D {
   form {
-    width: 0vw
+    width: 0vw;
   }
 
   to {
