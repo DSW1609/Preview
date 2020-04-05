@@ -7,8 +7,9 @@
 }
 
 body {
-  background: linear-gradient(#ff3f4c, #ff8441);
+  background: #2d6bb6;
   height: 100vh;
+  transition: 1s;
 }
 
 body::before {
