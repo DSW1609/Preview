@@ -140,9 +140,10 @@ body::before {
   content: '';
   position: absolute;
   width: 100vw;
-  height: 80vw;
+  height: 33vw;
   background-image: url(../img/GGZZ.png);
   background-size: 33.3% 100%;
+  z-index: 999;
 }
 
 .S_V_Img {
