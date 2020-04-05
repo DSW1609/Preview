@@ -26,7 +26,7 @@
       <!-- 单张轮播图 -->
       <div class="swiper-slide">
         <!-- 盛放二维码和背景图得盒子 -->
-        <div class="S_Ct S_Ct1">
+        <div class="S_Ct">
           <!-- 二维码 -->
           <div class="S_EWM S_EWM1">
             <img src="img/GZH.jpg" alt="">
@@ -35,12 +35,12 @@
           <img class="S_Sw_Bg" src="img/fx1.jpg" alt="">
         </div>
         <!-- 生成按钮 -->
-        <div class="share_mk" data-N="1">生成图片</div>
+        <div class="share_mk">生成图片</div>
       </div>
       <!-- 单张轮播图 -->
       <div class="swiper-slide">
         <!-- 盛放二维码和背景图得盒子 -->
-        <div class="S_Ct S_Ct2">
+        <div class="S_Ct">
           <!-- 二维码 -->
           <div class="S_EWM S_EWM2">
             <img src="img/GZH.jpg" alt="">
@@ -49,12 +49,12 @@
           <img class="S_Sw_Bg" src="img/fx2.jpg" alt="">
         </div>
         <!-- 生成按钮 -->
-        <div class="share_mk" data-N="2">生成图片</div>
+        <div class="share_mk">生成图片</div>
       </div>
       <!-- 单张轮播图 -->
       <div class="swiper-slide">
         <!-- 盛放二维码和背景图得盒子 -->
-        <div class="S_Ct S_Ct3">
+        <div class="S_Ct">
           <!-- 二维码 -->
           <div class="S_EWM S_EWM3">
             <img src="img/GZH.jpg" alt="">
@@ -63,12 +63,12 @@
           <img class="S_Sw_Bg" src="img/fx3.jpg" alt="">
         </div>
         <!-- 生成按钮 -->
-        <div class="share_mk" data-N="3">生成图片</div>
+        <div class="share_mk">生成图片</div>
       </div>
       <!-- 单张轮播图 -->
       <div class="swiper-slide">
         <!-- 盛放二维码和背景图得盒子 -->
-        <div class="S_Ct S_Ct4">
+        <div class="S_Ct">
           <!-- 二维码 -->
           <div class="S_EWM S_EWM4">
             <img src="img/GZH.jpg" alt="">
@@ -77,12 +77,12 @@
           <img class="S_Sw_Bg" src="img/fx4.jpg" alt="">
         </div>
         <!-- 生成按钮 -->
-        <div class="share_mk" data-N="4">生成图片</div>
+        <div class="share_mk">生成图片</div>
       </div>
       <!-- 单张轮播图 -->
       <div class="swiper-slide">
         <!-- 盛放二维码和背景图得盒子 -->
-        <div class="S_Ct S_Ct5">
+        <div class="S_Ct">
           <!-- 二维码 -->
           <div class="S_EWM S_EWM5">
             <img src="img/GZH.jpg" alt="">
@@ -91,7 +91,7 @@
           <img class="S_Sw_Bg" src="img/fx5.jpg" alt="">
         </div>
         <!-- 生成按钮 -->
-        <div class="share_mk" data-N="5">生成图片</div>
+        <div class="share_mk">生成图片</div>
       </div>
     </div>
   </div>
@@ -108,6 +108,12 @@
   </div>
   <script>
     $(function () {
+      // 添加类名
+      $(".S_Ct").each(function (i) {
+        $(this).addClass("S_Ct" + i)
+        $(this).siblings().attr("data-n", i)
+      })
+
       // 轮播图控制
       var swiper = new Swiper('.swiper-container', {
         loop: true,
@@ -118,8 +124,7 @@
       });
       // 生成图片点击事件
       $(".share_mk").click(function () {
-        var cs = parseInt(localStorage.getItem("cs", 3))
-        var num = $(this).attr("data-N");
+        var num = $(this).attr("data-n");
         var canvas2 = document.createElement("canvas");
         let _canvas = document.querySelector(".S_Ct" + num);
         var w = parseInt(window.getComputedStyle(_canvas).width);
@@ -135,7 +140,7 @@
           canvas: canvas2
         }).then(function (canvas) {
           var strDataURI = canvas.toDataURL("image/png");
-          // var strDataURI = "ss";
+          // var strDataURI = "cs";
           $(".S_V_Img").attr("src", strDataURI);
           // 显示
           $(".S_CVS").fadeIn();
