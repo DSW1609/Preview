@@ -90,8 +90,12 @@ body::before {
   font-size: 5vw;
   text-align: center;
   color: #fff;
-  background: #fcbd5c;
+  /* background: #fcbd5c; */
+  background: linear-gradient(#ffe778, #ff9109);
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
+  border-radius: 5vw;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .S_EWM {
