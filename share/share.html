@@ -142,9 +142,13 @@
           $(".S_V_Img").attr("src", strDataURI);
           // 显示
           $(".S_CVS").fadeIn();
+          // 隐藏生成图片按钮
+          $(".share_mk").hide();
           // 关闭按钮点击事件
           $(".S_Mk_Gb").click(function () {
             $(".S_CVS").fadeOut();
+            // 显示生成图片按钮
+            $(".share_mk").show();
           })
         })
       })

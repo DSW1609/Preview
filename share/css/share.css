@@ -82,7 +82,7 @@ body::before {
 .share_mk,
 .share_mk_k {
   position: relative;
-  width: 50vw;
+  width: 52vw;
   height: 11vw;
   line-height: 11vw;
   margin: 0 auto;
@@ -161,7 +161,7 @@ body::before {
 .S_Mk_K {
   position: absolute;
   width: 75vw;
-  top: 148vw;
+  top: 149vw;
   left: 12.5vw;
   z-index: 1000;
 }
