@@ -43,12 +43,7 @@ body {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
-.swiper-container::before,
-.sw0::before,
-.sw1::before,
-.sw2::before,
-.sw3::before,
-.sw4::before {
+.swiper-container::before {
   position: absolute;
   content: '';
   width: 100%;
@@ -59,23 +54,23 @@ body {
   transition: 1s;
 }
 
-.sw0::before {
+#sw0::before {
   background-image: url(../img/fx1.jpg);
 }
 
-.sw1::before {
+#sw1::before {
   background-image: url(../img/fx2.jpg);
 }
 
-.sw2::before {
+#sw2::before {
   background-image: url(../img/fx3.jpg);
 }
 
-.sw3::before {
+#sw3::before {
   background-image: url(../img/fx4.jpg);
 }
 
-.sw4::before {
+#sw4::before {
   background-image: url(../img/fx5.jpg);
 }
 
@@ -149,7 +144,7 @@ body {
 }
 
 .S_EWM3 {
-  top: 75vw;
+  top: 78vw;
 }
 
 .S_EWM4 {
@@ -173,6 +168,7 @@ body {
 .S_CVS::before {
   content: '';
   position: absolute;
+  top: -1px;
   width: 100vw;
   height: 33vw;
   background-image: url(../img/GGZZ.png);

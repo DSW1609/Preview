@@ -18,7 +18,7 @@
   </div>
   <!-- HEAD -->
   <!-- 轮播图部分 -->
-  <div class="swiper-container sw0 swiper-container-initialized swiper-container-horizontal">
+  <div id="sw0" class="swiper-container swiper-container-initialized swiper-container-horizontal">
     <div class="swiper-wrapper">
       <!-- 单张轮播图 -->
       <div class="swiper-slide">
@@ -114,11 +114,8 @@
         on: {
           // 切换事件
           slideChange: function () {
-            // 删除旧类名
-            rClass = this.realIndex == 0 ? 4 : this.realIndex - 1;
-            $(".swiper-container").removeClass("sw" + rClass);
-            // 添加类名
-            $(".swiper-container").addClass("sw" + this.realIndex);
+            // 修改id名 
+            $(".swiper-container").attr("id", "sw" + this.realIndex);
           }
         }
       });
