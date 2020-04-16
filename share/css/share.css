@@ -7,27 +7,16 @@
 }
 
 body {
-  background: #2d6bb6;
-  height: 100vh;
-  transition: 1s;
-}
-
-body::before {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 100%;
-  background-image: url(../img/body_y.png);
+  background: #e42922;
 }
 
 .S_Head {
   position: relative;
   width: 100vw;
-  height: 30vw;
-  text-align: center;
-  font-weight: bold;
-  top: 4vw;
-  text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.3);
+  height: 39vw;
+  background-image: url(../img/Share_Head.png);
+  background-size: 100%;
+  top: 5vw;
 }
 
 .S_Head em {
@@ -44,23 +33,65 @@ body::before {
 
 .swiper-container {
   position: relative;
-  width: 100vw;
-  height: 112vw;
+  width: 92vw;
+  height: 115vw;
+  top: -2vw;
+  border: 5px solid #fb431f;
+  box-sizing: border-box;
+  background: #fff;
+  border-radius: 3vw;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
 }
 
+.swiper-container::before,
+.sw0::before,
+.sw1::before,
+.sw2::before,
+.sw3::before,
+.sw4::before {
+  position: absolute;
+  content: '';
+  width: 100%;
+  height: 100%;
+  filter: blur(6px);
+  opacity: 0.8;
+  background-size: 100%;
+  transition: 1s;
+}
+
+.sw0::before {
+  background-image: url(../img/fx1.jpg);
+}
+
+.sw1::before {
+  background-image: url(../img/fx2.jpg);
+}
+
+.sw2::before {
+  background-image: url(../img/fx3.jpg);
+}
+
+.sw3::before {
+  background-image: url(../img/fx4.jpg);
+}
+
+.sw4::before {
+  background-image: url(../img/fx5.jpg);
+}
 
 .swiper-slide {
-  width: 75vw;
-  height: 130vw;
+  width: 70vw;
+  height: 104.5vw;
+  top: 3.5vw;
 }
 
 .S_Ct {
-  height: 112vw;
+  height: 104.5vw;
 }
 
 .S_Sw_Bg {
-  width: 75vw;
-  height: 112vw;
+  width: 70vw;
+  height: 105vw;
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.3);
 }
 
@@ -85,12 +116,13 @@ body::before {
   width: 52vw;
   height: 11vw;
   line-height: 11vw;
-  margin: 0 auto;
-  margin-top: 7vw;
+  margin: 3vw auto;
+  top: -2vw;
   font-size: 5vw;
   text-align: center;
   color: #fff;
-  background: linear-gradient(#ffe778, #ff9109);
+  background: #fb431f;
+  /* background: linear-gradient(#ffe778, #ff9109); */
   box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.1);
   border-radius: 6vw;
   font-weight: bold;
@@ -101,7 +133,7 @@ body::before {
   position: absolute;
   width: 20vw;
   height: 20vw;
-  left: 27.5vw;
+  left: 25vw;
   top: 0;
 }
 
@@ -111,7 +143,7 @@ body::before {
 }
 
 .S_EWM1 {
-  top: 70vw;
+  top: 65vw;
 }
 
 .S_EWM2 {
@@ -119,15 +151,15 @@ body::before {
 }
 
 .S_EWM3 {
-  top: 85vw;
+  top: 75vw;
 }
 
 .S_EWM4 {
-  top: 85vw;
+  top: 75vw;
 }
 
 .S_EWM5 {
-  top: 66vw;
+  top: 60vw;
 }
 
 .S_CVS {
@@ -163,7 +195,6 @@ body::before {
   width: 75vw;
   top: 149vw;
   left: 12.5vw;
-  z-index: 1000;
 }
 
 .share_mk_k {

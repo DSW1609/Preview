@@ -15,13 +15,10 @@
 <body>
   <!-- HEAD -->
   <div class="S_Head">
-    <em>邀请新用户</em>
-    <br>
-    <an>得大额扶贫积分</an>
   </div>
   <!-- HEAD -->
   <!-- 轮播图部分 -->
-  <div class="swiper-container swiper-container-initialized swiper-container-horizontal">
+  <div class="swiper-container sw0 swiper-container-initialized swiper-container-horizontal">
     <div class="swiper-wrapper">
       <!-- 单张轮播图 -->
       <div class="swiper-slide">
@@ -104,20 +101,24 @@
       $(".S_Ct").each(function (i) {
         $(this).addClass("S_Ct" + i)
       })
-      // 背景颜色
-      var S_Color = ['#2d6bb6', '#fd9d0b', '#fc5a11', '#e44b43', '#920000'];
       // 轮播图控制
       var swiper = new Swiper('.swiper-container', {
         loop: true,
+        // autoplay: {
+        //   delay: 3000,
+        // },
         slideToClickedSlide: true,
         slidesPerView: 'auto',
-        spaceBetween: 25,
+        spaceBetween: 20,
         centeredSlides: true,
         on: {
           // 切换事件
-          slideChange: function (event) {
-            // 更改背景颜色
-            $("body").css("background", S_Color[this.realIndex])
+          slideChange: function () {
+            // 删除旧类名
+            rClass = this.realIndex == 0 ? 4 : this.realIndex - 1;
+            $(".swiper-container").removeClass("sw" + rClass);
+            // 添加类名
+            $(".swiper-container").addClass("sw" + this.realIndex);
           }
         }
       });
@@ -137,8 +138,8 @@
         html2canvas(_canvas, {
           canvas: canvas2
         }).then(function (canvas) {
-          var strDataURI = canvas.toDataURL("image/png");
-          // var strDataURI = "cs";
+          // var strDataURI = canvas.toDataURL("image/png");
+          var strDataURI = "cs";
           $(".S_V_Img").attr("src", strDataURI);
           // 显示
           $(".S_CVS").fadeIn();
