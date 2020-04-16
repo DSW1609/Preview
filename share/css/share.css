@@ -203,12 +203,13 @@ body {
 .share_mk_c {
   position: relative;
   float: left;
-  width: 50vw;
+  width: 59vw;
 }
 
 .S_Mk_Gb {
   position: relative;
   float: left;
-  width: 20vw;
+  width: 11vw;
   left: 5vw;
+  background: linear-gradient(#f85032, #e73827);
 }
