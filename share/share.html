@@ -138,8 +138,8 @@
         html2canvas(_canvas, {
           canvas: canvas2
         }).then(function (canvas) {
-          // var strDataURI = canvas.toDataURL("image/png");
-          var strDataURI = "cs";
+          var strDataURI = canvas.toDataURL("image/png");
+          // var strDataURI = "cs";
           $(".S_V_Img").attr("src", strDataURI);
           // 显示
           $(".S_CVS").fadeIn();
