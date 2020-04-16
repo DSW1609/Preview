@@ -97,13 +97,11 @@
   </div>
   <script>
     $(function () {
-      // 添加类名和自定义属性
-      $(".S_Ct").each(function (i) {
-        $(this).addClass("S_Ct" + i)
-      })
       // 轮播图控制
       var swiper = new Swiper('.swiper-container', {
         loop: true,
+        //惯性滑动
+        // freeMode: true,
         autoplay: {
           delay: 3000,
         },
@@ -122,7 +120,7 @@
       // 生成图片点击事件
       $(".share_mk").click(function () {
         var canvas2 = document.createElement("canvas");
-        let _canvas = document.querySelector(".S_Ct" + swiper.realIndex);
+        let _canvas = document.querySelector(".swiper-slide-active");
         var w = parseInt(window.getComputedStyle(_canvas).width);
         var h = parseInt(window.getComputedStyle(_canvas).height);
         canvas2.width = w * 3;
