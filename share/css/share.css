@@ -207,7 +207,7 @@ body {
   z-index: 999;
   /* 海市蜃楼-鼠标穿透 */
   pointer-events: none;
-  animation: S_CVS 2s infinite linear;
+  animation: S_CVS 2s infinite ease-in-out;
 }
 
 @keyframes S_CVS {
