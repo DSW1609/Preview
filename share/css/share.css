@@ -161,7 +161,7 @@ body {
   height: 100vh;
   top: 0vw;
   z-index: 999;
-  display: none;
+  /* display: none; */
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -173,6 +173,35 @@ body {
   height: 33vw;
   background-image: url(../img/GGZZ.png);
   background-size: 34% 100%;
+}
+
+.S_CVS::after {
+  content: '';
+  position: absolute;
+  top: 100vw;
+  width: 15vw;
+  height: 15vw;
+  border-radius: 15vw;
+  left: 70vw;
+  background-color: rgba(255, 255, 255, 0.3);
+  background-image: url(../img/lpress.svg);
+  background-size: 100%;
+  z-index: 999;
+  animation: S_CVS 2s infinite linear;
+}
+
+@keyframes S_CVS {
+  0% {
+    transform: scale(0.9);
+  }
+
+  50% {
+    transform: scale(1);
+  }
+
+  100% {
+    transform: scale(0.9);
+  }
 }
 
 .S_V_Img {
