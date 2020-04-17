@@ -81,6 +81,7 @@
         </div>
       </div>
     </div>
+    <div class="swiper-scrollbar"></div>
   </div>
   <!-- 生成按钮 -->
   <div class="share_mk">生成图片</div>
@@ -116,10 +117,15 @@
             // 修改id名 
             $(".swiper-container").attr("id", "sw" + this.realIndex);
           }
-        }
+        },
+        scrollbar: {
+          el: '.swiper-scrollbar',
+          draggable: true,
+        },
       });
       // 生成图片点击事件
       $(".share_mk").click(function () {
+        console.log("我被点击了!");
         var canvas2 = document.createElement("canvas");
         let _canvas = document.querySelector(".swiper-slide-active");
         var w = parseInt(window.getComputedStyle(_canvas).width);
