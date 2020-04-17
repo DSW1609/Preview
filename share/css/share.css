@@ -34,7 +34,7 @@ body {
 .swiper-container {
   position: relative;
   width: 92vw;
-  height: 115vw;
+  height: 118vw;
   top: -2vw;
   border: 5px solid #fb431f;
   box-sizing: border-box;
@@ -74,10 +74,14 @@ body {
   background-image: url(../img/fx5.jpg);
 }
 
+.swiper-container-horizontal>.swiper-scrollbar {
+  bottom: 2vw;
+}
+
 .swiper-slide {
   width: 70vw;
   height: 104.5vw;
-  top: 3.5vw;
+  top: 4vw;
 }
 
 .S_Ct {
