@@ -100,7 +100,7 @@
     $(function () {
       // 轮播图控制
       var swiper = new Swiper('.swiper-container', {
-        // loop: true,
+        loop: true,
         // 惯性滑动
         // freeMode: true,
         // 自动切换
@@ -114,10 +114,11 @@
         on: {
           // 切换事件
           slideChange: function () {
-            // 修改id名 
+            // 修改id名 - 不同id对应伪类图片不同
             $(".swiper-container").attr("id", "sw" + this.realIndex);
           }
         },
+        // 滚动条
         scrollbar: {
           el: '.swiper-scrollbar',
           draggable: true,
@@ -125,7 +126,6 @@
       });
       // 生成图片点击事件
       $(".share_mk").click(function () {
-        console.log("我被点击了!");
         var canvas2 = document.createElement("canvas");
         let _canvas = document.querySelector(".swiper-slide-active");
         var w = parseInt(window.getComputedStyle(_canvas).width);
