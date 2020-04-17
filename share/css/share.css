@@ -161,7 +161,7 @@ body {
   height: 100vh;
   top: 0vw;
   z-index: 999;
-  display: none;
+  /* display: none; */
   background: rgba(0, 0, 0, 0.3);
 }
 
@@ -187,6 +187,7 @@ body {
   background-image: url(../img/lpress.svg);
   background-size: 100%;
   z-index: 999;
+  pointer-events: none;
   animation: S_CVS 2s infinite linear;
 }
 
