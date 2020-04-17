@@ -239,3 +239,14 @@ body {
   left: 5vw;
   background: linear-gradient(#ff9987, #ff1700);
 }
+
+.S_Mk_Gb::before {
+  content: '';
+  position: absolute;
+  width: 8vw;
+  height: 8vw;
+  left: 1.5vw;
+  top: 1.5vw;
+  background-image: url(../img/s_none.svg);
+  background-size: 100%;
+}
