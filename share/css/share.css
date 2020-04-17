@@ -161,7 +161,7 @@ body {
   height: 100vh;
   top: 0vw;
   z-index: 999;
-  /* display: none; */
+  display: none;
   background: rgba(0, 0, 0, 0.3);
 }
 
