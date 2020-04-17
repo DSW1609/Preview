@@ -54,6 +54,20 @@ body {
   transition: 1s;
 }
 
+.swiper-container::after {
+  content: '';
+  position: absolute;
+  width: 50vw;
+  height: 50vw;
+  color: #2c6ab5;
+  font-size: 10vw;
+  top: 34vw;
+  left: 21vw;
+  background-image: url(../img/ZSFM.png);
+  background-repeat: no-repeat;
+  background-size: 100%;
+}
+
 #sw0::before {
   background-image: url(../img/fx1.jpg);
 }
