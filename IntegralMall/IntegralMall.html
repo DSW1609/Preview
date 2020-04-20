@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>积分兑换商城</title>
+  <link rel="stylesheet" href="css/IntegralMall.css">
+</head>
+
+<body>
+  <!-- 顶部导航栏 -->
+  <div class="I_TOP_NAV">
+    <!-- 返回按钮 -->
+    <a href="javascript:;">
+      <div class="I_Back">
+        <img src="img/I_back.png" alt="">
+      </div>
+    </a>
+    积分兑换商城
+  </div>
+  <!-- 可用积分 -->
+  <div class="I_Have_Itg">
+    <!-- 左上标题 -->
+    <div class="I_Itg_Tit">
+      可用扶贫积分
+      <br>
+      <!-- 积分数值 -->
+      <em>108000</em>
+    </div>
+    <!-- 底部按钮 -->
+    <div class="I_Itg_Ann">
+      <!-- 左侧按钮 -->
+      <div class="Itg_An_n Itg_An_n1">
+        去赚积分
+      </div>
+      <!-- 右侧按钮 -->
+      <div class="Itg_An_n Itg_An_n2">
+        <!-- 跳转到我的扶贫积分 -->
+        <a href="javascript:;">
+          积分明细
+        </a>
+      </div>
+    </div>
+    <!-- 右上的一个圆形 -->
+    <div class="I_Itg_RY">
+    </div>
+    <!-- 右上的一个圆形 -->
+    <div class="I_Itg_RY I_Itg_RY2">
+      <span>兑</span>
+    </div>
+  </div>
+  <div class="I_Get_Bg">
+  </div>
+  <!-- 赚取积分途径 -->
+  <div class="I_Get_W">
+    <!-- 单个途径 -->
+    <div class="I_GW_Item">
+      <!-- 跳转到签到详情 -->
+      <a href="javascript:;">
+        <!-- 左上标题 -->
+        <div class="I_GW_Tit">
+          签到
+        </div>
+        <!-- 可领取积分 -->
+        <div class="I_GW_Itg">
+          最高可领取
+          <br>
+          <em>50积分</em>
+        </div>
+        <!-- 右下图标 -->
+        <img src="img/I_QD.png" alt="">
+      </a>
+    </div>
+    <div class="I_GW_Item I_GW_Item2">
+      <!-- 跳转到砸金蛋 -->
+      <a href="javascript:;">
+        <!-- 左上标题 -->
+        <div class="I_GW_Tit">
+          砸金蛋
+        </div>
+        <!-- 可领取积分 -->
+        <div class="I_GW_Itg">
+          最高可获得
+          <br>
+          <em>8888积分</em>
+        </div>
+        <!-- 右下图标 -->
+        <img src="img/I_ZJ.png" alt="">
+      </a>
+    </div>
+    <div class="I_GW_Item I_GW_Item3">
+      <!-- 跳转到合伙人专区 -->
+      <a href="javascript:;">
+        <!-- 左上标题 -->
+        <div class="I_GW_Tit">
+          合伙人商品
+        </div>
+        <!-- 可领取积分 -->
+        <div class="I_GW_Itg">
+          购买至少得
+          <br>
+          <em>10000积分</em>
+        </div>
+        <!-- 右下图标 -->
+        <img src="img/I_SP.png" alt="">
+      </a>
+    </div>
+  </div>
+  <!-- 积分兑换专区 -->
+  <div class="I_Itg_Z">
+    <!-- 标题 -->
+    <div class="IZ_Tit">
+      积分兑换专区
+    </div>
+    <!-- 商品列表 -->
+    <div class="I_SList">
+
+    </div>
+  </div>
+  <script src="js/jquery1.8.3.min.js"></script>
+  <script>
+    $(function () {
+      $(".Itg_An_n1").click(function () {
+        $(".I_Get_Bg").fadeIn();
+        // 添加类名
+        $(".I_GW_Item").css("animation", "I_GW_Item 0.6s linear")
+        $(".I_GW_Item img").css("animation", "I_GW_Img 0.6s linear")
+      })
+      $(".I_Get_Bg").click(function () {
+        $(this).fadeOut();
+        $(".I_GW_Item").css("animation", "none")
+        $(".I_GW_Item img").css("animation", "none")
+      })
+    })
+  </script>
+</body>
+
+</html>
