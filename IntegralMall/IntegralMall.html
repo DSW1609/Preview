@@ -28,20 +28,6 @@
       <!-- 积分数值 -->
       <em>108000</em>
     </div>
-    <!-- 底部按钮 -->
-    <div class="I_Itg_Ann">
-      <!-- 左侧按钮 -->
-      <div class="Itg_An_n Itg_An_n1">
-        去赚积分
-      </div>
-      <!-- 右侧按钮 -->
-      <div class="Itg_An_n Itg_An_n2">
-        <!-- 跳转到我的扶贫积分 -->
-        <a href="javascript:;">
-          积分明细
-        </a>
-      </div>
-    </div>
     <!-- 右上的一个圆形 -->
     <div class="I_Itg_RY">
     </div>
@@ -50,12 +36,27 @@
       <span>兑</span>
     </div>
   </div>
+  <!-- 积分按钮 -->
+  <div class="I_Itg_Ann">
+    <!-- 左侧按钮 -->
+    <div class="Itg_An_n Itg_An_n1">
+      去赚积分
+    </div>
+    <!-- 右侧按钮 -->
+    <div class="Itg_An_n Itg_An_n2">
+      <!-- 跳转到我的扶贫积分 -->
+      <a href="javascript:;">
+        积分明细
+      </a>
+    </div>
+  </div>
+  <!-- 赚取积分途径隐藏背景 -->
   <div class="I_Get_Bg">
   </div>
   <!-- 赚取积分途径 -->
   <div class="I_Get_W">
     <!-- 单个途径 -->
-    <div class="I_GW_Item">
+    <div class="I_GW_Item I_GW_Item1">
       <!-- 跳转到签到详情 -->
       <a href="javascript:;">
         <!-- 左上标题 -->
@@ -115,12 +116,47 @@
     </div>
     <!-- 商品列表 -->
     <div class="I_SList">
-
+      <!-- 排序行 -->
+      <div class="I_Slist_Sort">
+        <!-- 单行 -->
+        <div class="I_Sort_Item I_Sort_Item1 Sort_Ac">
+          综合排序
+        </div>
+        <!-- 单行 -->
+        <div class="I_Sort_Item I_Sort_Item2">
+          积分排序
+          <em></em>
+          <!-- 隐藏弹窗 -->
+          <div class="S_Jp">
+            <div class="S_Jp_i S_Jp_1">
+              从低到高
+            </div>
+            <div class="S_Jp_i S_Jp_2">
+              从高到低
+            </div>
+          </div>
+        </div>
+        <!-- 单行 -->
+        <div class="I_Sort_Item I_Sort_Item3">
+          金额排序
+          <em></em>
+          <!-- 隐藏弹窗 -->
+          <div class="S_Ep">
+            <div class="S_Jp_i S_Ep_1">
+              从低到高
+            </div>
+            <div class="S_Jp_i S_Ep_2">
+              从高到低
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <script src="js/jquery1.8.3.min.js"></script>
   <script>
     $(function () {
+      // 去赚积分按钮点击事件
       $(".Itg_An_n1").click(function () {
         $(".I_Get_Bg").fadeIn();
         // 添加类名
@@ -132,6 +168,126 @@
         $(".I_GW_Item").css("animation", "none")
         $(".I_GW_Item img").css("animation", "none")
       })
+      //一进来先进行综合排序操作
+      console.log("开始综合排序操作");
+
+      // 排序按钮点击事件-对css部分
+      $(".I_Sort_Item").click(function () {
+        // 首先清除所有的Sort_Ac类名
+        $(".Sort_Ac").removeClass("Sort_Ac");
+        // 给当前点击的添加Sort_Ac类名
+        $(this).addClass("Sort_Ac");
+        Sort_No()
+      })
+
+      // 综合排序点击事件
+      $(".I_Sort_Item1").click(function () {
+        //排序操作
+        console.log("开始综合排序操作");
+      })
+
+
+      // 点击 积分排序 事件 默认为 从低到高 排序
+      // 创建变量保存当前下拉框状态
+      var Sort_X1 = true;
+      // 创建变量保存当前下拉框显示的第几个菜单
+      var Sort_Z1 = 1;
+      $(".I_Sort_Item2").click(function () {
+        Sort_F1(".S_Jp_" + Sort_Z1, ".S_Jp")
+        // 排序操作
+        console.log("开始积分排序从低到高排序操作");
+
+      })
+      // 点击 从低到高 事件
+      $(".S_Jp_1").click(function () {
+        Sort_LX1(1)
+        // 排序操作
+        console.log("开始积分排序从低到高排序操作");
+
+      })
+      // 点击 从高到低 事件
+      $(".S_Jp_2").click(function () {
+        Sort_LX1(2)
+        // 排序操作
+        console.log("开始积分排序从高到低排序操作");
+
+      })
+
+      // 点击 金额排序 事件 默认为 从低到高 排序
+      // 创建变量保存当前下拉框状态
+      var Sort_X2 = true;
+      // 创建变量保存当前下拉框显示的第几个菜单
+      var Sort_Z2 = 1;
+      $(".I_Sort_Item3").click(function () {
+        Sort_F2(".S_Ep_" + Sort_Z2, ".S_Ep")
+        // 排序操作
+        console.log("开始金额排序从低到高排序操作");
+
+      })
+      // 点击 从低到高 事件
+      $(".S_Ep_1").click(function () {
+        Sort_LX2(1)
+        // 排序操作
+        console.log("开始金额排序从低到高排序操作");
+
+      })
+      // 点击 从高到低 事件
+      $(".S_Ep_2").click(function () {
+        Sort_LX2(2)
+        // 排序操作
+        console.log("开始金额排序从高到低排序操作");
+
+      })
+      // 隐藏 所有下拉框
+      function Sort_No() {
+        // 隐藏所有下拉框
+        $(".S_Jp").css("height", "0vw")
+        $(".S_Ep").css("height", "0vw")
+      }
+
+      function Sort_F1(S, Y) {
+        // 给默认的排序方式添加Sort_Ac类名
+        $(S).addClass("Sort_Ac");
+        // 再次点击弹出/隐藏 下拉框
+        if (Sort_X1) {
+          $(Y).css("height", "14vw");
+          Sort_X1 = false;
+
+        } else {
+          $(Y).css("height", "0vw");
+          Sort_X1 = true;
+        }
+      }
+
+      function Sort_F2(S, Y) {
+        // 给默认的排序方式添加Sort_Ac类名
+        $(S).addClass("Sort_Ac");
+        // 再次点击弹出/隐藏 下拉框
+        if (Sort_X1) {
+          $(Y).css("height", "14vw");
+          Sort_X1 = false;
+
+        } else {
+          $(Y).css("height", "0vw");
+          Sort_X1 = true;
+        }
+      }
+
+      function Sort_LX1(Z) {
+        Sort_Z1 = Z;
+        Sort_X1 = false;
+        setTimeout(function () {
+          Sort_X1 = true;
+        }, 300)
+      }
+
+      function Sort_LX2(Z) {
+        Sort_Z2 = Z;
+        Sort_X2 = false;
+        setTimeout(function () {
+          Sort_X2 = true;
+        }, 300)
+      }
     })
   </script>
 </body>

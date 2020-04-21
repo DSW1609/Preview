@@ -70,7 +70,7 @@
 }
 
 .I_Itg_Ann {
-  position: fixed;
+  position: absolute;
   display: flex;
   width: 92vw;
   height: 17vw;
@@ -271,7 +271,71 @@
 .I_SList {
   position: relative;
   width: 100vw;
-  height: 90vw;
   margin-top: 2vw;
   background: #f8f8f8;
+}
+
+.I_Slist_Sort {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  height: 10vw;
+  font-size: 3.6vw;
+}
+
+.I_Sort_Item {
+  flex: 1;
+  color: #333;
+  line-height: 10vw;
+  text-align: center;
+}
+
+.I_Sort_Item em {
+  display: inline-block;
+  width: 3vw;
+  height: 2vw;
+  background-image: url(../img/I_Down.png);
+  background-size: 3vw;
+  background-repeat: no-repeat;
+}
+
+.Sort_Ac em {
+  background-image: url(../img/I_Down_Ac.png);
+}
+
+.S_Jp,
+.S_Ep {
+  position: relative;
+  width: 60%;
+  height: 0vw;
+  transition: 0.5s;
+  margin: auto;
+  overflow: hidden;
+  box-sizing: border-box;
+  background: #f8f8f8;
+}
+
+.S_Jp_i {
+  position: relative;
+  width: 100%;
+  height: 7vw;
+  color: #333;
+  font-size: 3.6vw;
+  line-height: 7vw;
+  background: #f8f8f8;
+}
+
+.S_Jp_1::before,
+.S_Ep_1::before {
+  position: absolute;
+  bottom: 0;
+  content: '';
+  width: 70%;
+  left: 15%;
+  height: 1px;
+  background: #ff455d;
+}
+
+.Sort_Ac {
+  color: #ff455d;
 }
