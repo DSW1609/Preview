@@ -7,17 +7,44 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
+body {
+  height: 200vh;
+}
 
 .I_TOP_NAV {
-  position: relative;
+  position: sticky;
   width: 100vw;
   height: 40px;
+  top: 0;
   background: #ff455d;
-  line-height: 40px;
+  line-height: 39px;
   font-size: 17px;
   color: #fff;
   text-align: center;
   letter-spacing: 2px;
+  z-index: 1000;
+}
+
+.I_NAV_N {
+  position: absolute;
+  width: 88vw;
+  height: 40px;
+  left: 12vw;
+  top: 0px;
+  color: #fff;
+  background: #ff455d;
+  line-height: 40px;
+  font-size: 17px;
+  text-align: left;
+  display: none;
+}
+
+.I_NAV_N em {
+  position: absolute;
+  font-size: 18px;
+  top: 1px;
+  margin-left: 5px;
+  font-style: normal;
 }
 
 .I_Back {
@@ -67,6 +94,7 @@
   left: -1vw;
   font-style: normal;
   font-size: 12vw;
+  z-index: 999;
 }
 
 .I_Itg_Ann {
@@ -79,7 +107,7 @@
   left: 4vw;
   top: 41vw;
   overflow: hidden;
-  z-index: 100;
+  z-index: 999;
   box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.1);
 }
 
@@ -109,11 +137,11 @@
 }
 
 .I_Itg_RY {
-  position: fixed;
+  position: absolute;
   width: 45vw;
   height: 45vw;
   right: 6vw;
-  top: 35px;
+  top: 15px;
   background: #ff455b;
   border-radius: 30vw;
   z-index: 99;
@@ -122,7 +150,7 @@
 
 .I_Itg_RY2 {
   z-index: 999;
-  top: -20px;
+  top: -40px;
   right: -60px;
 }
 
@@ -280,7 +308,7 @@
   display: flex;
   width: 100vw;
   height: 10vw;
-  font-size: 3.6vw;
+  font-size: 4vw;
 }
 
 .I_Sort_Item {
@@ -320,7 +348,7 @@
   width: 100%;
   height: 7vw;
   color: #333;
-  font-size: 3.6vw;
+  font-size: 4vw;
   line-height: 7vw;
   background: #f8f8f8;
 }

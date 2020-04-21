@@ -17,7 +17,12 @@
         <img src="img/I_back.png" alt="">
       </div>
     </a>
-    积分兑换商城
+    <span>积分兑换商城</span>
+    <!-- 隐藏div -->
+    <div class="I_NAV_N">
+      可用扶贫积分:
+      <em>108000</em>
+    </div>
   </div>
   <!-- 可用积分 -->
   <div class="I_Have_Itg">
@@ -156,6 +161,17 @@
   <script src="js/jquery1.8.3.min.js"></script>
   <script>
     $(function () {
+      // 导航栏切换
+      $(window).scroll(function () {
+        if ($(this).scrollTop() >= 100) {
+          $(".I_NAV_N").slideDown();
+          $(".I_TOP_NAV").css("box-shadow", "0px 5px 6px rgba(0, 0, 0, 0.1)")
+        } else {
+          $(".I_NAV_N").slideUp();
+          $(".I_TOP_NAV").css("box-shadow", "none")
+        }
+      })
+
       // 去赚积分按钮点击事件
       $(".Itg_An_n1").click(function () {
         $(".I_Get_Bg").fadeIn();
@@ -177,117 +193,7 @@
         $(".Sort_Ac").removeClass("Sort_Ac");
         // 给当前点击的添加Sort_Ac类名
         $(this).addClass("Sort_Ac");
-        Sort_No()
       })
-
-      // 综合排序点击事件
-      $(".I_Sort_Item1").click(function () {
-        //排序操作
-        console.log("开始综合排序操作");
-      })
-
-
-      // 点击 积分排序 事件 默认为 从低到高 排序
-      // 创建变量保存当前下拉框状态
-      var Sort_X1 = true;
-      // 创建变量保存当前下拉框显示的第几个菜单
-      var Sort_Z1 = 1;
-      $(".I_Sort_Item2").click(function () {
-        Sort_F1(".S_Jp_" + Sort_Z1, ".S_Jp")
-        // 排序操作
-        console.log("开始积分排序从低到高排序操作");
-
-      })
-      // 点击 从低到高 事件
-      $(".S_Jp_1").click(function () {
-        Sort_LX1(1)
-        // 排序操作
-        console.log("开始积分排序从低到高排序操作");
-
-      })
-      // 点击 从高到低 事件
-      $(".S_Jp_2").click(function () {
-        Sort_LX1(2)
-        // 排序操作
-        console.log("开始积分排序从高到低排序操作");
-
-      })
-
-      // 点击 金额排序 事件 默认为 从低到高 排序
-      // 创建变量保存当前下拉框状态
-      var Sort_X2 = true;
-      // 创建变量保存当前下拉框显示的第几个菜单
-      var Sort_Z2 = 1;
-      $(".I_Sort_Item3").click(function () {
-        Sort_F2(".S_Ep_" + Sort_Z2, ".S_Ep")
-        // 排序操作
-        console.log("开始金额排序从低到高排序操作");
-
-      })
-      // 点击 从低到高 事件
-      $(".S_Ep_1").click(function () {
-        Sort_LX2(1)
-        // 排序操作
-        console.log("开始金额排序从低到高排序操作");
-
-      })
-      // 点击 从高到低 事件
-      $(".S_Ep_2").click(function () {
-        Sort_LX2(2)
-        // 排序操作
-        console.log("开始金额排序从高到低排序操作");
-
-      })
-      // 隐藏 所有下拉框
-      function Sort_No() {
-        // 隐藏所有下拉框
-        $(".S_Jp").css("height", "0vw")
-        $(".S_Ep").css("height", "0vw")
-      }
-
-      function Sort_F1(S, Y) {
-        // 给默认的排序方式添加Sort_Ac类名
-        $(S).addClass("Sort_Ac");
-        // 再次点击弹出/隐藏 下拉框
-        if (Sort_X1) {
-          $(Y).css("height", "14vw");
-          Sort_X1 = false;
-
-        } else {
-          $(Y).css("height", "0vw");
-          Sort_X1 = true;
-        }
-      }
-
-      function Sort_F2(S, Y) {
-        // 给默认的排序方式添加Sort_Ac类名
-        $(S).addClass("Sort_Ac");
-        // 再次点击弹出/隐藏 下拉框
-        if (Sort_X1) {
-          $(Y).css("height", "14vw");
-          Sort_X1 = false;
-
-        } else {
-          $(Y).css("height", "0vw");
-          Sort_X1 = true;
-        }
-      }
-
-      function Sort_LX1(Z) {
-        Sort_Z1 = Z;
-        Sort_X1 = false;
-        setTimeout(function () {
-          Sort_X1 = true;
-        }, 300)
-      }
-
-      function Sort_LX2(Z) {
-        Sort_Z2 = Z;
-        Sort_X2 = false;
-        setTimeout(function () {
-          Sort_X2 = true;
-        }, 300)
-      }
     })
   </script>
 </body>
