@@ -122,7 +122,7 @@
     <!-- 商品列表 -->
     <div class="I_SList">
       <!-- 排序行 -->
-      <div class="I_Slist_Sort">
+      <div class="I_S_Sort">
         <!-- 单行 -->
         <div class="I_Sort_Item I_Sort_Item1 Sort_Ac">
           综合排序
@@ -147,12 +147,56 @@
           <em></em>
           <!-- 隐藏弹窗 -->
           <div class="S_Ep">
-            <div class="S_Jp_i S_Ep_1">
+            <div class="S_Ep_i S_Ep_1">
               从低到高
             </div>
-            <div class="S_Jp_i S_Ep_2">
+            <div class="S_Ep_i S_Ep_2">
               从高到低
             </div>
+          </div>
+        </div>
+      </div>
+      <!-- 商品列表 -->
+      <div class="I_S_List">
+        <!-- 单个商品 -->
+        <div class="I_Item">
+          <!-- 上方商品图片 -->
+          <div class="Itm_Im">
+            <img src="img/1.jpg" alt="">
+          </div>
+          <!-- 标题 -->
+          <div class="Itm_Tit">
+            牡丹ω-3无蔗糖咖啡牡丹ω-3无蔗糖咖啡
+          </div>
+        </div>
+        <div class="I_Item">
+          <!-- 上方商品图片 -->
+          <div class="Itm_Im">
+            <img src="img/1.jpg" alt="">
+          </div>
+          <!-- 标题 -->
+          <div class="Itm_Tit">
+            牡丹ω-3无蔗糖咖啡牡丹ω-3无蔗糖咖啡
+          </div>
+        </div>
+        <div class="I_Item">
+          <!-- 上方商品图片 -->
+          <div class="Itm_Im">
+            <img src="img/1.jpg" alt="">
+          </div>
+          <!-- 标题 -->
+          <div class="Itm_Tit">
+            牡丹ω-3无蔗糖咖啡牡丹ω-3无蔗糖咖啡
+          </div>
+        </div>
+        <div class="I_Item">
+          <!-- 上方商品图片 -->
+          <div class="Itm_Im">
+            <img src="img/1.jpg" alt="">
+          </div>
+          <!-- 标题 -->
+          <div class="Itm_Tit">
+            牡丹ω-3无蔗糖咖啡牡丹ω-3无蔗糖咖啡
           </div>
         </div>
       </div>
@@ -164,10 +208,10 @@
       // 导航栏切换
       $(window).scroll(function () {
         if ($(this).scrollTop() >= 100) {
-          $(".I_NAV_N").slideDown();
+          $(".I_NAV_N").fadeIn(1000);
           $(".I_TOP_NAV").css("box-shadow", "0px 5px 6px rgba(0, 0, 0, 0.1)")
         } else {
-          $(".I_NAV_N").slideUp();
+          $(".I_NAV_N").fadeOut(1000);
           $(".I_TOP_NAV").css("box-shadow", "none")
         }
       })
@@ -184,16 +228,104 @@
         $(".I_GW_Item").css("animation", "none")
         $(".I_GW_Item img").css("animation", "none")
       })
-      //一进来先进行综合排序操作
-      console.log("开始综合排序操作");
 
+      //一进来先进行综合排序操作
+      SortComposite()
+
+      // 保存当前点的按钮索引
+      var Sort_T = null;
       // 排序按钮点击事件-对css部分
       $(".I_Sort_Item").click(function () {
+        Sort_T = $(this).is('.Sort_Ac');
         // 首先清除所有的Sort_Ac类名
         $(".Sort_Ac").removeClass("Sort_Ac");
         // 给当前点击的添加Sort_Ac类名
         $(this).addClass("Sort_Ac");
+        // 隐藏弹窗
+        $(".S_Jp").fadeOut()
+        $(".S_Ep").fadeOut()
       })
+
+      function GW_N(GW) {
+        $(GW).addClass("Sort_Ac");
+      }
+
+      // 综合排序点击事件
+      $(".I_Sort_Item1").click(function () {
+        if (!Sort_T) {
+          SortComposite()
+        }
+      })
+
+      // 积分排序开始排序方式
+      var GW_ITG = 1; // 1代表从低到高
+      // 金额排序开始排序方式
+      var GW_MNY = 1; // 2代表从高到低
+
+      // 积分排序点击事件
+      $(".I_Sort_Item2").click(function () {
+        GW_N(".S_Jp_" + GW_ITG);
+        // 显示隐藏弹窗
+        $(".S_Jp").toggle();
+        if (!Sort_T) {
+          SortITG()
+        }
+      })
+
+      // 金额排序点击事件
+      $(".I_Sort_Item3").click(function () {
+        GW_N(".S_Ep_" + GW_MNY);
+        // 显示隐藏弹窗
+        $(".S_Ep").toggle();
+        if (!Sort_T) {
+          SortMNY()
+        }
+      })
+
+      // 积分排序下拉菜单点击事件
+      $(".S_Jp_i").click(function () {
+        if ($(this).index() + 1 == GW_ITG) {
+          event.stopPropagation();
+          $(".S_Jp").toggle();
+          console.log("不进行操作");
+        } else {
+          GW_ITG = $(this).index() + 1
+          SortITG()
+        }
+      })
+
+      // 金额排序下拉菜单点击事件
+      $(".S_Ep_i").click(function () {
+        if ($(this).index() + 1 == GW_MNY) {
+          event.stopPropagation();
+          $(".S_Ep").toggle();
+          console.log("不进行操作");
+        } else {
+          GW_MNY = $(this).index() + 1
+          SortMNY()
+        }
+      })
+
+      // 综合排序事件
+      function SortComposite() {
+        console.log("开始综合排序点击事件");
+      }
+      // 积分排序事件
+      function SortITG() {
+        if (GW_ITG == 1) {
+          console.log("开始积分排序从低到高事件");
+        } else {
+          console.log("开始积分排序从高到低事件");
+        }
+      }
+      // 金额排序事件
+      function SortMNY() {
+        if (GW_MNY == 1) {
+          console.log("开始金额排序从低到高事件");
+        } else {
+          console.log("开始金额排序从高到低事件");
+        }
+      }
     })
   </script>
 </body>

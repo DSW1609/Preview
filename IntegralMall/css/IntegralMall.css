@@ -7,10 +7,6 @@
   -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
-body {
-  height: 200vh;
-}
-
 .I_TOP_NAV {
   position: sticky;
   width: 100vw;
@@ -301,9 +297,10 @@ body {
   width: 100vw;
   margin-top: 2vw;
   background: #f8f8f8;
+  padding-bottom: 10vw;
 }
 
-.I_Slist_Sort {
+.I_S_Sort {
   position: relative;
   display: flex;
   width: 100vw;
@@ -327,30 +324,41 @@ body {
   background-repeat: no-repeat;
 }
 
-.Sort_Ac em {
-  background-image: url(../img/I_Down_Ac.png);
-}
-
 .S_Jp,
 .S_Ep {
   position: relative;
   width: 60%;
-  height: 0vw;
-  transition: 0.5s;
+  height: 14vw;
+  display: none;
   margin: auto;
-  overflow: hidden;
   box-sizing: border-box;
-  background: #f8f8f8;
+  background: #fff;
+  border: 1px solid #ff455b;
+  border-radius: 1vw;
+  z-index: 999;
 }
 
-.S_Jp_i {
+.S_Jp::before,
+.S_Ep::before {
+  position: absolute;
+  content: '';
+  width: 0;
+  height: 0;
+  border-width: 0 2vw 2vw;
+  border-style: solid;
+  border-color: transparent transparent #ff455d;
+  left: 8vw;
+  top: -2vw;
+}
+
+.S_Jp_i,
+.S_Ep_i {
   position: relative;
   width: 100%;
   height: 7vw;
   color: #333;
   font-size: 4vw;
-  line-height: 7vw;
-  background: #f8f8f8;
+  line-height: 6vw;
 }
 
 .S_Jp_1::before,
@@ -358,12 +366,58 @@ body {
   position: absolute;
   bottom: 0;
   content: '';
-  width: 70%;
-  left: 15%;
-  height: 1px;
+  width: 80%;
+  left: 10%;
+  height: 2px;
   background: #ff455d;
 }
 
 .Sort_Ac {
   color: #ff455d;
+  font-weight: bold;
+}
+
+.Sort_Ac em {
+  background-image: url(../img/I_Down_Ac.png);
+}
+
+.I_S_List {
+  position: relative;
+  width: 100vw;
+}
+
+.I_Item {
+  position: relative;
+  display: inline-block;
+  width: 45vw;
+  height: 55vw;
+  left: 1.5vw;
+  top: -1vw;
+  margin-left: 2vw;
+  margin-top: 2vw;
+  background: #fff;
+  border-radius: 3vw;
+  overflow: hidden;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+
+.Itm_Im {
+  position: relative;
+  width: 45vw;
+  height: 30vw;
+  overflow: hidden;
+  background: #333;
+}
+
+.Itm_Im img {
+  position: absolute;
+  width: 100%;
+  top: -5vw;
+}
+
+.Itm_Tit {
+  position: relative;
+  padding: 1.5vw;
+  font-size: 3.8vw;
+  color: #000;
 }
