@@ -38,9 +38,9 @@ body {
 
 .gallery-top {
   width: 90vw;
-  height: 60vh;
+  height: 65vh;
   margin: 0 auto;
-  top: 38vw;
+  top: 36vw;
   overflow-y: scroll;
   margin-bottom: 10vw;
 }
@@ -86,6 +86,18 @@ body {
   background: linear-gradient(#b490ff, #9095ff);
 }
 
+.ctr1::after {
+  position: absolute;
+  content: "";
+  width: 20vw;
+  height: 20vw;
+  top: -5vw;
+  right: -5vw;
+  background-image: url(../img/srr.svg);
+  background-size: 100%;
+  opacity: 0.1;
+}
+
 .ctr2 {
   background: linear-gradient(#70e184, #4fd5a2);
 }
@@ -100,17 +112,35 @@ body {
   top: 5vw;
 }
 
+.ctr_tit em {
+  font-size: 3.5vw;
+  font-style: normal;
+}
+
 .ctr_mn {
   position: relative;
-  left: 5vw;
   top: 7.5vw;
   font-size: 6vw;
+  left: 5vw;
+}
+
+.ctr_mn_i {
+  float: left;
+  text-align: center;
+}
+.ctr_mn_i em{
+  top: -1vw;
+}
+.ctr_mn_i2 {
+  position: absolute;
+  right: 10vw;
 }
 
 .ctr_mn em {
   font-size: 3vw;
   font-style: normal;
   margin-left: 1vw;
+  position: relative;
 }
 
 .ctr_time {
@@ -131,7 +161,12 @@ body {
   margin-top: 3vw;
   background: #fff;
   border-radius: 3vw;
+  transition: 0.3s;
   box-shadow: 0px 2px 6px 6px rgba(224, 224, 224, .1);
+}
+
+.tst_item:hover {
+  background: rgba(255, 255, 255, .6);
 }
 
 .tst_im {
@@ -198,15 +233,5 @@ body {
   height: 5vw;
   background: linear-gradient(rgb(243, 242, 251), rgba(243, 242, 251, 0));
   z-index: 999;
-  top: 60vw;
-}
-
-.swiper_scoll_bss {
-  position: relative;
-  width: 90vw;
-  left: 5vw;
-  height: 5vw;
-  background: linear-gradient(rgba(243, 242, 251, 0), rgb(243, 242, 251));
-  z-index: 999;
-  margin-top: 38vw;
+  top: 58vw;
 }

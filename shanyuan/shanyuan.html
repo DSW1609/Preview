@@ -33,6 +33,7 @@
   </div>
   <!-- 滚动样式上边距过渡处理 -->
   <div class="swiper_scoll_tss"></div>
+  <!-- 详细信息展示部分 -->
   <div class="swiper-container gallery-top">
     <div class="swiper-wrapper">
       <!-- 最近收入部分 -->
@@ -208,6 +209,7 @@
           </div>
         </div>
       </div>
+      <!-- 最近支出部分 -->
       <div class="swiper-slide">
         <!-- 单个交易信息 -->
         <div class="tst_item">
@@ -414,15 +416,16 @@
           </div>
         </div>
       </div>
+      <!-- 兑换善元部分 -->
       <div class="swiper-slide">
-        兑换
+        兑换善元
       </div>
     </div>
   </div>
-  <!-- 滚动样式下边距过渡处理 -->
-  <div class="swiper_scoll_bss"></div>
+  <!-- 中间轮播图 -->
   <div class="swiper-container gallery-ctr">
     <div class="swiper-wrapper">
+      <!-- 当前余额 -->
       <div class="swiper-slide ctr1" data-hash="slide1">
         <!-- 标题 -->
         <div class="ctr_tit">
@@ -437,18 +440,24 @@
           06-08
         </div>
       </div>
+      <!-- 最近收支 -->
       <div class="swiper-slide ctr2" data-hash="slide2">
         <!-- 标题 -->
         <div class="ctr_tit">
-          最近支出
+          最近收支
+          <!-- 显示本月时间 -->
+          <em>2020-06</em>
         </div>
         <!-- 金额 -->
         <div class="ctr_mn">
-          8890.65<em>善元</em>
-        </div>
-        <!-- 右下角时间 -->
-        <div class="ctr_time">
-          06-08
+          <!-- 单条明细 -->
+          <div class="ctr_mn_i">
+            8890.65<br><em>收入(善元)</em>
+          </div>
+          <!-- 单条明细 -->
+          <div class="ctr_mn_i ctr_mn_i2">
+            8890.65<br><em>支出(善元)</em>
+          </div>
         </div>
       </div>
       <div class="swiper-slide ctr3" data-hash="slide3">
@@ -485,6 +494,7 @@
     // 中间的
     var galleryCtr = new Swiper('.gallery-ctr', {
       spaceBetween: 15,
+      // 制作完成关闭本项
       hashNavigation: true,
       on: {
         init: function () {
