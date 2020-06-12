@@ -196,7 +196,7 @@ body {
   width: 90vw;
   left: 5vw;
   height: 5vw;
-  background: linear-gradient(rgb(243, 242, 251), rgba(243, 242, 251, .3));
+  background: linear-gradient(rgb(243, 242, 251), rgba(243, 242, 251, 0));
   z-index: 999;
   top: 60vw;
 }
@@ -206,7 +206,7 @@ body {
   width: 90vw;
   left: 5vw;
   height: 5vw;
-  background: linear-gradient(rgba(243, 242, 251, .3), rgb(243, 242, 251));
+  background: linear-gradient(rgba(243, 242, 251, 0), rgb(243, 242, 251));
   z-index: 999;
-  margin-top: 35vw;
+  margin-top: 38vw;
 }
