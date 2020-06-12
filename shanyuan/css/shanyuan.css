@@ -68,6 +68,8 @@ body {
   left: 5vw;
   width: 70vw;
   margin: 0 auto;
+  color: #fff;
+  font-size: 4vw;
 }
 
 .gallery-ctr .swiper-wrapper {
@@ -89,4 +91,30 @@ body {
 
 .ctr3 {
   background: linear-gradient(#f5af19, #f12711);
+}
+
+.ctr_tit {
+  position: relative;
+  left: 5vw;
+  top: 5vw;
+}
+
+.ctr_mn {
+  position: relative;
+  left: 5vw;
+  top: 7.5vw;
+  font-size: 6vw;
+}
+
+.ctr_mn em {
+  font-size: 3vw;
+  font-style: normal;
+  margin-left: 1vw;
+}
+
+.ctr_time {
+  position: absolute;
+  right: 4vw;
+  bottom: 4vw;
+  font-size: 3.5vw;
 }
