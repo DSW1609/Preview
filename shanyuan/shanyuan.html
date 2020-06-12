@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>我的善元</title>
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/shanyuan.css">
+</head>
+
+<body>
+  <!-- 顶部指示栏 -->
+  <div class="head_bar">
+    <a href="">
+      <img src="img/back.svg" alt="">
+    </a>
+    <span>我的善元</span>
+  </div>
+  <!-- Swiper -->
+  <div class="swiper-container gallery-thumbs">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        <span>最近收入</span>
+      </div>
+      <div class="swiper-slide">
+        <span>最近支出</span>
+      </div>
+      <div class="swiper-slide">
+        <span>兑换善元</span>
+      </div>
+    </div>
+  </div>
+  <div class="swiper-container gallery-top">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide">
+        收入
+      </div>
+      <div class="swiper-slide">
+        支出
+      </div>
+      <div class="swiper-slide">
+        兑换
+      </div>
+    </div>
+  </div>
+  <div class="swiper-container gallery-ctr">
+    <div class="swiper-wrapper">
+      <div class="swiper-slide ctr1">
+        当前余额
+      </div>
+      <div class="swiper-slide ctr2">
+        最近支出
+      </div>
+      <div class="swiper-slide ctr3">
+        兑换善元
+      </div>
+    </div>
+  </div>
+  <script src="js/jquery1.8.3.min.js"></script>
+  <script src="js/swiper.min.js"></script>
+
+  <script>
+    // 顶部的
+    var galleryThumbs = new Swiper('.gallery-thumbs', {
+      spaceBetween: 10,
+      slidesPerView: 3,
+      watchSlidesVisibility: true,
+      watchSlidesProgress: true,
+    });
+    // 底部的
+    var galleryTop = new Swiper('.gallery-top', {
+      // 控制顶部的
+      thumbs: {
+        swiper: galleryThumbs
+      }
+    });
+    // 中间的
+    var galleryCtr = new Swiper('.gallery-ctr', {
+      spaceBetween: 15,
+      on: {
+        init: function () {
+          // 初始化完成更改宽度，可以展示右侧小半块slide
+          $(".gallery-ctr").css("width", "90vw")
+        },
+      },
+    });
+  </script>
+  </script>
+</body>
+
+</html>
