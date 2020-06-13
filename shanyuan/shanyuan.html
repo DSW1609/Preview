@@ -426,7 +426,7 @@
   <div class="swiper-container gallery-ctr">
     <div class="swiper-wrapper">
       <!-- 当前余额 -->
-      <div class="swiper-slide ctr1" data-hash="slide1">
+      <div class="swiper-slide ctr1">
         <!-- 标题 -->
         <div class="ctr_tit">
           当前余额
@@ -441,7 +441,7 @@
         </div>
       </div>
       <!-- 最近收支 -->
-      <div class="swiper-slide ctr2" data-hash="slide2">
+      <div class="swiper-slide ctr2">
         <!-- 标题 -->
         <div class="ctr_tit">
           最近收支
@@ -460,7 +460,7 @@
           </div>
         </div>
       </div>
-      <div class="swiper-slide ctr3" data-hash="slide3">
+      <div class="swiper-slide ctr3">
         兑换善元
       </div>
     </div>
@@ -471,7 +471,7 @@
   <script>
     // 顶部的
     var galleryThumbs = new Swiper('.gallery-thumbs', {
-      spaceBetween: 10,
+      spaceBetween: 0,
       slidesPerView: 3,
       watchSlidesVisibility: true,
       watchSlidesProgress: true
@@ -488,11 +488,13 @@
         slideChange: function () {
           // 回到顶部
           $(".gallery-top").scrollTop(0);
-        },
+        }
       },
     });
     // 中间的
     var galleryCtr = new Swiper('.gallery-ctr', {
+      // 初始化显示第几个
+      // initialSlide: 1,
       spaceBetween: 15,
       // 制作完成关闭本项
       hashNavigation: true,
