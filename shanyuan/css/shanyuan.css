@@ -118,6 +118,7 @@ body {
   margin: 0 auto;
   color: #fff;
   font-size: 4vw;
+  border-radius: 3vw;
 }
 
 .gallery-ctr .swiper-wrapper {
