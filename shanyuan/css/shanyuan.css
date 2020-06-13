@@ -6,7 +6,9 @@
 }
 
 body {
-  background: #f3f2fb;
+  /* background: #f3f2fb; */
+  background-image: url(../img/sybg.png);
+  background-size: 100% 100vh;
 }
 
 .head_bar {
@@ -15,7 +17,7 @@ body {
   height: 10vw;
   line-height: 10vw;
   font-size: 4.5vw;
-  color: #2b2b49;
+  color: #fff;
   text-align: center;
   margin-bottom: 3vw;
 }
@@ -53,12 +55,12 @@ body {
 
 .gallery-thumbs .swiper-slide {
   font-size: 4vw;
-  color: #acb1c9;
+  color: rgba(255, 255, 255, 0.8);
   transition: 0.3s;
 }
 
 .gallery-thumbs .swiper-slide-thumb-active {
-  color: #2b2b49;
+  color: #fff;
   font-size: 4.3vw;
   font-weight: bold;
 }
@@ -127,10 +129,32 @@ body {
 .ctr_mn_i {
   float: left;
   text-align: center;
+  text-indent: -2vw;
 }
-.ctr_mn_i em{
+
+.ctr_mn_i em {
   top: -1vw;
 }
+
+.ctr_mn_i i {
+  display: inline-block;
+  position: relative;
+  width: 0;
+  height: 0;
+  margin-right: 3px;
+  border: 1.5vw solid transparent;
+
+}
+
+.ctr_mn_i1 i {
+  border-top-color: #368dff;
+}
+
+.ctr_mn_i2 i {
+  top: -1.5vw;
+  border-bottom-color: #ff8746;
+}
+
 .ctr_mn_i2 {
   position: absolute;
   right: 10vw;
@@ -166,7 +190,7 @@ body {
 }
 
 .tst_item:hover {
-  background: rgba(255, 255, 255, .6);
+  box-shadow: 0px 3px 0px 0px #ffcb6f;
 }
 
 .tst_im {
