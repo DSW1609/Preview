@@ -2,11 +2,9 @@
   margin: 0;
   padding: 0;
   text-decoration: none;
-  list-style: none;
 }
 
 body {
-  /* background: #f3f2fb; */
   background-image: url(../img/sybg.png);
   background-size: 100% 100vh;
 }
@@ -70,15 +68,20 @@ body {
 .gallery-thumbs {
   height: 10vw;
   padding-left: 5%;
+  top: -0.5vw;
   box-sizing: border-box;
 }
 
-.gallery-thumbs .swiper-slide:nth-child(2).swiper-slide-thumb-active {
+.gallery-thumbs .swiper-slide:first-child.swiper-slide-thumb-active {
+  left: 0vw;
+}
+
+.gallery-thumbs .swiper-slide-thumb-active {
   left: -2vw;
 }
 
 .gallery-thumbs .swiper-slide-thumb-active span {
-  padding: 0.5vw 2vw;
+  padding: 1vw 2vw;
   border-radius: 3vw;
 }
 
@@ -98,7 +101,7 @@ body {
   font-size: 4vw;
   color: rgba(255, 255, 255, 0.8);
   transition: 0.3s;
-  top: 0.5vw;
+  top: 1vw;
 }
 
 .gallery-thumbs .swiper-slide-thumb-active {
