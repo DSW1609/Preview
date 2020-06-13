@@ -37,7 +37,7 @@
   <div class="swiper-container gallery-top">
     <div class="swiper-wrapper">
       <!-- 最近收入部分 -->
-      <div class="swiper-slide">
+      <div class="swiper-slide swiper-slide1">
         <!-- 单个交易信息 -->
         <div class="tst_item">
           <!-- 交易图标 收入类名为srr 支出为zcc -->
@@ -210,7 +210,7 @@
         </div>
       </div>
       <!-- 最近支出部分 -->
-      <div class="swiper-slide">
+      <div class="swiper-slide swiper-slide2">
         <!-- 单个交易信息 -->
         <div class="tst_item">
           <!-- 交易图标 收入类名为srr 支出为zcc -->
@@ -474,7 +474,7 @@
       spaceBetween: 10,
       slidesPerView: 3,
       watchSlidesVisibility: true,
-      watchSlidesProgress: true,
+      watchSlidesProgress: true
     });
     // 底部的
     var galleryTop = new Swiper('.gallery-top', {
@@ -496,6 +496,7 @@
       spaceBetween: 15,
       // 制作完成关闭本项
       hashNavigation: true,
+      slideToClickedSlide: true,
       on: {
         init: function () {
           // 初始化完成更改宽度，可以展示右侧小半块slide

@@ -42,9 +42,13 @@ body {
   width: 90vw;
   height: 65vh;
   margin: 0 auto;
-  top: 36vw;
+  top: 37vw;
   overflow-y: scroll;
   margin-bottom: 10vw;
+  border-radius: 3vw;
+  background: #f3f2fb;
+  box-sizing: border-box;
+  border: 2vw solid #f3f2fb;
 }
 
 .gallery-thumbs {
@@ -88,7 +92,8 @@ body {
   background: linear-gradient(#b490ff, #9095ff);
 }
 
-.ctr1::after {
+.ctr1::after,
+.ctr2::after {
   position: absolute;
   content: "";
   width: 20vw;
@@ -98,6 +103,10 @@ body {
   background-image: url(../img/srr.svg);
   background-size: 100%;
   opacity: 0.1;
+}
+
+.ctr2::after {
+  background-image: url(../img/zcc.svg);
 }
 
 .ctr2 {
@@ -130,6 +139,7 @@ body {
   float: left;
   text-align: center;
   text-indent: -2vw;
+  min-width: 30%;
 }
 
 .ctr_mn_i em {
@@ -143,10 +153,10 @@ body {
   height: 0;
   margin-right: 3px;
   border: 1.5vw solid transparent;
-
 }
 
 .ctr_mn_i1 i {
+  top: 0;
   border-top-color: #368dff;
 }
 
@@ -161,10 +171,10 @@ body {
 }
 
 .ctr_mn em {
+  position: relative;
   font-size: 3vw;
   font-style: normal;
   margin-left: 1vw;
-  position: relative;
 }
 
 .ctr_time {
@@ -182,15 +192,19 @@ body {
   position: relative;
   width: 100%;
   height: 16vw;
-  margin-top: 3vw;
+  margin-bottom: 2.5vw;
   background: #fff;
   border-radius: 3vw;
   transition: 0.3s;
   box-shadow: 0px 2px 6px 6px rgba(224, 224, 224, .1);
 }
 
-.tst_item:hover {
-  box-shadow: 0px 3px 0px 0px #ffcb6f;
+.swiper-slide1 .tst_item:hover {
+  box-shadow: 0px 3px 0px 0px #a9d2ff;
+}
+
+.swiper-slide2 .tst_item:hover {
+  box-shadow: 0px 3px 0px 0px #ffe4cd;
 }
 
 .tst_im {
