@@ -167,10 +167,67 @@
     <!-- 订单部分结束 -->
     <!-- 活动图开始 -->
     <div class="act">
-      <a href="javascript:;">
-        <img class="act_im" src="img/gogogo.png" alt="">
-        <span class="act_te">全球分红&nbsp;第三期</span>
-      </a>
+      <!-- <img class="act_im" src="img/gogogo.png" alt="">
+        <span class="act_te">全球分红&nbsp;第三期</span> -->
+      <!-- 单个活动 -->
+      <div class="act_activity act_ac1">
+        <!-- 活动标题 -->
+        <div class="act_ac_tit">
+          分红奖池
+        </div>
+        <!-- 活动副标题 -->
+        <div class="act_tit_f">
+          全球分红第7期
+        </div>
+        <!-- 背景图 -->
+        <div class="act_back">
+          <img src="img/List/HBB.png" alt="">
+        </div>
+      </div>
+      <div class="act_activity act_ac1">
+        <!-- 活动标题 -->
+        <div class="act_ac_tit">
+          富民驿站
+        </div>
+        <!-- 活动副标题 -->
+        <div class="act_tit_f">
+          富民驿站副标题
+        </div>
+        <!-- 背景图 -->
+        <div class="act_back">
+          <img class="act_back_1" src="img/List/YZZ.png" alt="">
+        </div>
+      </div>
+      <div class="act_activity act_ac2">
+        <!-- 活动标题 -->
+        <div class="act_ac_tit">
+          幸运砸金蛋
+        </div>
+        <!-- 活动副标题 -->
+        <div class="act_tit_f">
+          必得实物或积分
+        </div>
+        <!-- 背景图 -->
+        <div class="act_back">
+          <img src="img/List/JDD.png" alt="">
+        </div>
+      </div>
+      <div class="act_activity act_ac2">
+        <!-- 活动标题 -->
+        <div class="act_ac_tit">
+          签到情况
+        </div>
+        <!-- 活动副标题 -->
+        <div class="act_tit_f">
+          查看签到详情
+        </div>
+        <!-- 背景图 -->
+        <div class="act_back">
+          <img src="img/List/QDD.png" alt="">
+          <!-- 日期显示 -->
+          <span id="act_time"></span>
+        </div>
+      </div>
       <!-- 隐藏弹窗 -->
       <div class="act_end">
         <!-- 内容 -->
@@ -212,13 +269,8 @@
       </div>
     </div>
     <!-- 活动图结束 -->
-    <!-- 富民驿站开始 -->
-    <div class="act">
-      <img src="img/FMYZ.png" alt="">
-    </div>
-    <!-- 富民驿站结束 -->
     <!-- 我的资产部分开始 -->
-    <div class="infmion">
+    <div class="infmion" style="height: 60.5vw;">
       <!-- 上方标题栏开始 -->
       <div class="order_tit">
         <!-- 左侧标题 -->
@@ -276,25 +328,65 @@
           </div>
         </div>
       </a>
+      <!-- 单个信息按钮 -->
+      <a href="javasvript:;">
+        <div class="inf_one">
+          <!-- 上方图片 -->
+          <img src="img/sy.svg" alt="">
+          <br>
+          <!-- 下方文字 -->
+          <span>善元系统</span>
+        </div>
+      </a>
+      <!-- 单个信息按钮 -->
+      <a href="javasvript:;">
+        <div class="inf_one">
+          <!-- 上方图片 -->
+          <img src="img/sy.svg" alt="">
+          <br>
+          <!-- 下方文字 -->
+          <span>我的金豆</span>
+        </div>
+      </a>
+      <!-- 单个信息按钮 -->
+      <a href="javasvript:;">
+        <div class="inf_one">
+          <!-- 上方图片 -->
+          <img src="img/sy.svg" alt="">
+          <br>
+          <!-- 下方文字 -->
+          <span>积分商城</span>
+        </div>
+      </a>
+      <!-- 单个信息按钮 -->
+      <a href="javasvript:;">
+        <div class="inf_one">
+          <!-- 上方图片 -->
+          <img src="img/sy.svg" alt="">
+          <br>
+          <!-- 下方文字 -->
+          <span>金豆商城</span>
+        </div>
+      </a>
     </div>
     <!-- 我的资产部分结束 -->
     <!-- 砸金蛋和签到入口 -->
-    <div class="Smash act">
-      <!-- 砸金蛋入口 -->
-      <div class="S_Bdy">
-        <img src="img/ZZZRK.png" alt="">
+    <!-- <div class="Smash act">
+      <div class="Q_Bdy">
+        <img src="img/ZRK3.png" alt="">
       </div>
-      <!-- 签到入口 -->
       <a href="http://www.benshanw.com/m-wap/SignIn/?">
         <div class="Q_Bdy">
-          <img src="img/QQQRK.png" alt="">
-          <!-- 文字 -->
+          <img src="img/QRK2.png" alt="">
           <div class="Q_B_Te">
             签到情况
           </div>
         </div>
       </a>
-    </div>
+      <div class="Q_Bdy">
+        <img src="img/QRK2.png" alt="">
+      </div>
+    </div> -->
     <!-- 砸金蛋和签到入口 -->
     <!-- 我的资产部分开始 -->
     <div class="infmion d_zc">
@@ -438,6 +530,10 @@
     $("#end_tx").click(function () {
       $(".act_end").css("display", "none")
     })
+    var act_date = new Date;
+    var act_month = act_date.getMonth();
+    var act_date = act_date.getDate();
+    $("#act_time").text(act_month + 1 + '.' + act_date)
   </script>
 </body>
 

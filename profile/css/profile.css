@@ -260,7 +260,7 @@ body {
 }
 
 .d_zc {
-  margin-top: 5vw;
+  margin-top: 3vw;
 }
 
 .act {
@@ -272,10 +272,7 @@ body {
   border-radius: 5vw;
   overflow: hidden;
   margin-bottom: 2vw;
-}
-
-.act img {
-  width: 100%;
+  background: #ffffff;
 }
 
 .act_te {
@@ -459,32 +456,30 @@ body {
 }
 
 .Smash {
-  height: 30vw;
+  height: 15vw;
   top: -1vw;
   margin-bottom: 6vw;
 }
 
 .Smash img {
+  width: 100%;
   border-radius: 5vw;
 }
 
-.S_Bdy {
-  position: absolute;
-  width: 60vw;
-  height: 30vw;
-}
 
 .Q_Bdy {
-  position: absolute;
+  position: relative;
+  float: left;
   width: 30vw;
-  height: 30vw;
-  right: 0;
+  height: 15vw;
   color: #fff;
   font-size: 4.5vw;
   font-weight: bold;
   text-align: center;
   border-radius: 5vw;
-  background: #f8826b;
+  margin-left: 2vw;
+  left: -2vw;
+  overflow: hidden;
 }
 
 .Q_B_Te {
@@ -500,4 +495,93 @@ body {
   left: 2vw;
   box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.1);
   background: linear-gradient(to right, #f56e5a, #fea553);
+}
+
+.act_activity {
+  position: relative;
+  float: left;
+  width: 50%;
+  height: 15vw;
+  background: #fff;
+  /* background-image: url(../img/List/act_bg.png); */
+  background-size: 100% 100%;
+}
+
+.act_ac_tit,
+.act_tit_f {
+  margin-top: 2vw;
+  margin-left: 4vw;
+  font-size: 4vw;
+  letter-spacing: 1px;
+  font-weight: bold;
+  color: #333;
+}
+
+.act_tit_f {
+  margin-top: 1vw;
+  font-size: 3.5vw;
+  color: #d89463;
+}
+
+.act_activity:nth-of-type(odd)::before {
+  position: absolute;
+  content: '';
+  width: 1px;
+  height: 10vw;
+  right: 0px;
+  top: 2.5vw;
+  background: #f2f2f2;
+}
+
+.act_ac1::after {
+  position: absolute;
+  content: '';
+  width: 74%; 
+  height: 1px;
+  bottom: -2px;
+  left: 13%;
+  z-index: 999;
+  background: #f2f2f2;
+}
+
+.act_back {
+  position: absolute;
+  width: 10vw;
+  height: 12vw;
+  right: 3vw;
+  top: 2.5vw;
+}
+
+.act_back img {
+  width: 100%;
+}
+
+.act_back_1 {
+  animation: 2s act_rtt 0s linear infinite;
+}
+
+@keyframes act_rtt {
+  0% {
+    transform: scale(1);
+  }
+
+  50% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1);
+  }
+}
+
+.act_back span {
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 10vw;
+  line-height: 12vw;
+  text-align: center;
+  color: #9f75fd;
+  font-weight: bold;
+  font-size: 3.5vw;
 }
