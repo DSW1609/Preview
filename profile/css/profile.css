@@ -107,7 +107,7 @@ body {
   background: #fff;
   margin: 0 auto;
   border-radius: 5vw;
-  top: -8vw;
+  top: -7vw;
 }
 
 .order_tit {
@@ -210,7 +210,7 @@ body {
 }
 
 .magent {
-  top: 0.5vw;
+  top: -1vw;
 }
 
 .magent_ctt {
@@ -235,7 +235,7 @@ body {
   background: #fb1436;
   margin: 0 auto;
   border-radius: 1vw;
-  top: 5vw;
+  top: 3vw;
   text-align: center;
   font-size: 4vw;
   line-height: 10vw;
@@ -268,7 +268,7 @@ body {
   width: 92vw;
   height: 30.7vw;
   margin: 0 auto;
-  top: -5vw;
+  top: -8vw;
   border-radius: 5vw;
   overflow: hidden;
   margin-bottom: 2vw;
@@ -518,9 +518,11 @@ body {
 }
 
 .act_tit_f {
+  position: relative;
   margin-top: 1vw;
   font-size: 3.5vw;
   color: #d89463;
+  z-index: 999;
 }
 
 .act_activity:nth-of-type(odd)::before {
@@ -530,18 +532,18 @@ body {
   height: 10vw;
   right: 0px;
   top: 2.5vw;
-  background: #f2f2f2;
+  background: linear-gradient(#fff, #f2f2f2, #fff);
 }
 
 .act_ac1::after {
   position: absolute;
   content: '';
-  width: 74%; 
+  width: 80%;
   height: 1px;
   bottom: -2px;
-  left: 13%;
+  left: 10%;
   z-index: 999;
-  background: #f2f2f2;
+  background: linear-gradient(#fff, #f2f2f2, #fff);
 }
 
 .act_back {
